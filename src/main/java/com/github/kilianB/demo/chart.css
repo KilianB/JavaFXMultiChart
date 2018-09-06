@@ -1,0 +1,20 @@
+.chart-value-marker-label{
+	-fx-padding:1.0 8.0;
+	
+	/*
+		fx-border-radius will be ovewritten in the code same as color
+	*/
+}
+
+.chart-symbol { /* hollow circle */
+    -fx-background-insets: 0.0,2.0;
+    -fx-background-radius: 3.0px;
+    -fx-padding: 3.0px;
+}
+
+.chart-legend-symbol{
+	-fx-min-width: 10.0px;
+	-fx-min-height:10.0px;
+	-fx-pref-width: 10.0px;
+	-fx-pref-height: 10.0px;
+}
