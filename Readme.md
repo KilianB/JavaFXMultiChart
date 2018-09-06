@@ -47,7 +47,7 @@ for(...){
 Due to the API containing a lot of private and final methods the result is rather lackluster and just works good enough if somone does not look at the code. (A lot of copy and pasted code, switch statements and 
 almost no indication of OOP).
 Java 9/10 discourage "illegal" reflection access usage and byte code manipulation in conjunction with a custom class loader to circumvent the final restrictions seem a bit overkill for such a feature.
-This should only be considered a hack until the api caught up until the jdk feature request is resolved.
+This should only be considered a hack until the api caught up until the jdk feature request <a href="https://bugs.openjdk.java.net/browse/JDK-8090594">JDK-8090594</a> is resolved.
 
 
 - Support all basic chart types
