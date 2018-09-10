@@ -878,6 +878,7 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 		//Additional axis currently only additional yAxis are supported but we could
 		//simply change this in the future
 		for (var entry : additionalYAxis.entrySet()) {
+			
 			if(entry.getValue().isAutoRanging()) {
 				yData.put(entry.getKey(), new ArrayList<Y>());
 				oneAutoRanging = true;
@@ -888,6 +889,11 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 			
 			//Collect data for each axis
 			for (Series<X, Y> series : getData()) {
+				
+				//If the series is not visible don't include it in the axis range
+				if(!seriesVisibility.get(series)) {
+					continue;
+				}
 				
 				//To which axis does it belong to?
 				var typed = typedSeries.get(series);
@@ -921,7 +927,7 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 					axis = additionalXAxis.get(axisIndex);
 				}
 	
-				if (xDataPoints != null && !(xDataPoints.size() == 1 && axis.toNumericValue(xDataPoints.get(0)) == 0)) {
+				if (xDataPoints != null && !xDataPoints.isEmpty() && !(xDataPoints.size() == 1 && axis.toNumericValue(xDataPoints.get(0)) == 0)) {
 					axis.invalidateRange(xDataPoints);
 				}
 			}
@@ -938,23 +944,10 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 					axis = additionalYAxis.get(axisIndex);
 				}
 	
-				if (yDataPoints != null && !(yDataPoints.size() == 1 && axis.toNumericValue(yDataPoints.get(0)) == 0)) {
+				if (yDataPoints != null && !yDataPoints.isEmpty() && !(yDataPoints.size() == 1 && axis.toNumericValue(yDataPoints.get(0)) == 0)) {
 					axis.invalidateRange(yDataPoints);
 				}
 			}
-			
-			
-//			if (xData != null && !(xData.size() == 1 && getXAxis().toNumericValue(xData.get(0)) == 0)) {
-//				xa.invalidateRange(xData);
-//			}
-//			if (yData != null && !(yData.size() == 1 && getYAxis().toNumericValue(yData.get(0)) == 0)) {
-//				ya.invalidateRange(yData);
-//
-//				for (Axis additional : additionalYAxis) {
-//					additional.invalidateRange(yData);
-//				}
-//
-//			}
 		}
 	}
 
