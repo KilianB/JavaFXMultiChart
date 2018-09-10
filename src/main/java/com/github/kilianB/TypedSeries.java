@@ -154,7 +154,7 @@ public class TypedSeries<X, Y> {
 		private SortingPolicy xAxisSortingPolicy = SortingPolicy.NONE;
 		private int xAxisIndex = 0;
 		private int yAxisIndex = 0;
-		private Side xAxisSide = Side.BOTTOM;
+		private Side xAxisSide = Side.TOP;
 		private Side yAxisSide = Side.RIGHT;
 		
 		
@@ -200,6 +200,12 @@ public class TypedSeries<X, Y> {
 		@Override
 		public IAxisStage<X, Y> withXAxisSide(Side side) {
 			if(side.equals(Side.TOP) || side.equals(Side.BOTTOM)) {
+				
+				//TODO
+				if(side.equals(Side.BOTTOM)) {
+					throw new IllegalArgumentException("Currently additional xAxis can only be positioned at the top");
+				}
+				
 				xAxisSide = side;
 			}else {
 				throw new IllegalArgumentException("X Axis may only be placed at the Top or Bottom of the chart");
@@ -216,7 +222,7 @@ public class TypedSeries<X, Y> {
 		@Override
 		public IAxisStage<X, Y> withYAxisSide(Side side) {
 			if(side.equals(Side.LEFT) || side.equals(Side.RIGHT)) {
-				xAxisSide = side;
+				yAxisSide = side;
 			}else {
 				throw new IllegalArgumentException("Y Axis may only be placed at the Left or Right of the chart");
 			}

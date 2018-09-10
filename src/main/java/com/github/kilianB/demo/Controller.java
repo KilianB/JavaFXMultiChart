@@ -33,7 +33,8 @@ public class Controller {
 		TypedSeries lineSeries = TypedSeries.builder("Line").line().build();
 		
 		TypedSeries<Number,Number> scatterSeries = TypedSeries.<Number,Number>
-		builder("Scatter Series").scatter().build();
+		builder("Scatter Series").scatter()
+		.withXAxisIndex(1).build();
 		
 		TypedSeries<Number,Number> areaSeries = TypedSeries.<Number,Number>
 		builder("Area").area().build();
@@ -41,12 +42,13 @@ public class Controller {
 		TypedSeries<Number,Number> lineSeries1 = TypedSeries.<Number,Number>
 		builder("Line Series 1").line()
 			.withYAxisIndex(1)
-			.withYAxisSide(Side.RIGHT).
+			.withYAxisSide(Side.LEFT).
 			build();
 		
 		TypedSeries<Number,Number> lineSeries2 = TypedSeries.<Number,Number>
 		builder("Line Series 2").line()
 			.withYAxisIndex(2)
+			.withXAxisIndex(2)
 			.withYAxisSide(Side.RIGHT).build();
 		
 		multiTypeChart.addSeries(scatterSeries);

@@ -123,7 +123,6 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 			//XAxis
 			axis = new NumberAxis();
 			additionalXAxis.put(index,(Axis<X>) axis);
-			
 		}else {
 			//YAxis
 			axis = new NumberAxis();
@@ -173,10 +172,10 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 					
 					switch(entry.getValue().getSide()) {
 					case LEFT:
-							left += width+AXIS_PADDING;
+							left += (width+AXIS_PADDING);
 						break;
 					case RIGHT:
-							right += width+AXIS_PADDING;
+							right += (width+AXIS_PADDING);
 						break;
 					default:
 						throw new IllegalStateException("Y Axis may only be positioned right or left");
@@ -186,18 +185,21 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 				for(var entry : additionalXAxis.entrySet()) {
 					double height = entry.getValue().getHeight();
 					
+					System.out.println("X Axis: " + height + " " + entry.getValue() + " " + entry.getValue().getWidth()
+							+ entry.getValue().getSide());
+					
 					switch(entry.getValue().getSide()) {
 					case TOP:
-							top += height;
+							top += (height+AXIS_PADDING);
 						break;
 					case BOTTOM:
-							bottom += height;
+							bottom += (height+AXIS_PADDING);
 						break;
 					default:
-						throw new IllegalStateException("X Axis may oonly be positioned top or bottom");
+						throw new IllegalStateException("X Axis may only be positioned top or bottom");
 					}
 				}
-				
+				System.out.println(top + " " + right + " " + bottom + " " + left);
 				return new Insets(top,right,bottom,left);
 				
 			}
@@ -290,14 +292,14 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 
 			//Check if we need to add an additional axis
 			int yAxisIndex = series.getYAxisIndex();
-			int xAxisIndex = series.getYAxisIndex();
+			int xAxisIndex = series.getXAxisIndex();
 			
 			if(yAxisIndex != 0 && !additionalYAxis.containsKey(yAxisIndex)) {
-				addAdditionalAxis(yAxisIndex,false,Side.RIGHT);
+				addAdditionalAxis(yAxisIndex,false,series.getyAxisSide());
 			}
 			
 			if(xAxisIndex != 0 && !additionalXAxis.containsKey(xAxisIndex)) {
-				addAdditionalAxis(xAxisIndex,true,Side.TOP);
+				addAdditionalAxis(xAxisIndex,true,series.getxAxisSide());
 			}
 	
 			getData().add(series.getSeries());
@@ -520,8 +522,6 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 	@Override
 	protected void layoutPlotChildren() {
 
-		// Does this work for multiple different series? Try out if not go ahead
-		// and alter make path method
 		List<LineTo> constructedPath = new ArrayList<>(getDataSizeMultiType());
 
 		series: for (int seriesIndex = 0; seriesIndex < getDataSizeMultiType(); seriesIndex++) {
@@ -649,7 +649,9 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 		// layout additional axis should be done in requestAxisLayout but it's once again final ....
 		
 		double offsetRight = 0;
-		double offsetLeft = 0;
+		double offsetLeft = - (yAxis.getWidth()*2 + AXIS_PADDING);
+		double offsetTop = 0;
+		double offsetBottom = xAxis.getHeight() + AXIS_PADDING;
 		
 		for(var axisEntry : additionalYAxis.entrySet()) {
 			//Shall we create an array after each new axis addition / deletion for quicker traversal?
@@ -666,20 +668,35 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 			}else if(additional.getSide().equals(Side.LEFT)) {
 				additional.resizeRelocate(plotArea.getBoundsInParent().getMinX()+offsetLeft, getYAxis().getLayoutY(),
 						prefWidth, getYAxis().getHeight());
-				offsetLeft -= prefWidth - AXIS_PADDING;
+				offsetLeft -= (prefWidth + AXIS_PADDING);
 			}
 		}
 		
-//		for(var axisEntry : additionalXAxis.entrySet()) {
-//			//Shall we create an array after each new axis addition / deletion for quicker traversal?
-//			//Hashmaps are more expensive for sure...
-//			Axis<X> additional = axisEntry.getValue();
-//			//Original Y Axis is already layed out. We still need to compute the width as label sizes might
-//			//differ depending on values
-//			double prefWidth = snapSizeY(additional.prefWidth(getYAxis().getHeight()));
-//			additional.resizeRelocate(plotArea.getBoundsInParent().getMaxX(), getYAxis().getLayoutY(),
-//					prefWidth, getYAxis().getHeight());
-//		}
+		for(var axisEntry : additionalXAxis.entrySet()) {
+			//Shall we create an array after each new axis addition / deletion for quicker traversal?
+			//Hashmaps are more expensive for sure...
+			Axis<X> additional = axisEntry.getValue();
+			//Original Y Axis is already layed out. We still need to compute the width as label sizes might
+			//differ depending on values
+			double prefHeight = snapSizeY(additional.prefHeight(getXAxis().getWidth()));
+
+			if(additional.getSide().equals(Side.TOP)) {
+				additional.resizeRelocate(plotArea.getBoundsInParent().getMinX(),
+						plotArea.getBoundsInParent().getMinY()+offsetTop-prefHeight,
+						xAxis.getWidth(), 
+						prefHeight);
+				
+				offsetTop -= (prefHeight + AXIS_PADDING);
+			}else if(additional.getSide().equals(Side.BOTTOM)) {
+//				additional.resizeRelocate(
+//						plotArea.getBoundsInParent().getMinX(),
+//						xAxis.getLayoutBounds().getMaxY() + offsetBottom,
+//						xAxis.getWidth(), 
+//						prefHeight);
+//				offsetLeft -= (prefHeight + AXIS_PADDING);
+			}
+			
+		}
 //		
 
 	}
@@ -875,8 +892,6 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 			oneAutoRanging = true;
 		}
 		
-		//Additional axis currently only additional yAxis are supported but we could
-		//simply change this in the future
 		for (var entry : additionalYAxis.entrySet()) {
 			
 			if(entry.getValue().isAutoRanging()) {
@@ -885,6 +900,13 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 			}
 		}
 		
+		for (var entry : additionalXAxis.entrySet()) {	
+			if(entry.getValue().isAutoRanging()) {
+				xData.put(entry.getKey(), new ArrayList<X>());
+				oneAutoRanging = true;
+			}
+		}
+
 		if (oneAutoRanging) {
 			
 			//Collect data for each axis
