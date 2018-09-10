@@ -18,3 +18,11 @@
 	-fx-pref-width: 10.0px;
 	-fx-pref-height: 10.0px;
 }
+
+.hide-series{
+}
+
+.hide-series-symbol{
+	-fx-visibility:hidden;
+	visibility:hidden;
+}

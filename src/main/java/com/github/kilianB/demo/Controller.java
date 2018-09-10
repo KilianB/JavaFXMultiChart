@@ -11,6 +11,7 @@ import com.github.kilianB.MultiTypeChart.SeriesType;
 import javafx.animation.AnimationTimer;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.geometry.Side;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.ScatterChart;
 import javafx.scene.chart.XYChart;
@@ -28,21 +29,31 @@ public class Controller {
 		
 		//Create a chart
 		MultiTypeChart<Number, Number> multiTypeChart= new MultiTypeChart<>(new NumberAxis(), new NumberAxis());
+
+		TypedSeries lineSeries = TypedSeries.builder("Line").line().build();
 		
-		//Create series as usual
-		Series<Number,Number> line = new Series<>();
-		line.setName("Line");
+		TypedSeries<Number,Number> scatterSeries = TypedSeries.<Number,Number>
+		builder("Scatter Series").scatter().build();
 		
-		Series<Number,Number> scatter = new Series<>();
-		scatter.setName("Scatter");
+		TypedSeries<Number,Number> areaSeries = TypedSeries.<Number,Number>
+		builder("Area").area().build();
 		
-		Series<Number,Number> area = new Series<>();
-		area.setName("Area");
+		TypedSeries<Number,Number> lineSeries1 = TypedSeries.<Number,Number>
+		builder("Line Series 1").line()
+			.withYAxisIndex(1)
+			.withYAxisSide(Side.RIGHT).
+			build();
 		
-		//Wrap series in a typed series object
-		multiTypeChart.addSeries(new TypedSeries<>(scatter,SeriesType.SCATTER));
-		multiTypeChart.addSeries(new TypedSeries<>(line,SeriesType.LINE));
-		multiTypeChart.addSeries(new TypedSeries<>(area,SeriesType.AREA));
+		TypedSeries<Number,Number> lineSeries2 = TypedSeries.<Number,Number>
+		builder("Line Series 2").line()
+			.withYAxisIndex(2)
+			.withYAxisSide(Side.RIGHT).build();
+		
+		multiTypeChart.addSeries(scatterSeries);
+		multiTypeChart.addSeries(areaSeries);
+		multiTypeChart.addSeries(lineSeries);
+		multiTypeChart.addSeries(lineSeries1);
+		multiTypeChart.addSeries(lineSeries2);
 		
 		//Add/remove value markers
 		boolean showLabel = true;
@@ -50,8 +61,9 @@ public class Controller {
 		multiTypeChart.addValueMarker(new ValueMarker<Number>(12,false,Color.BLACK,showLabel));
 		multiTypeChart.addValueMarker(new ValueMarker<Number>(20,false,Color.GREEN,showLabel));
 		
+		multiTypeChart.getData();
 		
-		
+	
 		borderPane.setCenter(multiTypeChart);
 				
 		new Thread(()->{	
@@ -62,11 +74,13 @@ public class Controller {
 				int j = i;
 				Platform.runLater(()->{
 					
-					line.getData().add(new Data<Number, Number>(j*10d,r.nextInt(20)));
-					area.getData().add(new Data<Number, Number>(j*10d,r.nextInt(20)));
+					lineSeries.addData(j*10d, r.nextInt(35));
+					lineSeries1.addData(j*10d, r.nextInt(20));
+					lineSeries2.addData(j*10d, r.nextInt(25));
+					areaSeries.addData(j*10d, r.nextInt(35));
 					
 					for(int m = 0; m < r.nextInt(30); m++) {
-						scatter.getData().add(new Data<Number, Number>(j*10d,r.nextInt(10)));
+						scatterSeries.addData(j*10d, r.nextInt(10));
 					}
 					
 					
@@ -82,7 +96,7 @@ public class Controller {
 			
 			
 			
-		}).start();
+		}).start();;
 		
 		
 	}

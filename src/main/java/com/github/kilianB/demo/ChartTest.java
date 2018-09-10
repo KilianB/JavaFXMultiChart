@@ -12,7 +12,6 @@ public class ChartTest extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		
-		
 	FXMLLoader loader = new FXMLLoader();
 		
 		//loader.setController(new Controller());
@@ -20,7 +19,7 @@ public class ChartTest extends Application {
 		
 		Parent parent = loader.load();
 		
-		Scene scene = new Scene(parent,500,500);
+		Scene scene = new Scene(parent,800,500);
 		 
 		scene.getStylesheets().add(ChartTest.class.getResource("chart.css").toExternalForm());
 		

@@ -1,13 +1,16 @@
 # JavaFXMultiChart 
 
-A <b>work in progress</b> fix for the default javafx chart class to allow combining multiple chart types in one chart object.
+A <b>work in progress</b> fix for the default javafx chart class to allow combining multiple chart types and axis in one chart object.
 Currently JavaFX does not support to create a composite chart using different series types. Java 10 required!**
 
 ## Features: 
 - Fixed value markers
+- Multiple X and Y Axis
+- Hide/Show Series (click on legend)
 - Different chart types in one chart
 
-![javafxchart](https://user-images.githubusercontent.com/9025925/45131878-2ee50200-b18f-11e8-9c92-b9f6361cfee9.png)
+![bildschirmfoto 2018-09-10 um 17 39 44](https://user-images.githubusercontent.com/9025925/45307979-b4b2d580-b520-11e8-8643-8c41098c41df.png)
+
 
 ## Usage:
 
@@ -15,20 +18,17 @@ Currently JavaFX does not support to create a composite chart using different se
 //Create a chart
 MultiTypeChart<Number, Number> multiTypeChart= new MultiTypeChart<>(new NumberAxis(), new NumberAxis());
 
-//Create series as usual
-Series<Number,Number> line = new Series<>();
-line.setName("Line");
+//Builder pattern
+TypedSeries lineSeries = TypedSeries.builder("Line").line().build();
+TypedSeries areaSeries = TypedSeries.builder("Area").area().build();
+TypedSeries scatterSeries = TypedSeries.builder("Scatter").scatter().build();
 
-Series<Number,Number> scatter = new Series<>();
-scatter.setName("Scatter");
-
-Series<Number,Number> area = new Series<>();
-area.setName("Area");
-
-//Wrap series in a typed series object
-multiTypeChart.addSeries(new TypedSeries<>(scatter,SeriesType.SCATTER));
-multiTypeChart.addSeries(new TypedSeries<>(line,SeriesType.LINE));
-multiTypeChart.addSeries(new TypedSeries<>(area,SeriesType.AREA));
+//Advanced control with full generics
+TypedSeries<Number,Number> lineSeries1 = TypedSeries.<Number,Number>
+    builder("Line Series 1").line()
+    .withYAxisIndex(1)
+    .withYAxisSide(Side.RIGHT)
+    .build();
 
 //Add/remove value markers
 boolean showLabel = true;
@@ -38,9 +38,17 @@ multiTypeChart.addValueMarker(new ValueMarker<Number>(20,false,Color.GREEN,showL
 
 //Add data
 for(...){
-    line.getData().add(new Data<Number, Number>(x,y);
+    lineSeries.addData(x,y);
 }
 ````
+
+### Changelog 
+
+#### 10.09
+- Add builder pattern to typed series
+- Add support for secondary/multiple x and y axis
+- change legend to be a flow pane instead of tile pane for better looking layout
+- add support to show hide series on mouse click
 
 ## Work in progress
 
@@ -55,6 +63,7 @@ This should only be considered a hack until the api caught up until the jdk feat
 - implement animation code
 - implement remove series action
 - make full use of beans.observable.values
+- test secondary/3rd ... nth x Axis and left axis.
 
 
 **I think there is one usage of `var` and no streams or anything else, so if you want to backport it to Java <8 it should take 2 minutes.

@@ -22,7 +22,7 @@ package com.github.kilianB;
  *
  *
  *
- *
+ * Legend modified by Kilian
  */
 
 import java.util.List;
@@ -36,20 +36,24 @@ import javafx.beans.property.StringPropertyBase;
 import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
+import javafx.event.Event;
+import javafx.event.EventHandler;
+import javafx.event.EventType;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.TilePane;
 
 /**
  * A chart legend that displays a list of items with symbols in a box
  */
-public class Legend extends TilePane {
+public class Legend extends FlowPane {
 
-    private static final int GAP = 5;
+    private static final int GAP = 2;
 
     // -------------- PRIVATE FIELDS ------------------------------------------
 
@@ -122,7 +126,8 @@ public class Legend extends TilePane {
 
     public Legend() {
         super(GAP, GAP);
-        setTileAlignment(Pos.CENTER_LEFT);
+        this.setAlignment(Pos.CENTER);
+        //setTileAlignment(Pos.CENTER_LEFT);
         setItems(FXCollections.<LegendItem>observableArrayList());
         getStyleClass().setAll("chart-legend");
     }
@@ -189,6 +194,18 @@ public class Legend extends TilePane {
         public final void setSymbol(Node value) { symbol.setValue(value); }
         public final ObjectProperty<Node> symbolProperty() { return symbol; }
 
+        public <T extends Event> void addEventHandler(
+                final EventType<T> eventType,
+                final EventHandler<? super T> eventHandler) {
+        	label.addEventHandler(eventType, eventHandler);
+        }
+        
+        public final <T extends Event> void removeEventHandler(
+                final EventType<T> eventType,
+                final EventHandler<? super T> eventHandler){
+        	label.removeEventHandler(eventType, eventHandler);
+        }
+        
         public LegendItem(String text) {
             setText(text);
             label.getStyleClass().add("chart-legend-item");
