@@ -64,6 +64,7 @@ This should only be considered a hack until the api caught up until the jdk feat
 - implement remove series action
 - make full use of beans.observable.values
 - test secondary/3rd ... nth x Axis and left axis.
-
+- don't rely on generics (they don't really apply when using multiple axis) and move from extending javafx x,y chart to just chart. 
+- allow value markers to be added to an arbitrary axis.
 
 **I think there is one usage of `var` and no streams or anything else, so if you want to backport it to Java <8 it should take 2 minutes.
