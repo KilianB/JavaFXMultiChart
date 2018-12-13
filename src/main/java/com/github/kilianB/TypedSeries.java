@@ -121,20 +121,27 @@ public class TypedSeries<X, Y> {
 	
 	
 	public interface ITypeStage<X1,Y1>{
-		IAxisStage<X1,Y1> line();
+		ILineAxisStage<X1,Y1> line();
+		IBarAxisStage<X1,Y1> bar();
 		IAxisStage<X1,Y1> scatter();
 		IAxisStage<X1,Y1> area();
+		
 	}
 	
 	public interface ILineAxisStage<X1,Y1>{
 		//Only line chart options
-		ILineAxisStage<X1,Y1> withXAxisSortingPolicy(SortingPolicy sortingPolicy);
-		
+		IAxisStage<X1,Y1> withXAxisSortingPolicy(SortingPolicy sortingPolicy);
 		IAxisStage<X1,Y1> withXAxisIndex(int xAxisIndex);
 		IAxisStage<X1,Y1> withXAxisSide(Side side);
 		IAxisStage<X1,Y1> withYAxisIndex(int yAxisIndex);
 		IAxisStage<X1,Y1> withYAxisSide(Side side);
 		TypedSeries<X1, Y1> build();
+	}
+	
+	public interface IBarAxisStage<X1,Y1>{
+		//Which axis is the categorical axis?
+		IBarAxisStage<X1,Y1> withDomainAxisIndex(int index);
+		IBarAxisStage<X1,Y1> withRangeAxisIndex(int index );
 	}
 	
 	public interface IAxisStage<X1,Y1>{
@@ -147,7 +154,7 @@ public class TypedSeries<X, Y> {
 		TypedSeries<X1,Y1> build();
 	}
 	
-	public static final class Builder<X,Y> implements ITypeStage<X,Y>,ILineAxisStage<X,Y>,IAxisStage<X,Y>{
+	public static final class Builder<X,Y> implements ITypeStage<X,Y>,ILineAxisStage<X,Y>,IAxisStage<X,Y>,IBarAxisStage<X,Y>{
 		
 		private Series<X,Y> series;
 		private ReadOnlyObjectWrapper<SeriesType> seriesType;
@@ -168,7 +175,7 @@ public class TypedSeries<X, Y> {
 		}
 		
 		@Override
-		public IAxisStage<X,Y> line() {
+		public ILineAxisStage<X, Y> line() {
 			seriesType = new ReadOnlyObjectWrapper<SeriesType>(SeriesType.LINE);
 			return this;
 		}
@@ -186,7 +193,13 @@ public class TypedSeries<X, Y> {
 		}
 
 		@Override
-		public ILineAxisStage<X, Y> withXAxisSortingPolicy(SortingPolicy sortingPolicy) {
+		public IBarAxisStage<X, Y> bar() {
+			seriesType = new ReadOnlyObjectWrapper<SeriesType>(SeriesType.BAR);
+			return this;
+		}
+		
+		@Override
+		public IAxisStage<X, Y> withXAxisSortingPolicy(SortingPolicy sortingPolicy) {
 			xAxisSortingPolicy = sortingPolicy;
 			return this;
 		}
@@ -195,6 +208,18 @@ public class TypedSeries<X, Y> {
 		public IAxisStage<X, Y> withXAxisIndex(int xAxisIndex) {
 			this.xAxisIndex = xAxisIndex;
 			return this;
+		}
+		
+		@Override
+		public IBarAxisStage<X, Y> withDomainAxisIndex(int index) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
+		@Override
+		public IBarAxisStage<X, Y> withRangeAxisIndex(int index) {
+			// TODO Auto-generated method stub
+			return null;
 		}
 
 		@Override
@@ -234,9 +259,8 @@ public class TypedSeries<X, Y> {
 			return new TypedSeries(series,seriesType,yAxisIndex,xAxisIndex,xAxisSortingPolicy,
 					xAxisSide,yAxisSide);
 		}
-		
 
-		
+	
 	}
 	
 }

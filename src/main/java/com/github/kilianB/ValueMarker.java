@@ -6,6 +6,12 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 
+/**
+ * A value marker represents a horizontal or vertical line overlaid over the chart.
+ * @author Kilian
+ *
+ * @param <X> type of the axis
+ */
 public class ValueMarker<X>{
 	
 //	public enum Direction{
