@@ -1,6 +1,58 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.github.kilianB</groupId>
-  <artifactId>MultiTypeChart</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.github.kilianB</groupId>
+	<artifactId>MultiTypeChart</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<name>MultiTypeChart</name>
+	<description>A composite javafx chart allowing to use several different series types in one chart object (line, scatter and area) as well as multiple x and y axis
+</description>
+
+	<url>https://github.com/KilianB/UtilityCode</url>
+	<scm>
+		<url>https://github.com/KilianB/JavaFXMultiChart</url>
+		<connection>https://github.com/KilianB/JavaFXMultiChart.git</connection>
+	</scm>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<licenses>
+		<license>
+			<name>MIT</name>
+			<url>https://opensource.org/licenses/MIT</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Kilian Brachtendorf</name>
+			<email>Kilian.Brachtendorf@t-online.de</email>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Berlin</timezone>
+		</developer>
+	</developers>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.8.0</version>
+					<configuration>
+						<source>10</source>
+						<target>10</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
 </project>
