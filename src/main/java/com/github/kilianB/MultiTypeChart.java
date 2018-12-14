@@ -46,6 +46,7 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.ClosePath;
 import javafx.scene.shape.LineTo;
 import javafx.scene.shape.MoveTo;
@@ -54,9 +55,17 @@ import javafx.scene.shape.PathElement;
 import javafx.scene.shape.StrokeLineJoin;
 import javafx.util.Duration;
 
-// TODO we should set our own color routines. this makes it much more fun...
-// Sadly we can't override final methods if we don't want to play around with
-// the classloader
+/**
+ * 
+ * 
+ * 
+ * This is by far the most hacky redundant and ugly code ever written. ...
+ * 
+ * @author Kilian
+ *
+ * @param <X>
+ * @param <Y>
+ */
 public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 
 	private static final Logger LOG = Logger.getLogger(MultiTypeChart.class.getName());
@@ -82,14 +91,19 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 	// Keep track of used listeners to avoid memory leaks
 	private HashMap<ValueMarker<?>, ChangeListener<Boolean>> valueMarkerLabelMap = new HashMap<>();
 
-	protected HashMap<Series<X, Y>, TypedSeries<X, Y>> typedSeries = new HashMap<>();
+	protected HashMap<Series<X, Y>, TypedSeries<X, Y>> typedSeries = new LinkedHashMap<>();
 	protected HashMap<Series<X, Y>, Boolean> seriesVisibility = new HashMap<>();
 
-	
 	/** A package private hashmap in the chart object */
 	protected Map<Series<X, Y>, Integer> seriesColorMap = new HashMap<>();
 	protected BitSet availableColors = new BitSet(8);
 
+	//TODO 
+//	private static final Color[] availableColorsExtended = new Color[164];
+//	static {
+//		
+//	}
+	
 	// Area chart
 	/** Remember the current animation state of area charts for layout */
 	private Map<Series<X, Y>, DoubleProperty> seriesYMultiplierMap = new HashMap<>();
@@ -100,14 +114,14 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 
 	// Implement multi axis support
 	private final int AXIS_PADDING = 5;
-	private HashMap<Integer,Axis<X>> additionalXAxis = new HashMap<>();
-	private HashMap<Integer,Axis<Y>> additionalYAxis = new HashMap<>();
-	
+	private HashMap<Integer, Axis<X>> additionalXAxis = new HashMap<>();
+	private HashMap<Integer, Axis<Y>> additionalYAxis = new HashMap<>();
+
 	/**
-	 * Legend items 
+	 * Legend items
 	 */
-	private HashMap<Series<X, Y>,LegendItem> legendMap; 
-	
+	private HashMap<Series<X, Y>, LegendItem> legendMap;
+
 	/**
 	 * 
 	 * @param index
@@ -115,22 +129,22 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 	 */
 	@SuppressWarnings("unchecked")
 	protected void addAdditionalAxis(int index, boolean isX, Side side) {
-		
+
 		// todo only number?
 		Axis<?> axis;
-		
-		if(isX) {
-			//XAxis
+
+		if (isX) {
+			// XAxis
 			axis = new NumberAxis();
-			additionalXAxis.put(index,(Axis<X>) axis);
-		}else {
-			//YAxis
+			additionalXAxis.put(index, (Axis<X>) axis);
+		} else {
+			// YAxis
 			axis = new NumberAxis();
-			additionalYAxis.put(index,(Axis<Y>) axis);		
+			additionalYAxis.put(index, (Axis<Y>) axis);
 		}
-		
+
 		axis.setSide(side);
-		
+
 		// package private. But as far as I can see this is not necessary when the side
 		// is set?
 		// axis.setEffectiveOrientation(Orientation.VERTICAL);
@@ -141,71 +155,73 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 
 		getChartChildren().add(axis);
 
-		//Make space for the axis. We are using the padding since we don't have enough access to other components
-		
+		// Make space for the axis. We are using the padding since we don't have enough
+		// access to other components
 
-		//Construct the binding 
-		ReadOnlyDoubleProperty[] axisWidthAndHeightProperty = new ReadOnlyDoubleProperty[additionalYAxis.size()+additionalXAxis.size()];
-		
+		// Construct the binding
+		ReadOnlyDoubleProperty[] axisWidthAndHeightProperty = new ReadOnlyDoubleProperty[additionalYAxis.size()
+				+ additionalXAxis.size()];
+
 		int i = 0;
-		for(var entry : additionalYAxis.entrySet()) {
+		for (var entry : additionalYAxis.entrySet()) {
 			axisWidthAndHeightProperty[i++] = entry.getValue().widthProperty();
 		}
-		
-		for(var entry : additionalXAxis.entrySet()) {
+
+		for (var entry : additionalXAxis.entrySet()) {
 			axisWidthAndHeightProperty[i++] = entry.getValue().heightProperty();
 		}
-		
-		
+
 		ObjectBinding<Insets> paddingBinding = new ObjectBinding<>() {
 
-			{super.bind(axisWidthAndHeightProperty);}
-			
+			{
+				super.bind(axisWidthAndHeightProperty);
+			}
+
 			@Override
 			protected Insets computeValue() {
-				
+
 				double top = 0, right = 0, bottom = 0, left = 0;
-				
-				for(var entry : additionalYAxis.entrySet()) {
-					
+
+				for (var entry : additionalYAxis.entrySet()) {
+
 					double width = entry.getValue().getWidth();
-					
-					switch(entry.getValue().getSide()) {
+
+					switch (entry.getValue().getSide()) {
 					case LEFT:
-							left += (width+AXIS_PADDING);
+						left += (width + AXIS_PADDING);
 						break;
 					case RIGHT:
-							right += (width+AXIS_PADDING);
+						right += (width + AXIS_PADDING);
 						break;
 					default:
 						throw new IllegalStateException("Y Axis may only be positioned right or left");
 					}
 				}
-				
-				for(var entry : additionalXAxis.entrySet()) {
+
+				for (var entry : additionalXAxis.entrySet()) {
 					double height = entry.getValue().getHeight();
-					
+
 					System.out.println("X Axis: " + height + " " + entry.getValue() + " " + entry.getValue().getWidth()
 							+ entry.getValue().getSide());
-					
-					switch(entry.getValue().getSide()) {
+
+					switch (entry.getValue().getSide()) {
 					case TOP:
-							top += (height+AXIS_PADDING);
+						top += (height + AXIS_PADDING);
 						break;
 					case BOTTOM:
-							bottom += (height+AXIS_PADDING);
+						bottom += (height + AXIS_PADDING);
 						break;
 					default:
 						throw new IllegalStateException("X Axis may only be positioned top or bottom");
 					}
 				}
 				System.out.println(top + " " + right + " " + bottom + " " + left);
-				return new Insets(top,right,bottom,left);
-				
+				return new Insets(top, right, bottom, left);
+
 			}
 
 		};
-		
+
 		this.paddingProperty().bind(paddingBinding);
 
 		this.requestChartLayout();
@@ -234,9 +250,7 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 
 	}
 
-	
-	
-	public boolean addSeries(TypedSeries<X, Y> series) throws IllegalArgumentException{
+	public boolean addSeries(TypedSeries<X, Y> series) throws IllegalArgumentException {
 		if (!typedSeries.containsKey(series.getSeries())) {
 
 			// JavaFX uses weak listeners? No need to dispose afterwards
@@ -290,18 +304,18 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 			typedSeries.put(series.getSeries(), series);
 			seriesVisibility.put(series.getSeries(), Boolean.TRUE);
 
-			//Check if we need to add an additional axis
+			// Check if we need to add an additional axis
 			int yAxisIndex = series.getYAxisIndex();
 			int xAxisIndex = series.getXAxisIndex();
-			
-			if(yAxisIndex != 0 && !additionalYAxis.containsKey(yAxisIndex)) {
-				addAdditionalAxis(yAxisIndex,false,series.getyAxisSide());
+
+			if (yAxisIndex != 0 && !additionalYAxis.containsKey(yAxisIndex)) {
+				addAdditionalAxis(yAxisIndex, false, series.getyAxisSide());
 			}
-			
-			if(xAxisIndex != 0 && !additionalXAxis.containsKey(xAxisIndex)) {
-				addAdditionalAxis(xAxisIndex,true,series.getxAxisSide());
+
+			if (xAxisIndex != 0 && !additionalXAxis.containsKey(xAxisIndex)) {
+				addAdditionalAxis(xAxisIndex, true, series.getxAxisSide());
 			}
-	
+
 			getData().add(series.getSeries());
 
 			return true;
@@ -527,39 +541,39 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 		series: for (int seriesIndex = 0; seriesIndex < getDataSizeMultiType(); seriesIndex++) {
 			Series<X, Y> series = getData().get(seriesIndex);
 
-			//If it's not visible don't layout
-			
+			// If it's not visible don't layout
+
 			var typed = typedSeries.get(series);
-			
+
 			SeriesType type = typed.getSeriesType();
 			int xAxisIndex = typed.getXAxisIndex();
 			int yAxisIndex = typed.getYAxisIndex();
-			
+
 			final Axis<X> xAxis;
 			final Axis<Y> yAxis;
-			
-			if(xAxisIndex == 0) {
+
+			if (xAxisIndex == 0) {
 				xAxis = getXAxis();
-			}else {
+			} else {
 				xAxis = additionalXAxis.get(xAxisIndex);
 			}
-			
-			if(yAxisIndex == 0) {
+
+			if (yAxisIndex == 0) {
 				yAxis = getYAxis();
-			}else {
+			} else {
 				yAxis = additionalYAxis.get(yAxisIndex);
 			}
 
 			// Not really object oriented but hey. Work with what we got here ...
 			switch (type) {
 			case AREA:
-				layoutAreaChart(series, constructedPath,xAxis,yAxis);
+				layoutAreaChart(series, constructedPath, xAxis, yAxis);
 				break;
 			case LINE:
-				layoutLineChart(series, constructedPath,xAxis,yAxis);
+				layoutLineChart(series, constructedPath, xAxis, yAxis);
 				break;
 			case SCATTER:
-				layoutScatterSeries(series,xAxis,yAxis);
+				layoutScatterSeries(series, xAxis, yAxis);
 				break;
 			default:
 				LOG.warning("No layout method found for: " + type.name() + ". Skip series: " + series);
@@ -571,8 +585,8 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 
 		final Axis<X> xAxis = getXAxis();
 		final Axis<Y> yAxis = getYAxis();
-		//double maxY = xAxis.getWidth();
-		//double maxX = yAxis.getHeight();
+		// double maxY = xAxis.getWidth();
+		// double maxX = yAxis.getHeight();
 
 		// 10 px padding
 		double yMin = yAxis.getBoundsInLocal().getMaxY() + 5;
@@ -646,48 +660,51 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 		}
 		markerLock.unlock();
 
-		// layout additional axis should be done in requestAxisLayout but it's once again final ....
-		
+		// layout additional axis should be done in requestAxisLayout but it's once
+		// again final ....
+
 		double offsetRight = 0;
-		double offsetLeft = - (yAxis.getWidth()*2 + AXIS_PADDING);
+		double offsetLeft = -(yAxis.getWidth() * 2 + AXIS_PADDING);
 		double offsetTop = 0;
 		double offsetBottom = xAxis.getHeight() + AXIS_PADDING;
-		
-		for(var axisEntry : additionalYAxis.entrySet()) {
-			//Shall we create an array after each new axis addition / deletion for quicker traversal?
-			//Hashmaps are more expensive for sure...
+
+		for (var axisEntry : additionalYAxis.entrySet()) {
+			// Shall we create an array after each new axis addition / deletion for quicker
+			// traversal?
+			// Hashmaps are more expensive for sure...
 			Axis<Y> additional = axisEntry.getValue();
-			//Original Y Axis is already layed out. We still need to compute the width as label sizes might
-			//differ depending on values
+			// Original Y Axis is already layed out. We still need to compute the width as
+			// label sizes might
+			// differ depending on values
 			double prefWidth = snapSizeY(additional.prefWidth(getYAxis().getHeight()));
-			
-			if(additional.getSide().equals(Side.RIGHT)) {
-				additional.resizeRelocate(plotArea.getBoundsInParent().getMaxX()+offsetRight, getYAxis().getLayoutY(),
+
+			if (additional.getSide().equals(Side.RIGHT)) {
+				additional.resizeRelocate(plotArea.getBoundsInParent().getMaxX() + offsetRight, getYAxis().getLayoutY(),
 						prefWidth, getYAxis().getHeight());
 				offsetRight += prefWidth + AXIS_PADDING;
-			}else if(additional.getSide().equals(Side.LEFT)) {
-				additional.resizeRelocate(plotArea.getBoundsInParent().getMinX()+offsetLeft, getYAxis().getLayoutY(),
+			} else if (additional.getSide().equals(Side.LEFT)) {
+				additional.resizeRelocate(plotArea.getBoundsInParent().getMinX() + offsetLeft, getYAxis().getLayoutY(),
 						prefWidth, getYAxis().getHeight());
 				offsetLeft -= (prefWidth + AXIS_PADDING);
 			}
 		}
-		
-		for(var axisEntry : additionalXAxis.entrySet()) {
-			//Shall we create an array after each new axis addition / deletion for quicker traversal?
-			//Hashmaps are more expensive for sure...
+
+		for (var axisEntry : additionalXAxis.entrySet()) {
+			// Shall we create an array after each new axis addition / deletion for quicker
+			// traversal?
+			// Hashmaps are more expensive for sure...
 			Axis<X> additional = axisEntry.getValue();
-			//Original Y Axis is already layed out. We still need to compute the width as label sizes might
-			//differ depending on values
+			// Original Y Axis is already layed out. We still need to compute the width as
+			// label sizes might
+			// differ depending on values
 			double prefHeight = snapSizeY(additional.prefHeight(getXAxis().getWidth()));
 
-			if(additional.getSide().equals(Side.TOP)) {
+			if (additional.getSide().equals(Side.TOP)) {
 				additional.resizeRelocate(plotArea.getBoundsInParent().getMinX(),
-						plotArea.getBoundsInParent().getMinY()+offsetTop-prefHeight,
-						xAxis.getWidth(), 
-						prefHeight);
-				
+						plotArea.getBoundsInParent().getMinY() + offsetTop - prefHeight, xAxis.getWidth(), prefHeight);
+
 				offsetTop -= (prefHeight + AXIS_PADDING);
-			}else if(additional.getSide().equals(Side.BOTTOM)) {
+			} else if (additional.getSide().equals(Side.BOTTOM)) {
 //				additional.resizeRelocate(
 //						plotArea.getBoundsInParent().getMinX(),
 //						xAxis.getLayoutBounds().getMaxY() + offsetBottom,
@@ -695,88 +712,79 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 //						prefHeight);
 //				offsetLeft -= (prefHeight + AXIS_PADDING);
 			}
-			
+
 		}
 //		
 
 	}
 
-	protected void layoutLineChart(Series<X, Y> series, List<LineTo> constructedPath,Axis<X> xAxis, Axis<Y> yAxis) {
+	protected void layoutLineChart(Series<X, Y> series, List<LineTo> constructedPath, Axis<X> xAxis, Axis<Y> yAxis) {
 		final Node seriesNode = series.getNode();
 		if (seriesNode instanceof Path) {
-			
-			boolean visible = seriesVisibility.get(series);
-			var cssPath = seriesNode.getStyleClass();
-			
-			if(!visible) {
-				if(!cssPath.contains("hide-series-symbol")) {
-					cssPath.add("hide-series-symbol");
 
-					//Also add the hide artifact to the symbols
-					for (Iterator<Data<X, Y>> it = getDisplayedDataIterator(series); it.hasNext();) {
-						Node symbol = it.next().getNode();
-						symbol.getStyleClass().add("hide-series-symbol");
-					}
-				}	
-			}else {
-				if(cssPath.contains("hide-series-symbol")) {
-					cssPath.remove("hide-series-symbol");
-					//Also add the hide artifact to the symbols
-					for (Iterator<Data<X, Y>> it = getDisplayedDataIterator(series); it.hasNext();) {
-						Node symbol = it.next().getNode();
-						symbol.getStyleClass().remove("hide-series-symbol");
-					}
-				}
-				makePaths(series, constructedPath, null, (Path) seriesNode, typedSeries.get(series).getSortingPolicy(),xAxis,yAxis);
+			boolean visible = seriesVisibility.get(series);
+
+			if (visible) {
+				makePaths(series, constructedPath, null, (Path) seriesNode, typedSeries.get(series).getSortingPolicy(),
+						xAxis, yAxis);
 			}
-			
-		
-		
-		
+
+			seriesNode.setVisible(visible);
+
+			for (Iterator<Data<X, Y>> it = getDisplayedDataIterator(series); it.hasNext();) {
+				it.next().getNode().setVisible(visible);
+			}
+
+//			if(!visible) {
+//				if(!cssPath.contains("hide-series-symbol")) {
+//					cssPath.add("hide-series-symbol");
+//
+//					//Also add the hide artifact to the symbols
+//					for (Iterator<Data<X, Y>> it = getDisplayedDataIterator(series); it.hasNext();) {
+//						Node symbol = it.next().getNode();
+//						symbol.getStyleClass().add("hide-series-symbol");
+//					}
+//				}	
+//			}else {
+//				if(cssPath.contains("hide-series-symbol")) {
+//					cssPath.remove("hide-series-symbol");
+//					//Also add the hide artifact to the symbols
+//					for (Iterator<Data<X, Y>> it = getDisplayedDataIterator(series); it.hasNext();) {
+//						Node symbol = it.next().getNode();
+//						symbol.getStyleClass().remove("hide-series-symbol");
+//					}
+//				}
+//				
+//			}
 		}
 	}
 
-	protected void layoutAreaChart(Series<X, Y> series, List<LineTo> constructedPath,Axis<X> xAxis, Axis<Y> yAxis) {
+	protected void layoutAreaChart(Series<X, Y> series, List<LineTo> constructedPath, Axis<X> xAxis, Axis<Y> yAxis) {
 		final ObservableList<Node> children = ((Group) series.getNode()).getChildren();
-		
+
 		boolean visible = seriesVisibility.get(series);
-		
+
 		Path fillPath = (Path) children.get(0);
 		Path linePath = (Path) children.get(1);
-		
-		var cssPath = fillPath.getStyleClass();
-		var cssLine = linePath.getStyleClass();
-		
-		if(!visible) {
-			if(!cssPath.contains("hide-series-symbol")) {
-				cssPath.add("hide-series-symbol");
-				cssLine.add("hide-series-symbol");
-				
-				//Also add the hide artifact to the symbols
-				for (Iterator<Data<X, Y>> it = getDisplayedDataIterator(series); it.hasNext();) {
-					Node symbol = it.next().getNode();
-					symbol.getStyleClass().add("hide-series-symbol");
-				}
-			}	
-		}else {
-			if(cssPath.contains("hide-series-symbol")) {
-				cssPath.remove("hide-series-symbol");
-				cssLine.add("hide-series-symbol");
-				//Also add the hide artifact to the symbols
-				for (Iterator<Data<X, Y>> it = getDisplayedDataIterator(series); it.hasNext();) {
-					Node symbol = it.next().getNode();
-					symbol.getStyleClass().remove("hide-series-symbol");
-				}
-			}
-			makePaths(series, constructedPath, fillPath, linePath, SortingPolicy.X_AXIS,xAxis,yAxis);
+
+		if (visible) {
+			makePaths(series, constructedPath, fillPath, linePath, SortingPolicy.X_AXIS, xAxis, yAxis);
 		}
+
+		fillPath.setVisible(visible);
+		linePath.setVisible(visible);
+
+		for (Iterator<Data<X, Y>> it = getDisplayedDataIterator(series); it.hasNext();) {
+			it.next().getNode().setVisible(visible);
+		}
+
 	}
 
-	protected void layoutScatterSeries(Series<X, Y> series,Axis<X> xAxis, Axis<Y> yAxis) {
-		
+	protected void layoutScatterSeries(Series<X, Y> series, Axis<X> xAxis, Axis<Y> yAxis) {
+
 		boolean visible = seriesVisibility.get(series);
-		
-		
+
+		// TODO they are still displayed since they
 		for (Iterator<Data<X, Y>> it = getDisplayedDataIterator(series); it.hasNext();) {
 			Data<X, Y> item = it.next();
 			// We don't have access to the item's current value circumvent using chart
@@ -787,23 +795,36 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 				return;
 			}
 			Node symbol = item.getNode();
-			
-			var css = symbol.getStyleClass();
-			if(!visible) {
-				if(!css.contains("hide-series-symbol")) {
-					css.add("hide-series-symbol");
-				}
-			}else {
-				if(css.contains("hide-series-symbol")) {
-					css.remove("hide-series-symbol");
-				}
 
-				if (symbol != null) {
+			if (symbol != null) {
+				if (visible) {
+					symbol.setVisible(true);
 					final double w = symbol.prefWidth(-1);
 					final double h = symbol.prefHeight(-1);
 					symbol.resizeRelocate(x - (w / 2), y - (h / 2), w, h);
+				} else {
+					symbol.setVisible(false);
 				}
 			}
+
+//			var css = symbol.getStyleClass();
+//			if(!visible) {
+//				if(!css.contains("hide-series-symbol")) {
+//					css.add("hide-series-symbol");
+//				}
+//			}else {
+//				
+//				while(css.contains("hide-series-symbol")) {
+//					css.remove("hide-series-symbol");
+//				}
+//
+//				if (symbol != null) {
+//					final double w = symbol.prefWidth(-1);
+//					final double h = symbol.prefHeight(-1);
+//					symbol.resizeRelocate(x - (w / 2), y - (h / 2), w, h);
+//				}
+//			}
+			symbol.applyCss();
 		}
 	}
 
@@ -868,64 +889,64 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 
 	@Override
 	protected void updateAxisRange() {
-		//default axis
+		// default axis
 		final Axis<X> xa = getXAxis();
 		final Axis<Y> ya = getYAxis();
-		
-		//Feetch axis related data
-		HashMap<Integer,List<X>> xData = new HashMap<>();
-		HashMap<Integer,List<Y>> yData = new HashMap<>();
-		
+
+		// Feetch axis related data
+		HashMap<Integer, List<X>> xData = new HashMap<>();
+		HashMap<Integer, List<Y>> yData = new HashMap<>();
+
 		/*
 		 * Check if we have at least one axis which requires automatic layouting
 		 */
 		boolean oneAutoRanging = false;
-		
-		//Default axis
+
+		// Default axis
 		if (xa.isAutoRanging()) {
 			xData.put(0, new ArrayList<X>());
 			oneAutoRanging = true;
 		}
-		
+
 		if (ya.isAutoRanging()) {
 			yData.put(0, new ArrayList<Y>());
 			oneAutoRanging = true;
 		}
-		
+
 		for (var entry : additionalYAxis.entrySet()) {
-			
-			if(entry.getValue().isAutoRanging()) {
+
+			if (entry.getValue().isAutoRanging()) {
 				yData.put(entry.getKey(), new ArrayList<Y>());
 				oneAutoRanging = true;
 			}
 		}
-		
-		for (var entry : additionalXAxis.entrySet()) {	
-			if(entry.getValue().isAutoRanging()) {
+
+		for (var entry : additionalXAxis.entrySet()) {
+			if (entry.getValue().isAutoRanging()) {
 				xData.put(entry.getKey(), new ArrayList<X>());
 				oneAutoRanging = true;
 			}
 		}
 
 		if (oneAutoRanging) {
-			
-			//Collect data for each axis
+
+			// Collect data for each axis
 			for (Series<X, Y> series : getData()) {
-				
-				//If the series is not visible don't include it in the axis range
-				if(!seriesVisibility.get(series)) {
+
+				// If the series is not visible don't include it in the axis range
+				if (!seriesVisibility.get(series)) {
 					continue;
 				}
-				
-				//To which axis does it belong to?
+
+				// To which axis does it belong to?
 				var typed = typedSeries.get(series);
 				int yAxisIndex = typed.getYAxisIndex();
 				int xAxisIndex = typed.getXAxisIndex();
-				
+
 				var xDataAxis = xData.get(xAxisIndex);
 				var yDataAxis = yData.get(yAxisIndex);
-				
-				if(xDataAxis == null && yDataAxis == null) {
+
+				if (xDataAxis == null && yDataAxis == null) {
 					continue;
 				}
 				for (Data<X, Y> data : series.getData()) {
@@ -935,38 +956,40 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 						yDataAxis.add(data.getYValue());
 				}
 			}
-			
-			//Push new data to each axis
-			for(var entry : xData.entrySet()) {
-				
+
+			// Push new data to each axis
+			for (var entry : xData.entrySet()) {
+
 				int axisIndex = entry.getKey();
 				List<X> xDataPoints = entry.getValue();
 				Axis<X> axis;
-				
-				if(axisIndex == 0) {
+
+				if (axisIndex == 0) {
 					axis = xa;
-				}else {
+				} else {
 					axis = additionalXAxis.get(axisIndex);
 				}
-	
-				if (xDataPoints != null && !xDataPoints.isEmpty() && !(xDataPoints.size() == 1 && axis.toNumericValue(xDataPoints.get(0)) == 0)) {
+
+				if (xDataPoints != null && !xDataPoints.isEmpty()
+						&& !(xDataPoints.size() == 1 && axis.toNumericValue(xDataPoints.get(0)) == 0)) {
 					axis.invalidateRange(xDataPoints);
 				}
 			}
-			
-			for(var entry : yData.entrySet()) {
-				
+
+			for (var entry : yData.entrySet()) {
+
 				int axisIndex = entry.getKey();
 				List<Y> yDataPoints = entry.getValue();
 				Axis<Y> axis;
-				
-				if(axisIndex == 0) {
+
+				if (axisIndex == 0) {
 					axis = ya;
-				}else {
+				} else {
 					axis = additionalYAxis.get(axisIndex);
 				}
-	
-				if (yDataPoints != null && !yDataPoints.isEmpty() && !(yDataPoints.size() == 1 && axis.toNumericValue(yDataPoints.get(0)) == 0)) {
+
+				if (yDataPoints != null && !yDataPoints.isEmpty()
+						&& !(yDataPoints.size() == 1 && axis.toNumericValue(yDataPoints.get(0)) == 0)) {
 					axis.invalidateRange(yDataPoints);
 				}
 			}
@@ -1069,35 +1092,34 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 		}
 	}
 
-	
 	public void setSeriesVisibility(TypedSeries series, boolean b) {
-		toggleSeriesVisability(series.getSeries(),b);
-		
+
 		LegendItem lItem = legendMap.get(series.getSeries());
-		
-		//Get the legends and update it accordingly
+
+		// Get the legends and update it accordingly
 		Node symbol = lItem.getSymbol();
 		ObservableList<String> cssClass = symbol.getStyleClass();
-		//TODO duplicated code.
-		if(cssClass.contains("hide-series")) {
+		// TODO duplicated code.
+		if (cssClass.contains("hide-series")) {
 			symbol.setEffect(null);
 			symbol.getStyleClass().remove("hide-series");
-			toggleSeriesVisability(series.getSeries(),true);
-		}else {
+			toggleSeriesVisability(series.getSeries(), true);
+		} else {
 			symbol.getStyleClass().add("hide-series");
 			ColorAdjust colorAdjust = new ColorAdjust();
 			colorAdjust.setSaturation(-0.5);
 			symbol.setEffect(colorAdjust);
-			toggleSeriesVisability(series.getSeries(),false);
+			toggleSeriesVisability(series.getSeries(), false);
 		}
-		
+
 	}
-	
+
 	protected void toggleSeriesVisability(Series<X, Y> series, boolean b) {
-		seriesVisibility.put(series,b);
+		seriesVisibility.put(series, b);
+		System.out.println("Toogle Series");
 		this.requestChartLayout();
 	}
-	
+
 	/**
 	 * 
 	 * @param series
@@ -1106,7 +1128,7 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 	public boolean isSeriesVisible(TypedSeries series) {
 		return seriesVisibility.get(series.getSeries());
 	}
-	
+
 	@Override
 	protected void updateLegend() {
 		legendMap = new LinkedHashMap<>();
@@ -1124,23 +1146,23 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 						"chart-symbol"); // This css class contains background-color of the chart. Just go ahead and use
 											// it
 				LegendItem lItem = new LegendItem(name, symbol);
-				
+
 				lItem.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
 					@Override
 					public void handle(MouseEvent event) {
-						
+
 						ObservableList<String> cssClass = symbol.getStyleClass();
-						
-						if(cssClass.contains("hide-series")) {
+
+						if (cssClass.contains("hide-series")) {
 							symbol.setEffect(null);
 							symbol.getStyleClass().remove("hide-series");
-							toggleSeriesVisability(series,true);
-						}else {
+							toggleSeriesVisability(series, true);
+						} else {
 							symbol.getStyleClass().add("hide-series");
 							ColorAdjust colorAdjust = new ColorAdjust();
 							colorAdjust.setSaturation(-0.5);
 							symbol.setEffect(colorAdjust);
-							toggleSeriesVisability(series,false);
+							toggleSeriesVisability(series, false);
 						}
 					}
 				});
@@ -1163,8 +1185,6 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 	 * accessible by default!!
 	 * 
 	 */
-
-	// public double
 
 	/**
 	 * Get the JavaFX X coordinate of the item
@@ -1239,8 +1259,11 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 
 		markerLock.unlock();
 	}
+	
+
 
 	
 	
 	
+
 }
