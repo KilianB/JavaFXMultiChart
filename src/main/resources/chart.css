@@ -8,8 +8,8 @@
 
 .chart-symbol { /* hollow circle */
     -fx-background-insets: 0.0,2.0;
-    -fx-background-radius: 3.0px;
-    -fx-padding: 3.0px;
+    -fx-background-radius: 4.5px;
+    -fx-padding: 4.5px;
 }
 
 .chart-legend-symbol{
@@ -466,1257 +466,1254 @@
 	CHART_COLOR_146_TRANS_90: #ffffffb2;
 }
 
-.default-color8.chart-symbol {-fx-background-color: CHART_COLOR_9;}
+.default-color8.chart-symbol {-fx-background-color: CHART_COLOR_9, white;}
 .default-color8.chart-line-symbol {-fx-background-color: CHART_COLOR_9, white;}
 .default-color8.chart-series-line {-fx-stroke: CHART_COLOR_9;}
-.default-color8.chart-area-symbol {fx-background-color: CHART_COLOR_9, white;}
+.default-color8.chart-area-symbol {-fx-background-color: CHART_COLOR_9, white;}
 .default-color8.chart-series-area-line {-fx-stroke: CHART_COLOR_9;}
 .default-color8.chart-series-area-fill {-fx-fill: CHART_COLOR_9_TRANS_20;}
 .default-color8.chart-bubble {-fx-bubble-fill: CHART_COLOR_9_TRANS_70;}
 .default-color8.chart-bar {-fx-bar-fill: CHART_COLOR_9;}
 .default-color8.chart-pie {-fx-pie-color: CHART_COLOR_9;}
-.default-color9.chart-symbol {-fx-background-color: CHART_COLOR_10;}
+.default-color9.chart-symbol {-fx-background-color: CHART_COLOR_10, white;}
 .default-color9.chart-line-symbol {-fx-background-color: CHART_COLOR_10, white;}
 .default-color9.chart-series-line {-fx-stroke: CHART_COLOR_10;}
-.default-color9.chart-area-symbol {fx-background-color: CHART_COLOR_10, white;}
+.default-color9.chart-area-symbol {-fx-background-color: CHART_COLOR_10, white;}
 .default-color9.chart-series-area-line {-fx-stroke: CHART_COLOR_10;}
 .default-color9.chart-series-area-fill {-fx-fill: CHART_COLOR_10_TRANS_20;}
 .default-color9.chart-bubble {-fx-bubble-fill: CHART_COLOR_10_TRANS_70;}
 .default-color9.chart-bar {-fx-bar-fill: CHART_COLOR_10;}
 .default-color9.chart-pie {-fx-pie-color: CHART_COLOR_10;}
-.default-color10.chart-symbol {-fx-background-color: CHART_COLOR_11;}
+.default-color10.chart-symbol {-fx-background-color: CHART_COLOR_11, white;}
 .default-color10.chart-line-symbol {-fx-background-color: CHART_COLOR_11, white;}
 .default-color10.chart-series-line {-fx-stroke: CHART_COLOR_11;}
-.default-color10.chart-area-symbol {fx-background-color: CHART_COLOR_11, white;}
+.default-color10.chart-area-symbol {-fx-background-color: CHART_COLOR_11, white;}
 .default-color10.chart-series-area-line {-fx-stroke: CHART_COLOR_11;}
 .default-color10.chart-series-area-fill {-fx-fill: CHART_COLOR_11_TRANS_20;}
 .default-color10.chart-bubble {-fx-bubble-fill: CHART_COLOR_11_TRANS_70;}
 .default-color10.chart-bar {-fx-bar-fill: CHART_COLOR_11;}
 .default-color10.chart-pie {-fx-pie-color: CHART_COLOR_11;}
-.default-color11.chart-symbol {-fx-background-color: CHART_COLOR_12;}
+.default-color11.chart-symbol {-fx-background-color: CHART_COLOR_12, white;}
 .default-color11.chart-line-symbol {-fx-background-color: CHART_COLOR_12, white;}
 .default-color11.chart-series-line {-fx-stroke: CHART_COLOR_12;}
-.default-color11.chart-area-symbol {fx-background-color: CHART_COLOR_12, white;}
+.default-color11.chart-area-symbol {-fx-background-color: CHART_COLOR_12, white;}
 .default-color11.chart-series-area-line {-fx-stroke: CHART_COLOR_12;}
 .default-color11.chart-series-area-fill {-fx-fill: CHART_COLOR_12_TRANS_20;}
 .default-color11.chart-bubble {-fx-bubble-fill: CHART_COLOR_12_TRANS_70;}
 .default-color11.chart-bar {-fx-bar-fill: CHART_COLOR_12;}
 .default-color11.chart-pie {-fx-pie-color: CHART_COLOR_12;}
-.default-color12.chart-symbol {-fx-background-color: CHART_COLOR_13;}
+.default-color12.chart-symbol {-fx-background-color: CHART_COLOR_13, white;}
 .default-color12.chart-line-symbol {-fx-background-color: CHART_COLOR_13, white;}
 .default-color12.chart-series-line {-fx-stroke: CHART_COLOR_13;}
-.default-color12.chart-area-symbol {fx-background-color: CHART_COLOR_13, white;}
+.default-color12.chart-area-symbol {-fx-background-color: CHART_COLOR_13, white;}
 .default-color12.chart-series-area-line {-fx-stroke: CHART_COLOR_13;}
 .default-color12.chart-series-area-fill {-fx-fill: CHART_COLOR_13_TRANS_20;}
 .default-color12.chart-bubble {-fx-bubble-fill: CHART_COLOR_13_TRANS_70;}
 .default-color12.chart-bar {-fx-bar-fill: CHART_COLOR_13;}
 .default-color12.chart-pie {-fx-pie-color: CHART_COLOR_13;}
-.default-color13.chart-symbol {-fx-background-color: CHART_COLOR_14;}
+.default-color13.chart-symbol {-fx-background-color: CHART_COLOR_14, white;}
 .default-color13.chart-line-symbol {-fx-background-color: CHART_COLOR_14, white;}
 .default-color13.chart-series-line {-fx-stroke: CHART_COLOR_14;}
-.default-color13.chart-area-symbol {fx-background-color: CHART_COLOR_14, white;}
+.default-color13.chart-area-symbol {-fx-background-color: CHART_COLOR_14, white;}
 .default-color13.chart-series-area-line {-fx-stroke: CHART_COLOR_14;}
 .default-color13.chart-series-area-fill {-fx-fill: CHART_COLOR_14_TRANS_20;}
 .default-color13.chart-bubble {-fx-bubble-fill: CHART_COLOR_14_TRANS_70;}
 .default-color13.chart-bar {-fx-bar-fill: CHART_COLOR_14;}
 .default-color13.chart-pie {-fx-pie-color: CHART_COLOR_14;}
-.default-color14.chart-symbol {-fx-background-color: CHART_COLOR_15;}
+.default-color14.chart-symbol {-fx-background-color: CHART_COLOR_15, white;}
 .default-color14.chart-line-symbol {-fx-background-color: CHART_COLOR_15, white;}
 .default-color14.chart-series-line {-fx-stroke: CHART_COLOR_15;}
-.default-color14.chart-area-symbol {fx-background-color: CHART_COLOR_15, white;}
+.default-color14.chart-area-symbol {-fx-background-color: CHART_COLOR_15, white;}
 .default-color14.chart-series-area-line {-fx-stroke: CHART_COLOR_15;}
 .default-color14.chart-series-area-fill {-fx-fill: CHART_COLOR_15_TRANS_20;}
 .default-color14.chart-bubble {-fx-bubble-fill: CHART_COLOR_15_TRANS_70;}
 .default-color14.chart-bar {-fx-bar-fill: CHART_COLOR_15;}
 .default-color14.chart-pie {-fx-pie-color: CHART_COLOR_15;}
-.default-color15.chart-symbol {-fx-background-color: CHART_COLOR_16;}
+.default-color15.chart-symbol {-fx-background-color: CHART_COLOR_16, white;}
 .default-color15.chart-line-symbol {-fx-background-color: CHART_COLOR_16, white;}
 .default-color15.chart-series-line {-fx-stroke: CHART_COLOR_16;}
-.default-color15.chart-area-symbol {fx-background-color: CHART_COLOR_16, white;}
+.default-color15.chart-area-symbol {-fx-background-color: CHART_COLOR_16, white;}
 .default-color15.chart-series-area-line {-fx-stroke: CHART_COLOR_16;}
 .default-color15.chart-series-area-fill {-fx-fill: CHART_COLOR_16_TRANS_20;}
 .default-color15.chart-bubble {-fx-bubble-fill: CHART_COLOR_16_TRANS_70;}
 .default-color15.chart-bar {-fx-bar-fill: CHART_COLOR_16;}
 .default-color15.chart-pie {-fx-pie-color: CHART_COLOR_16;}
-.default-color16.chart-symbol {-fx-background-color: CHART_COLOR_17;}
+.default-color16.chart-symbol {-fx-background-color: CHART_COLOR_17, white;}
 .default-color16.chart-line-symbol {-fx-background-color: CHART_COLOR_17, white;}
 .default-color16.chart-series-line {-fx-stroke: CHART_COLOR_17;}
-.default-color16.chart-area-symbol {fx-background-color: CHART_COLOR_17, white;}
+.default-color16.chart-area-symbol {-fx-background-color: CHART_COLOR_17, white;}
 .default-color16.chart-series-area-line {-fx-stroke: CHART_COLOR_17;}
 .default-color16.chart-series-area-fill {-fx-fill: CHART_COLOR_17_TRANS_20;}
 .default-color16.chart-bubble {-fx-bubble-fill: CHART_COLOR_17_TRANS_70;}
 .default-color16.chart-bar {-fx-bar-fill: CHART_COLOR_17;}
 .default-color16.chart-pie {-fx-pie-color: CHART_COLOR_17;}
-.default-color17.chart-symbol {-fx-background-color: CHART_COLOR_18;}
+.default-color17.chart-symbol {-fx-background-color: CHART_COLOR_18, white;}
 .default-color17.chart-line-symbol {-fx-background-color: CHART_COLOR_18, white;}
 .default-color17.chart-series-line {-fx-stroke: CHART_COLOR_18;}
-.default-color17.chart-area-symbol {fx-background-color: CHART_COLOR_18, white;}
+.default-color17.chart-area-symbol {-fx-background-color: CHART_COLOR_18, white;}
 .default-color17.chart-series-area-line {-fx-stroke: CHART_COLOR_18;}
 .default-color17.chart-series-area-fill {-fx-fill: CHART_COLOR_18_TRANS_20;}
 .default-color17.chart-bubble {-fx-bubble-fill: CHART_COLOR_18_TRANS_70;}
 .default-color17.chart-bar {-fx-bar-fill: CHART_COLOR_18;}
 .default-color17.chart-pie {-fx-pie-color: CHART_COLOR_18;}
-.default-color18.chart-symbol {-fx-background-color: CHART_COLOR_19;}
+.default-color18.chart-symbol {-fx-background-color: CHART_COLOR_19, white;}
 .default-color18.chart-line-symbol {-fx-background-color: CHART_COLOR_19, white;}
 .default-color18.chart-series-line {-fx-stroke: CHART_COLOR_19;}
-.default-color18.chart-area-symbol {fx-background-color: CHART_COLOR_19, white;}
+.default-color18.chart-area-symbol {-fx-background-color: CHART_COLOR_19, white;}
 .default-color18.chart-series-area-line {-fx-stroke: CHART_COLOR_19;}
 .default-color18.chart-series-area-fill {-fx-fill: CHART_COLOR_19_TRANS_20;}
 .default-color18.chart-bubble {-fx-bubble-fill: CHART_COLOR_19_TRANS_70;}
 .default-color18.chart-bar {-fx-bar-fill: CHART_COLOR_19;}
 .default-color18.chart-pie {-fx-pie-color: CHART_COLOR_19;}
-.default-color19.chart-symbol {-fx-background-color: CHART_COLOR_20;}
+.default-color19.chart-symbol {-fx-background-color: CHART_COLOR_20, white;}
 .default-color19.chart-line-symbol {-fx-background-color: CHART_COLOR_20, white;}
 .default-color19.chart-series-line {-fx-stroke: CHART_COLOR_20;}
-.default-color19.chart-area-symbol {fx-background-color: CHART_COLOR_20, white;}
+.default-color19.chart-area-symbol {-fx-background-color: CHART_COLOR_20, white;}
 .default-color19.chart-series-area-line {-fx-stroke: CHART_COLOR_20;}
 .default-color19.chart-series-area-fill {-fx-fill: CHART_COLOR_20_TRANS_20;}
 .default-color19.chart-bubble {-fx-bubble-fill: CHART_COLOR_20_TRANS_70;}
 .default-color19.chart-bar {-fx-bar-fill: CHART_COLOR_20;}
 .default-color19.chart-pie {-fx-pie-color: CHART_COLOR_20;}
-.default-color20.chart-symbol {-fx-background-color: CHART_COLOR_21;}
+.default-color20.chart-symbol {-fx-background-color: CHART_COLOR_21, white;}
 .default-color20.chart-line-symbol {-fx-background-color: CHART_COLOR_21, white;}
 .default-color20.chart-series-line {-fx-stroke: CHART_COLOR_21;}
-.default-color20.chart-area-symbol {fx-background-color: CHART_COLOR_21, white;}
+.default-color20.chart-area-symbol {-fx-background-color: CHART_COLOR_21, white;}
 .default-color20.chart-series-area-line {-fx-stroke: CHART_COLOR_21;}
 .default-color20.chart-series-area-fill {-fx-fill: CHART_COLOR_21_TRANS_20;}
 .default-color20.chart-bubble {-fx-bubble-fill: CHART_COLOR_21_TRANS_70;}
 .default-color20.chart-bar {-fx-bar-fill: CHART_COLOR_21;}
 .default-color20.chart-pie {-fx-pie-color: CHART_COLOR_21;}
-.default-color21.chart-symbol {-fx-background-color: CHART_COLOR_22;}
+.default-color21.chart-symbol {-fx-background-color: CHART_COLOR_22, white;}
 .default-color21.chart-line-symbol {-fx-background-color: CHART_COLOR_22, white;}
 .default-color21.chart-series-line {-fx-stroke: CHART_COLOR_22;}
-.default-color21.chart-area-symbol {fx-background-color: CHART_COLOR_22, white;}
+.default-color21.chart-area-symbol {-fx-background-color: CHART_COLOR_22, white;}
 .default-color21.chart-series-area-line {-fx-stroke: CHART_COLOR_22;}
 .default-color21.chart-series-area-fill {-fx-fill: CHART_COLOR_22_TRANS_20;}
 .default-color21.chart-bubble {-fx-bubble-fill: CHART_COLOR_22_TRANS_70;}
 .default-color21.chart-bar {-fx-bar-fill: CHART_COLOR_22;}
 .default-color21.chart-pie {-fx-pie-color: CHART_COLOR_22;}
-.default-color22.chart-symbol {-fx-background-color: CHART_COLOR_23;}
+.default-color22.chart-symbol {-fx-background-color: CHART_COLOR_23, white;}
 .default-color22.chart-line-symbol {-fx-background-color: CHART_COLOR_23, white;}
 .default-color22.chart-series-line {-fx-stroke: CHART_COLOR_23;}
-.default-color22.chart-area-symbol {fx-background-color: CHART_COLOR_23, white;}
+.default-color22.chart-area-symbol {-fx-background-color: CHART_COLOR_23, white;}
 .default-color22.chart-series-area-line {-fx-stroke: CHART_COLOR_23;}
 .default-color22.chart-series-area-fill {-fx-fill: CHART_COLOR_23_TRANS_20;}
 .default-color22.chart-bubble {-fx-bubble-fill: CHART_COLOR_23_TRANS_70;}
 .default-color22.chart-bar {-fx-bar-fill: CHART_COLOR_23;}
 .default-color22.chart-pie {-fx-pie-color: CHART_COLOR_23;}
-.default-color23.chart-symbol {-fx-background-color: CHART_COLOR_24;}
+.default-color23.chart-symbol {-fx-background-color: CHART_COLOR_24, white;}
 .default-color23.chart-line-symbol {-fx-background-color: CHART_COLOR_24, white;}
 .default-color23.chart-series-line {-fx-stroke: CHART_COLOR_24;}
-.default-color23.chart-area-symbol {fx-background-color: CHART_COLOR_24, white;}
+.default-color23.chart-area-symbol {-fx-background-color: CHART_COLOR_24, white;}
 .default-color23.chart-series-area-line {-fx-stroke: CHART_COLOR_24;}
 .default-color23.chart-series-area-fill {-fx-fill: CHART_COLOR_24_TRANS_20;}
 .default-color23.chart-bubble {-fx-bubble-fill: CHART_COLOR_24_TRANS_70;}
 .default-color23.chart-bar {-fx-bar-fill: CHART_COLOR_24;}
 .default-color23.chart-pie {-fx-pie-color: CHART_COLOR_24;}
-.default-color24.chart-symbol {-fx-background-color: CHART_COLOR_25;}
+.default-color24.chart-symbol {-fx-background-color: CHART_COLOR_25, white;}
 .default-color24.chart-line-symbol {-fx-background-color: CHART_COLOR_25, white;}
 .default-color24.chart-series-line {-fx-stroke: CHART_COLOR_25;}
-.default-color24.chart-area-symbol {fx-background-color: CHART_COLOR_25, white;}
+.default-color24.chart-area-symbol {-fx-background-color: CHART_COLOR_25, white;}
 .default-color24.chart-series-area-line {-fx-stroke: CHART_COLOR_25;}
 .default-color24.chart-series-area-fill {-fx-fill: CHART_COLOR_25_TRANS_20;}
 .default-color24.chart-bubble {-fx-bubble-fill: CHART_COLOR_25_TRANS_70;}
 .default-color24.chart-bar {-fx-bar-fill: CHART_COLOR_25;}
 .default-color24.chart-pie {-fx-pie-color: CHART_COLOR_25;}
-.default-color25.chart-symbol {-fx-background-color: CHART_COLOR_26;}
+.default-color25.chart-symbol {-fx-background-color: CHART_COLOR_26, white;}
 .default-color25.chart-line-symbol {-fx-background-color: CHART_COLOR_26, white;}
 .default-color25.chart-series-line {-fx-stroke: CHART_COLOR_26;}
-.default-color25.chart-area-symbol {fx-background-color: CHART_COLOR_26, white;}
+.default-color25.chart-area-symbol {-fx-background-color: CHART_COLOR_26, white;}
 .default-color25.chart-series-area-line {-fx-stroke: CHART_COLOR_26;}
 .default-color25.chart-series-area-fill {-fx-fill: CHART_COLOR_26_TRANS_20;}
 .default-color25.chart-bubble {-fx-bubble-fill: CHART_COLOR_26_TRANS_70;}
 .default-color25.chart-bar {-fx-bar-fill: CHART_COLOR_26;}
 .default-color25.chart-pie {-fx-pie-color: CHART_COLOR_26;}
-.default-color26.chart-symbol {-fx-background-color: CHART_COLOR_27;}
+.default-color26.chart-symbol {-fx-background-color: CHART_COLOR_27, white;}
 .default-color26.chart-line-symbol {-fx-background-color: CHART_COLOR_27, white;}
 .default-color26.chart-series-line {-fx-stroke: CHART_COLOR_27;}
-.default-color26.chart-area-symbol {fx-background-color: CHART_COLOR_27, white;}
+.default-color26.chart-area-symbol {-fx-background-color: CHART_COLOR_27, white;}
 .default-color26.chart-series-area-line {-fx-stroke: CHART_COLOR_27;}
 .default-color26.chart-series-area-fill {-fx-fill: CHART_COLOR_27_TRANS_20;}
 .default-color26.chart-bubble {-fx-bubble-fill: CHART_COLOR_27_TRANS_70;}
 .default-color26.chart-bar {-fx-bar-fill: CHART_COLOR_27;}
 .default-color26.chart-pie {-fx-pie-color: CHART_COLOR_27;}
-.default-color27.chart-symbol {-fx-background-color: CHART_COLOR_28;}
+.default-color27.chart-symbol {-fx-background-color: CHART_COLOR_28, white;}
 .default-color27.chart-line-symbol {-fx-background-color: CHART_COLOR_28, white;}
 .default-color27.chart-series-line {-fx-stroke: CHART_COLOR_28;}
-.default-color27.chart-area-symbol {fx-background-color: CHART_COLOR_28, white;}
+.default-color27.chart-area-symbol {-fx-background-color: CHART_COLOR_28, white;}
 .default-color27.chart-series-area-line {-fx-stroke: CHART_COLOR_28;}
 .default-color27.chart-series-area-fill {-fx-fill: CHART_COLOR_28_TRANS_20;}
 .default-color27.chart-bubble {-fx-bubble-fill: CHART_COLOR_28_TRANS_70;}
 .default-color27.chart-bar {-fx-bar-fill: CHART_COLOR_28;}
 .default-color27.chart-pie {-fx-pie-color: CHART_COLOR_28;}
-.default-color28.chart-symbol {-fx-background-color: CHART_COLOR_29;}
+.default-color28.chart-symbol {-fx-background-color: CHART_COLOR_29, white;}
 .default-color28.chart-line-symbol {-fx-background-color: CHART_COLOR_29, white;}
 .default-color28.chart-series-line {-fx-stroke: CHART_COLOR_29;}
-.default-color28.chart-area-symbol {fx-background-color: CHART_COLOR_29, white;}
+.default-color28.chart-area-symbol {-fx-background-color: CHART_COLOR_29, white;}
 .default-color28.chart-series-area-line {-fx-stroke: CHART_COLOR_29;}
 .default-color28.chart-series-area-fill {-fx-fill: CHART_COLOR_29_TRANS_20;}
 .default-color28.chart-bubble {-fx-bubble-fill: CHART_COLOR_29_TRANS_70;}
 .default-color28.chart-bar {-fx-bar-fill: CHART_COLOR_29;}
 .default-color28.chart-pie {-fx-pie-color: CHART_COLOR_29;}
-.default-color29.chart-symbol {-fx-background-color: CHART_COLOR_30;}
+.default-color29.chart-symbol {-fx-background-color: CHART_COLOR_30, white;}
 .default-color29.chart-line-symbol {-fx-background-color: CHART_COLOR_30, white;}
 .default-color29.chart-series-line {-fx-stroke: CHART_COLOR_30;}
-.default-color29.chart-area-symbol {fx-background-color: CHART_COLOR_30, white;}
+.default-color29.chart-area-symbol {-fx-background-color: CHART_COLOR_30, white;}
 .default-color29.chart-series-area-line {-fx-stroke: CHART_COLOR_30;}
 .default-color29.chart-series-area-fill {-fx-fill: CHART_COLOR_30_TRANS_20;}
 .default-color29.chart-bubble {-fx-bubble-fill: CHART_COLOR_30_TRANS_70;}
 .default-color29.chart-bar {-fx-bar-fill: CHART_COLOR_30;}
 .default-color29.chart-pie {-fx-pie-color: CHART_COLOR_30;}
-.default-color30.chart-symbol {-fx-background-color: CHART_COLOR_31;}
+.default-color30.chart-symbol {-fx-background-color: CHART_COLOR_31, white;}
 .default-color30.chart-line-symbol {-fx-background-color: CHART_COLOR_31, white;}
 .default-color30.chart-series-line {-fx-stroke: CHART_COLOR_31;}
-.default-color30.chart-area-symbol {fx-background-color: CHART_COLOR_31, white;}
+.default-color30.chart-area-symbol {-fx-background-color: CHART_COLOR_31, white;}
 .default-color30.chart-series-area-line {-fx-stroke: CHART_COLOR_31;}
 .default-color30.chart-series-area-fill {-fx-fill: CHART_COLOR_31_TRANS_20;}
 .default-color30.chart-bubble {-fx-bubble-fill: CHART_COLOR_31_TRANS_70;}
 .default-color30.chart-bar {-fx-bar-fill: CHART_COLOR_31;}
 .default-color30.chart-pie {-fx-pie-color: CHART_COLOR_31;}
-.default-color31.chart-symbol {-fx-background-color: CHART_COLOR_32;}
+.default-color31.chart-symbol {-fx-background-color: CHART_COLOR_32, white;}
 .default-color31.chart-line-symbol {-fx-background-color: CHART_COLOR_32, white;}
 .default-color31.chart-series-line {-fx-stroke: CHART_COLOR_32;}
-.default-color31.chart-area-symbol {fx-background-color: CHART_COLOR_32, white;}
+.default-color31.chart-area-symbol {-fx-background-color: CHART_COLOR_32, white;}
 .default-color31.chart-series-area-line {-fx-stroke: CHART_COLOR_32;}
 .default-color31.chart-series-area-fill {-fx-fill: CHART_COLOR_32_TRANS_20;}
 .default-color31.chart-bubble {-fx-bubble-fill: CHART_COLOR_32_TRANS_70;}
 .default-color31.chart-bar {-fx-bar-fill: CHART_COLOR_32;}
 .default-color31.chart-pie {-fx-pie-color: CHART_COLOR_32;}
-.default-color32.chart-symbol {-fx-background-color: CHART_COLOR_33;}
+.default-color32.chart-symbol {-fx-background-color: CHART_COLOR_33, white;}
 .default-color32.chart-line-symbol {-fx-background-color: CHART_COLOR_33, white;}
 .default-color32.chart-series-line {-fx-stroke: CHART_COLOR_33;}
-.default-color32.chart-area-symbol {fx-background-color: CHART_COLOR_33, white;}
+.default-color32.chart-area-symbol {-fx-background-color: CHART_COLOR_33, white;}
 .default-color32.chart-series-area-line {-fx-stroke: CHART_COLOR_33;}
 .default-color32.chart-series-area-fill {-fx-fill: CHART_COLOR_33_TRANS_20;}
 .default-color32.chart-bubble {-fx-bubble-fill: CHART_COLOR_33_TRANS_70;}
 .default-color32.chart-bar {-fx-bar-fill: CHART_COLOR_33;}
 .default-color32.chart-pie {-fx-pie-color: CHART_COLOR_33;}
-.default-color33.chart-symbol {-fx-background-color: CHART_COLOR_34;}
+.default-color33.chart-symbol {-fx-background-color: CHART_COLOR_34, white;}
 .default-color33.chart-line-symbol {-fx-background-color: CHART_COLOR_34, white;}
 .default-color33.chart-series-line {-fx-stroke: CHART_COLOR_34;}
-.default-color33.chart-area-symbol {fx-background-color: CHART_COLOR_34, white;}
+.default-color33.chart-area-symbol {-fx-background-color: CHART_COLOR_34, white;}
 .default-color33.chart-series-area-line {-fx-stroke: CHART_COLOR_34;}
 .default-color33.chart-series-area-fill {-fx-fill: CHART_COLOR_34_TRANS_20;}
 .default-color33.chart-bubble {-fx-bubble-fill: CHART_COLOR_34_TRANS_70;}
 .default-color33.chart-bar {-fx-bar-fill: CHART_COLOR_34;}
 .default-color33.chart-pie {-fx-pie-color: CHART_COLOR_34;}
-.default-color34.chart-symbol {-fx-background-color: CHART_COLOR_35;}
+.default-color34.chart-symbol {-fx-background-color: CHART_COLOR_35, white;}
 .default-color34.chart-line-symbol {-fx-background-color: CHART_COLOR_35, white;}
 .default-color34.chart-series-line {-fx-stroke: CHART_COLOR_35;}
-.default-color34.chart-area-symbol {fx-background-color: CHART_COLOR_35, white;}
+.default-color34.chart-area-symbol {-fx-background-color: CHART_COLOR_35, white;}
 .default-color34.chart-series-area-line {-fx-stroke: CHART_COLOR_35;}
 .default-color34.chart-series-area-fill {-fx-fill: CHART_COLOR_35_TRANS_20;}
 .default-color34.chart-bubble {-fx-bubble-fill: CHART_COLOR_35_TRANS_70;}
 .default-color34.chart-bar {-fx-bar-fill: CHART_COLOR_35;}
 .default-color34.chart-pie {-fx-pie-color: CHART_COLOR_35;}
-.default-color35.chart-symbol {-fx-background-color: CHART_COLOR_36;}
+.default-color35.chart-symbol {-fx-background-color: CHART_COLOR_36, white;}
 .default-color35.chart-line-symbol {-fx-background-color: CHART_COLOR_36, white;}
 .default-color35.chart-series-line {-fx-stroke: CHART_COLOR_36;}
-.default-color35.chart-area-symbol {fx-background-color: CHART_COLOR_36, white;}
+.default-color35.chart-area-symbol {-fx-background-color: CHART_COLOR_36, white;}
 .default-color35.chart-series-area-line {-fx-stroke: CHART_COLOR_36;}
 .default-color35.chart-series-area-fill {-fx-fill: CHART_COLOR_36_TRANS_20;}
 .default-color35.chart-bubble {-fx-bubble-fill: CHART_COLOR_36_TRANS_70;}
 .default-color35.chart-bar {-fx-bar-fill: CHART_COLOR_36;}
 .default-color35.chart-pie {-fx-pie-color: CHART_COLOR_36;}
-.default-color36.chart-symbol {-fx-background-color: CHART_COLOR_37;}
+.default-color36.chart-symbol {-fx-background-color: CHART_COLOR_37, white;}
 .default-color36.chart-line-symbol {-fx-background-color: CHART_COLOR_37, white;}
 .default-color36.chart-series-line {-fx-stroke: CHART_COLOR_37;}
-.default-color36.chart-area-symbol {fx-background-color: CHART_COLOR_37, white;}
+.default-color36.chart-area-symbol {-fx-background-color: CHART_COLOR_37, white;}
 .default-color36.chart-series-area-line {-fx-stroke: CHART_COLOR_37;}
 .default-color36.chart-series-area-fill {-fx-fill: CHART_COLOR_37_TRANS_20;}
 .default-color36.chart-bubble {-fx-bubble-fill: CHART_COLOR_37_TRANS_70;}
 .default-color36.chart-bar {-fx-bar-fill: CHART_COLOR_37;}
 .default-color36.chart-pie {-fx-pie-color: CHART_COLOR_37;}
-.default-color37.chart-symbol {-fx-background-color: CHART_COLOR_38;}
+.default-color37.chart-symbol {-fx-background-color: CHART_COLOR_38, white;}
 .default-color37.chart-line-symbol {-fx-background-color: CHART_COLOR_38, white;}
 .default-color37.chart-series-line {-fx-stroke: CHART_COLOR_38;}
-.default-color37.chart-area-symbol {fx-background-color: CHART_COLOR_38, white;}
+.default-color37.chart-area-symbol {-fx-background-color: CHART_COLOR_38, white;}
 .default-color37.chart-series-area-line {-fx-stroke: CHART_COLOR_38;}
 .default-color37.chart-series-area-fill {-fx-fill: CHART_COLOR_38_TRANS_20;}
 .default-color37.chart-bubble {-fx-bubble-fill: CHART_COLOR_38_TRANS_70;}
 .default-color37.chart-bar {-fx-bar-fill: CHART_COLOR_38;}
 .default-color37.chart-pie {-fx-pie-color: CHART_COLOR_38;}
-.default-color38.chart-symbol {-fx-background-color: CHART_COLOR_39;}
+.default-color38.chart-symbol {-fx-background-color: CHART_COLOR_39, white;}
 .default-color38.chart-line-symbol {-fx-background-color: CHART_COLOR_39, white;}
 .default-color38.chart-series-line {-fx-stroke: CHART_COLOR_39;}
-.default-color38.chart-area-symbol {fx-background-color: CHART_COLOR_39, white;}
+.default-color38.chart-area-symbol {-fx-background-color: CHART_COLOR_39, white;}
 .default-color38.chart-series-area-line {-fx-stroke: CHART_COLOR_39;}
 .default-color38.chart-series-area-fill {-fx-fill: CHART_COLOR_39_TRANS_20;}
 .default-color38.chart-bubble {-fx-bubble-fill: CHART_COLOR_39_TRANS_70;}
 .default-color38.chart-bar {-fx-bar-fill: CHART_COLOR_39;}
 .default-color38.chart-pie {-fx-pie-color: CHART_COLOR_39;}
-.default-color39.chart-symbol {-fx-background-color: CHART_COLOR_40;}
+.default-color39.chart-symbol {-fx-background-color: CHART_COLOR_40, white;}
 .default-color39.chart-line-symbol {-fx-background-color: CHART_COLOR_40, white;}
 .default-color39.chart-series-line {-fx-stroke: CHART_COLOR_40;}
-.default-color39.chart-area-symbol {fx-background-color: CHART_COLOR_40, white;}
+.default-color39.chart-area-symbol {-fx-background-color: CHART_COLOR_40, white;}
 .default-color39.chart-series-area-line {-fx-stroke: CHART_COLOR_40;}
 .default-color39.chart-series-area-fill {-fx-fill: CHART_COLOR_40_TRANS_20;}
 .default-color39.chart-bubble {-fx-bubble-fill: CHART_COLOR_40_TRANS_70;}
 .default-color39.chart-bar {-fx-bar-fill: CHART_COLOR_40;}
 .default-color39.chart-pie {-fx-pie-color: CHART_COLOR_40;}
-.default-color40.chart-symbol {-fx-background-color: CHART_COLOR_41;}
+.default-color40.chart-symbol {-fx-background-color: CHART_COLOR_41, white;}
 .default-color40.chart-line-symbol {-fx-background-color: CHART_COLOR_41, white;}
 .default-color40.chart-series-line {-fx-stroke: CHART_COLOR_41;}
-.default-color40.chart-area-symbol {fx-background-color: CHART_COLOR_41, white;}
+.default-color40.chart-area-symbol {-fx-background-color: CHART_COLOR_41, white;}
 .default-color40.chart-series-area-line {-fx-stroke: CHART_COLOR_41;}
 .default-color40.chart-series-area-fill {-fx-fill: CHART_COLOR_41_TRANS_20;}
 .default-color40.chart-bubble {-fx-bubble-fill: CHART_COLOR_41_TRANS_70;}
 .default-color40.chart-bar {-fx-bar-fill: CHART_COLOR_41;}
 .default-color40.chart-pie {-fx-pie-color: CHART_COLOR_41;}
-.default-color41.chart-symbol {-fx-background-color: CHART_COLOR_42;}
+.default-color41.chart-symbol {-fx-background-color: CHART_COLOR_42, white;}
 .default-color41.chart-line-symbol {-fx-background-color: CHART_COLOR_42, white;}
 .default-color41.chart-series-line {-fx-stroke: CHART_COLOR_42;}
-.default-color41.chart-area-symbol {fx-background-color: CHART_COLOR_42, white;}
+.default-color41.chart-area-symbol {-fx-background-color: CHART_COLOR_42, white;}
 .default-color41.chart-series-area-line {-fx-stroke: CHART_COLOR_42;}
 .default-color41.chart-series-area-fill {-fx-fill: CHART_COLOR_42_TRANS_20;}
 .default-color41.chart-bubble {-fx-bubble-fill: CHART_COLOR_42_TRANS_70;}
 .default-color41.chart-bar {-fx-bar-fill: CHART_COLOR_42;}
 .default-color41.chart-pie {-fx-pie-color: CHART_COLOR_42;}
-.default-color42.chart-symbol {-fx-background-color: CHART_COLOR_43;}
+.default-color42.chart-symbol {-fx-background-color: CHART_COLOR_43, white;}
 .default-color42.chart-line-symbol {-fx-background-color: CHART_COLOR_43, white;}
 .default-color42.chart-series-line {-fx-stroke: CHART_COLOR_43;}
-.default-color42.chart-area-symbol {fx-background-color: CHART_COLOR_43, white;}
+.default-color42.chart-area-symbol {-fx-background-color: CHART_COLOR_43, white;}
 .default-color42.chart-series-area-line {-fx-stroke: CHART_COLOR_43;}
 .default-color42.chart-series-area-fill {-fx-fill: CHART_COLOR_43_TRANS_20;}
 .default-color42.chart-bubble {-fx-bubble-fill: CHART_COLOR_43_TRANS_70;}
 .default-color42.chart-bar {-fx-bar-fill: CHART_COLOR_43;}
 .default-color42.chart-pie {-fx-pie-color: CHART_COLOR_43;}
-.default-color43.chart-symbol {-fx-background-color: CHART_COLOR_44;}
+.default-color43.chart-symbol {-fx-background-color: CHART_COLOR_44, white;}
 .default-color43.chart-line-symbol {-fx-background-color: CHART_COLOR_44, white;}
 .default-color43.chart-series-line {-fx-stroke: CHART_COLOR_44;}
-.default-color43.chart-area-symbol {fx-background-color: CHART_COLOR_44, white;}
+.default-color43.chart-area-symbol {-fx-background-color: CHART_COLOR_44, white;}
 .default-color43.chart-series-area-line {-fx-stroke: CHART_COLOR_44;}
 .default-color43.chart-series-area-fill {-fx-fill: CHART_COLOR_44_TRANS_20;}
 .default-color43.chart-bubble {-fx-bubble-fill: CHART_COLOR_44_TRANS_70;}
 .default-color43.chart-bar {-fx-bar-fill: CHART_COLOR_44;}
 .default-color43.chart-pie {-fx-pie-color: CHART_COLOR_44;}
-.default-color44.chart-symbol {-fx-background-color: CHART_COLOR_45;}
+.default-color44.chart-symbol {-fx-background-color: CHART_COLOR_45, white;}
 .default-color44.chart-line-symbol {-fx-background-color: CHART_COLOR_45, white;}
 .default-color44.chart-series-line {-fx-stroke: CHART_COLOR_45;}
-.default-color44.chart-area-symbol {fx-background-color: CHART_COLOR_45, white;}
+.default-color44.chart-area-symbol {-fx-background-color: CHART_COLOR_45, white;}
 .default-color44.chart-series-area-line {-fx-stroke: CHART_COLOR_45;}
 .default-color44.chart-series-area-fill {-fx-fill: CHART_COLOR_45_TRANS_20;}
 .default-color44.chart-bubble {-fx-bubble-fill: CHART_COLOR_45_TRANS_70;}
 .default-color44.chart-bar {-fx-bar-fill: CHART_COLOR_45;}
 .default-color44.chart-pie {-fx-pie-color: CHART_COLOR_45;}
-.default-color45.chart-symbol {-fx-background-color: CHART_COLOR_46;}
+.default-color45.chart-symbol {-fx-background-color: CHART_COLOR_46, white;}
 .default-color45.chart-line-symbol {-fx-background-color: CHART_COLOR_46, white;}
 .default-color45.chart-series-line {-fx-stroke: CHART_COLOR_46;}
-.default-color45.chart-area-symbol {fx-background-color: CHART_COLOR_46, white;}
+.default-color45.chart-area-symbol {-fx-background-color: CHART_COLOR_46, white;}
 .default-color45.chart-series-area-line {-fx-stroke: CHART_COLOR_46;}
 .default-color45.chart-series-area-fill {-fx-fill: CHART_COLOR_46_TRANS_20;}
 .default-color45.chart-bubble {-fx-bubble-fill: CHART_COLOR_46_TRANS_70;}
 .default-color45.chart-bar {-fx-bar-fill: CHART_COLOR_46;}
 .default-color45.chart-pie {-fx-pie-color: CHART_COLOR_46;}
-.default-color46.chart-symbol {-fx-background-color: CHART_COLOR_47;}
+.default-color46.chart-symbol {-fx-background-color: CHART_COLOR_47, white;}
 .default-color46.chart-line-symbol {-fx-background-color: CHART_COLOR_47, white;}
 .default-color46.chart-series-line {-fx-stroke: CHART_COLOR_47;}
-.default-color46.chart-area-symbol {fx-background-color: CHART_COLOR_47, white;}
+.default-color46.chart-area-symbol {-fx-background-color: CHART_COLOR_47, white;}
 .default-color46.chart-series-area-line {-fx-stroke: CHART_COLOR_47;}
 .default-color46.chart-series-area-fill {-fx-fill: CHART_COLOR_47_TRANS_20;}
 .default-color46.chart-bubble {-fx-bubble-fill: CHART_COLOR_47_TRANS_70;}
 .default-color46.chart-bar {-fx-bar-fill: CHART_COLOR_47;}
 .default-color46.chart-pie {-fx-pie-color: CHART_COLOR_47;}
-.default-color47.chart-symbol {-fx-background-color: CHART_COLOR_48;}
+.default-color47.chart-symbol {-fx-background-color: CHART_COLOR_48, white;}
 .default-color47.chart-line-symbol {-fx-background-color: CHART_COLOR_48, white;}
 .default-color47.chart-series-line {-fx-stroke: CHART_COLOR_48;}
-.default-color47.chart-area-symbol {fx-background-color: CHART_COLOR_48, white;}
+.default-color47.chart-area-symbol {-fx-background-color: CHART_COLOR_48, white;}
 .default-color47.chart-series-area-line {-fx-stroke: CHART_COLOR_48;}
 .default-color47.chart-series-area-fill {-fx-fill: CHART_COLOR_48_TRANS_20;}
 .default-color47.chart-bubble {-fx-bubble-fill: CHART_COLOR_48_TRANS_70;}
 .default-color47.chart-bar {-fx-bar-fill: CHART_COLOR_48;}
 .default-color47.chart-pie {-fx-pie-color: CHART_COLOR_48;}
-.default-color48.chart-symbol {-fx-background-color: CHART_COLOR_49;}
+.default-color48.chart-symbol {-fx-background-color: CHART_COLOR_49, white;}
 .default-color48.chart-line-symbol {-fx-background-color: CHART_COLOR_49, white;}
 .default-color48.chart-series-line {-fx-stroke: CHART_COLOR_49;}
-.default-color48.chart-area-symbol {fx-background-color: CHART_COLOR_49, white;}
+.default-color48.chart-area-symbol {-fx-background-color: CHART_COLOR_49, white;}
 .default-color48.chart-series-area-line {-fx-stroke: CHART_COLOR_49;}
 .default-color48.chart-series-area-fill {-fx-fill: CHART_COLOR_49_TRANS_20;}
 .default-color48.chart-bubble {-fx-bubble-fill: CHART_COLOR_49_TRANS_70;}
 .default-color48.chart-bar {-fx-bar-fill: CHART_COLOR_49;}
 .default-color48.chart-pie {-fx-pie-color: CHART_COLOR_49;}
-.default-color49.chart-symbol {-fx-background-color: CHART_COLOR_50;}
+.default-color49.chart-symbol {-fx-background-color: CHART_COLOR_50, white;}
 .default-color49.chart-line-symbol {-fx-background-color: CHART_COLOR_50, white;}
 .default-color49.chart-series-line {-fx-stroke: CHART_COLOR_50;}
-.default-color49.chart-area-symbol {fx-background-color: CHART_COLOR_50, white;}
+.default-color49.chart-area-symbol {-fx-background-color: CHART_COLOR_50, white;}
 .default-color49.chart-series-area-line {-fx-stroke: CHART_COLOR_50;}
 .default-color49.chart-series-area-fill {-fx-fill: CHART_COLOR_50_TRANS_20;}
 .default-color49.chart-bubble {-fx-bubble-fill: CHART_COLOR_50_TRANS_70;}
 .default-color49.chart-bar {-fx-bar-fill: CHART_COLOR_50;}
 .default-color49.chart-pie {-fx-pie-color: CHART_COLOR_50;}
-.default-color50.chart-symbol {-fx-background-color: CHART_COLOR_51;}
+.default-color50.chart-symbol {-fx-background-color: CHART_COLOR_51, white;}
 .default-color50.chart-line-symbol {-fx-background-color: CHART_COLOR_51, white;}
 .default-color50.chart-series-line {-fx-stroke: CHART_COLOR_51;}
-.default-color50.chart-area-symbol {fx-background-color: CHART_COLOR_51, white;}
+.default-color50.chart-area-symbol {-fx-background-color: CHART_COLOR_51, white;}
 .default-color50.chart-series-area-line {-fx-stroke: CHART_COLOR_51;}
 .default-color50.chart-series-area-fill {-fx-fill: CHART_COLOR_51_TRANS_20;}
 .default-color50.chart-bubble {-fx-bubble-fill: CHART_COLOR_51_TRANS_70;}
 .default-color50.chart-bar {-fx-bar-fill: CHART_COLOR_51;}
 .default-color50.chart-pie {-fx-pie-color: CHART_COLOR_51;}
-.default-color51.chart-symbol {-fx-background-color: CHART_COLOR_52;}
+.default-color51.chart-symbol {-fx-background-color: CHART_COLOR_52, white;}
 .default-color51.chart-line-symbol {-fx-background-color: CHART_COLOR_52, white;}
 .default-color51.chart-series-line {-fx-stroke: CHART_COLOR_52;}
-.default-color51.chart-area-symbol {fx-background-color: CHART_COLOR_52, white;}
+.default-color51.chart-area-symbol {-fx-background-color: CHART_COLOR_52, white;}
 .default-color51.chart-series-area-line {-fx-stroke: CHART_COLOR_52;}
 .default-color51.chart-series-area-fill {-fx-fill: CHART_COLOR_52_TRANS_20;}
 .default-color51.chart-bubble {-fx-bubble-fill: CHART_COLOR_52_TRANS_70;}
 .default-color51.chart-bar {-fx-bar-fill: CHART_COLOR_52;}
 .default-color51.chart-pie {-fx-pie-color: CHART_COLOR_52;}
-.default-color52.chart-symbol {-fx-background-color: CHART_COLOR_53;}
+.default-color52.chart-symbol {-fx-background-color: CHART_COLOR_53, white;}
 .default-color52.chart-line-symbol {-fx-background-color: CHART_COLOR_53, white;}
 .default-color52.chart-series-line {-fx-stroke: CHART_COLOR_53;}
-.default-color52.chart-area-symbol {fx-background-color: CHART_COLOR_53, white;}
+.default-color52.chart-area-symbol {-fx-background-color: CHART_COLOR_53, white;}
 .default-color52.chart-series-area-line {-fx-stroke: CHART_COLOR_53;}
 .default-color52.chart-series-area-fill {-fx-fill: CHART_COLOR_53_TRANS_20;}
 .default-color52.chart-bubble {-fx-bubble-fill: CHART_COLOR_53_TRANS_70;}
 .default-color52.chart-bar {-fx-bar-fill: CHART_COLOR_53;}
 .default-color52.chart-pie {-fx-pie-color: CHART_COLOR_53;}
-.default-color53.chart-symbol {-fx-background-color: CHART_COLOR_54;}
+.default-color53.chart-symbol {-fx-background-color: CHART_COLOR_54, white;}
 .default-color53.chart-line-symbol {-fx-background-color: CHART_COLOR_54, white;}
 .default-color53.chart-series-line {-fx-stroke: CHART_COLOR_54;}
-.default-color53.chart-area-symbol {fx-background-color: CHART_COLOR_54, white;}
+.default-color53.chart-area-symbol {-fx-background-color: CHART_COLOR_54, white;}
 .default-color53.chart-series-area-line {-fx-stroke: CHART_COLOR_54;}
 .default-color53.chart-series-area-fill {-fx-fill: CHART_COLOR_54_TRANS_20;}
 .default-color53.chart-bubble {-fx-bubble-fill: CHART_COLOR_54_TRANS_70;}
 .default-color53.chart-bar {-fx-bar-fill: CHART_COLOR_54;}
 .default-color53.chart-pie {-fx-pie-color: CHART_COLOR_54;}
-.default-color54.chart-symbol {-fx-background-color: CHART_COLOR_55;}
+.default-color54.chart-symbol {-fx-background-color: CHART_COLOR_55, white;}
 .default-color54.chart-line-symbol {-fx-background-color: CHART_COLOR_55, white;}
 .default-color54.chart-series-line {-fx-stroke: CHART_COLOR_55;}
-.default-color54.chart-area-symbol {fx-background-color: CHART_COLOR_55, white;}
+.default-color54.chart-area-symbol {-fx-background-color: CHART_COLOR_55, white;}
 .default-color54.chart-series-area-line {-fx-stroke: CHART_COLOR_55;}
 .default-color54.chart-series-area-fill {-fx-fill: CHART_COLOR_55_TRANS_20;}
 .default-color54.chart-bubble {-fx-bubble-fill: CHART_COLOR_55_TRANS_70;}
 .default-color54.chart-bar {-fx-bar-fill: CHART_COLOR_55;}
 .default-color54.chart-pie {-fx-pie-color: CHART_COLOR_55;}
-.default-color55.chart-symbol {-fx-background-color: CHART_COLOR_56;}
+.default-color55.chart-symbol {-fx-background-color: CHART_COLOR_56, white;}
 .default-color55.chart-line-symbol {-fx-background-color: CHART_COLOR_56, white;}
 .default-color55.chart-series-line {-fx-stroke: CHART_COLOR_56;}
-.default-color55.chart-area-symbol {fx-background-color: CHART_COLOR_56, white;}
+.default-color55.chart-area-symbol {-fx-background-color: CHART_COLOR_56, white;}
 .default-color55.chart-series-area-line {-fx-stroke: CHART_COLOR_56;}
 .default-color55.chart-series-area-fill {-fx-fill: CHART_COLOR_56_TRANS_20;}
 .default-color55.chart-bubble {-fx-bubble-fill: CHART_COLOR_56_TRANS_70;}
 .default-color55.chart-bar {-fx-bar-fill: CHART_COLOR_56;}
 .default-color55.chart-pie {-fx-pie-color: CHART_COLOR_56;}
-.default-color56.chart-symbol {-fx-background-color: CHART_COLOR_57;}
+.default-color56.chart-symbol {-fx-background-color: CHART_COLOR_57, white;}
 .default-color56.chart-line-symbol {-fx-background-color: CHART_COLOR_57, white;}
 .default-color56.chart-series-line {-fx-stroke: CHART_COLOR_57;}
-.default-color56.chart-area-symbol {fx-background-color: CHART_COLOR_57, white;}
+.default-color56.chart-area-symbol {-fx-background-color: CHART_COLOR_57, white;}
 .default-color56.chart-series-area-line {-fx-stroke: CHART_COLOR_57;}
 .default-color56.chart-series-area-fill {-fx-fill: CHART_COLOR_57_TRANS_20;}
 .default-color56.chart-bubble {-fx-bubble-fill: CHART_COLOR_57_TRANS_70;}
 .default-color56.chart-bar {-fx-bar-fill: CHART_COLOR_57;}
 .default-color56.chart-pie {-fx-pie-color: CHART_COLOR_57;}
-.default-color57.chart-symbol {-fx-background-color: CHART_COLOR_58;}
+.default-color57.chart-symbol {-fx-background-color: CHART_COLOR_58, white;}
 .default-color57.chart-line-symbol {-fx-background-color: CHART_COLOR_58, white;}
 .default-color57.chart-series-line {-fx-stroke: CHART_COLOR_58;}
-.default-color57.chart-area-symbol {fx-background-color: CHART_COLOR_58, white;}
+.default-color57.chart-area-symbol {-fx-background-color: CHART_COLOR_58, white;}
 .default-color57.chart-series-area-line {-fx-stroke: CHART_COLOR_58;}
 .default-color57.chart-series-area-fill {-fx-fill: CHART_COLOR_58_TRANS_20;}
 .default-color57.chart-bubble {-fx-bubble-fill: CHART_COLOR_58_TRANS_70;}
 .default-color57.chart-bar {-fx-bar-fill: CHART_COLOR_58;}
 .default-color57.chart-pie {-fx-pie-color: CHART_COLOR_58;}
-.default-color58.chart-symbol {-fx-background-color: CHART_COLOR_59;}
+.default-color58.chart-symbol {-fx-background-color: CHART_COLOR_59, white;}
 .default-color58.chart-line-symbol {-fx-background-color: CHART_COLOR_59, white;}
 .default-color58.chart-series-line {-fx-stroke: CHART_COLOR_59;}
-.default-color58.chart-area-symbol {fx-background-color: CHART_COLOR_59, white;}
+.default-color58.chart-area-symbol {-fx-background-color: CHART_COLOR_59, white;}
 .default-color58.chart-series-area-line {-fx-stroke: CHART_COLOR_59;}
 .default-color58.chart-series-area-fill {-fx-fill: CHART_COLOR_59_TRANS_20;}
 .default-color58.chart-bubble {-fx-bubble-fill: CHART_COLOR_59_TRANS_70;}
 .default-color58.chart-bar {-fx-bar-fill: CHART_COLOR_59;}
 .default-color58.chart-pie {-fx-pie-color: CHART_COLOR_59;}
-.default-color59.chart-symbol {-fx-background-color: CHART_COLOR_60;}
+.default-color59.chart-symbol {-fx-background-color: CHART_COLOR_60, white;}
 .default-color59.chart-line-symbol {-fx-background-color: CHART_COLOR_60, white;}
 .default-color59.chart-series-line {-fx-stroke: CHART_COLOR_60;}
-.default-color59.chart-area-symbol {fx-background-color: CHART_COLOR_60, white;}
+.default-color59.chart-area-symbol {-fx-background-color: CHART_COLOR_60, white;}
 .default-color59.chart-series-area-line {-fx-stroke: CHART_COLOR_60;}
 .default-color59.chart-series-area-fill {-fx-fill: CHART_COLOR_60_TRANS_20;}
 .default-color59.chart-bubble {-fx-bubble-fill: CHART_COLOR_60_TRANS_70;}
 .default-color59.chart-bar {-fx-bar-fill: CHART_COLOR_60;}
 .default-color59.chart-pie {-fx-pie-color: CHART_COLOR_60;}
-.default-color60.chart-symbol {-fx-background-color: CHART_COLOR_61;}
+.default-color60.chart-symbol {-fx-background-color: CHART_COLOR_61, white;}
 .default-color60.chart-line-symbol {-fx-background-color: CHART_COLOR_61, white;}
 .default-color60.chart-series-line {-fx-stroke: CHART_COLOR_61;}
-.default-color60.chart-area-symbol {fx-background-color: CHART_COLOR_61, white;}
+.default-color60.chart-area-symbol {-fx-background-color: CHART_COLOR_61, white;}
 .default-color60.chart-series-area-line {-fx-stroke: CHART_COLOR_61;}
 .default-color60.chart-series-area-fill {-fx-fill: CHART_COLOR_61_TRANS_20;}
 .default-color60.chart-bubble {-fx-bubble-fill: CHART_COLOR_61_TRANS_70;}
 .default-color60.chart-bar {-fx-bar-fill: CHART_COLOR_61;}
 .default-color60.chart-pie {-fx-pie-color: CHART_COLOR_61;}
-.default-color61.chart-symbol {-fx-background-color: CHART_COLOR_62;}
+.default-color61.chart-symbol {-fx-background-color: CHART_COLOR_62, white;}
 .default-color61.chart-line-symbol {-fx-background-color: CHART_COLOR_62, white;}
 .default-color61.chart-series-line {-fx-stroke: CHART_COLOR_62;}
-.default-color61.chart-area-symbol {fx-background-color: CHART_COLOR_62, white;}
+.default-color61.chart-area-symbol {-fx-background-color: CHART_COLOR_62, white;}
 .default-color61.chart-series-area-line {-fx-stroke: CHART_COLOR_62;}
 .default-color61.chart-series-area-fill {-fx-fill: CHART_COLOR_62_TRANS_20;}
 .default-color61.chart-bubble {-fx-bubble-fill: CHART_COLOR_62_TRANS_70;}
 .default-color61.chart-bar {-fx-bar-fill: CHART_COLOR_62;}
 .default-color61.chart-pie {-fx-pie-color: CHART_COLOR_62;}
-.default-color62.chart-symbol {-fx-background-color: CHART_COLOR_63;}
+.default-color62.chart-symbol {-fx-background-color: CHART_COLOR_63, white;}
 .default-color62.chart-line-symbol {-fx-background-color: CHART_COLOR_63, white;}
 .default-color62.chart-series-line {-fx-stroke: CHART_COLOR_63;}
-.default-color62.chart-area-symbol {fx-background-color: CHART_COLOR_63, white;}
+.default-color62.chart-area-symbol {-fx-background-color: CHART_COLOR_63, white;}
 .default-color62.chart-series-area-line {-fx-stroke: CHART_COLOR_63;}
 .default-color62.chart-series-area-fill {-fx-fill: CHART_COLOR_63_TRANS_20;}
 .default-color62.chart-bubble {-fx-bubble-fill: CHART_COLOR_63_TRANS_70;}
 .default-color62.chart-bar {-fx-bar-fill: CHART_COLOR_63;}
 .default-color62.chart-pie {-fx-pie-color: CHART_COLOR_63;}
-.default-color63.chart-symbol {-fx-background-color: CHART_COLOR_64;}
+.default-color63.chart-symbol {-fx-background-color: CHART_COLOR_64, white;}
 .default-color63.chart-line-symbol {-fx-background-color: CHART_COLOR_64, white;}
 .default-color63.chart-series-line {-fx-stroke: CHART_COLOR_64;}
-.default-color63.chart-area-symbol {fx-background-color: CHART_COLOR_64, white;}
+.default-color63.chart-area-symbol {-fx-background-color: CHART_COLOR_64, white;}
 .default-color63.chart-series-area-line {-fx-stroke: CHART_COLOR_64;}
 .default-color63.chart-series-area-fill {-fx-fill: CHART_COLOR_64_TRANS_20;}
 .default-color63.chart-bubble {-fx-bubble-fill: CHART_COLOR_64_TRANS_70;}
 .default-color63.chart-bar {-fx-bar-fill: CHART_COLOR_64;}
 .default-color63.chart-pie {-fx-pie-color: CHART_COLOR_64;}
-.default-color64.chart-symbol {-fx-background-color: CHART_COLOR_65;}
+.default-color64.chart-symbol {-fx-background-color: CHART_COLOR_65, white;}
 .default-color64.chart-line-symbol {-fx-background-color: CHART_COLOR_65, white;}
 .default-color64.chart-series-line {-fx-stroke: CHART_COLOR_65;}
-.default-color64.chart-area-symbol {fx-background-color: CHART_COLOR_65, white;}
+.default-color64.chart-area-symbol {-fx-background-color: CHART_COLOR_65, white;}
 .default-color64.chart-series-area-line {-fx-stroke: CHART_COLOR_65;}
 .default-color64.chart-series-area-fill {-fx-fill: CHART_COLOR_65_TRANS_20;}
 .default-color64.chart-bubble {-fx-bubble-fill: CHART_COLOR_65_TRANS_70;}
 .default-color64.chart-bar {-fx-bar-fill: CHART_COLOR_65;}
 .default-color64.chart-pie {-fx-pie-color: CHART_COLOR_65;}
-.default-color65.chart-symbol {-fx-background-color: CHART_COLOR_66;}
+.default-color65.chart-symbol {-fx-background-color: CHART_COLOR_66, white;}
 .default-color65.chart-line-symbol {-fx-background-color: CHART_COLOR_66, white;}
 .default-color65.chart-series-line {-fx-stroke: CHART_COLOR_66;}
-.default-color65.chart-area-symbol {fx-background-color: CHART_COLOR_66, white;}
+.default-color65.chart-area-symbol {-fx-background-color: CHART_COLOR_66, white;}
 .default-color65.chart-series-area-line {-fx-stroke: CHART_COLOR_66;}
 .default-color65.chart-series-area-fill {-fx-fill: CHART_COLOR_66_TRANS_20;}
 .default-color65.chart-bubble {-fx-bubble-fill: CHART_COLOR_66_TRANS_70;}
 .default-color65.chart-bar {-fx-bar-fill: CHART_COLOR_66;}
 .default-color65.chart-pie {-fx-pie-color: CHART_COLOR_66;}
-.default-color66.chart-symbol {-fx-background-color: CHART_COLOR_67;}
+.default-color66.chart-symbol {-fx-background-color: CHART_COLOR_67, white;}
 .default-color66.chart-line-symbol {-fx-background-color: CHART_COLOR_67, white;}
 .default-color66.chart-series-line {-fx-stroke: CHART_COLOR_67;}
-.default-color66.chart-area-symbol {fx-background-color: CHART_COLOR_67, white;}
+.default-color66.chart-area-symbol {-fx-background-color: CHART_COLOR_67, white;}
 .default-color66.chart-series-area-line {-fx-stroke: CHART_COLOR_67;}
 .default-color66.chart-series-area-fill {-fx-fill: CHART_COLOR_67_TRANS_20;}
 .default-color66.chart-bubble {-fx-bubble-fill: CHART_COLOR_67_TRANS_70;}
 .default-color66.chart-bar {-fx-bar-fill: CHART_COLOR_67;}
 .default-color66.chart-pie {-fx-pie-color: CHART_COLOR_67;}
-.default-color67.chart-symbol {-fx-background-color: CHART_COLOR_68;}
+.default-color67.chart-symbol {-fx-background-color: CHART_COLOR_68, white;}
 .default-color67.chart-line-symbol {-fx-background-color: CHART_COLOR_68, white;}
 .default-color67.chart-series-line {-fx-stroke: CHART_COLOR_68;}
-.default-color67.chart-area-symbol {fx-background-color: CHART_COLOR_68, white;}
+.default-color67.chart-area-symbol {-fx-background-color: CHART_COLOR_68, white;}
 .default-color67.chart-series-area-line {-fx-stroke: CHART_COLOR_68;}
 .default-color67.chart-series-area-fill {-fx-fill: CHART_COLOR_68_TRANS_20;}
 .default-color67.chart-bubble {-fx-bubble-fill: CHART_COLOR_68_TRANS_70;}
 .default-color67.chart-bar {-fx-bar-fill: CHART_COLOR_68;}
 .default-color67.chart-pie {-fx-pie-color: CHART_COLOR_68;}
-.default-color68.chart-symbol {-fx-background-color: CHART_COLOR_69;}
+.default-color68.chart-symbol {-fx-background-color: CHART_COLOR_69, white;}
 .default-color68.chart-line-symbol {-fx-background-color: CHART_COLOR_69, white;}
 .default-color68.chart-series-line {-fx-stroke: CHART_COLOR_69;}
-.default-color68.chart-area-symbol {fx-background-color: CHART_COLOR_69, white;}
+.default-color68.chart-area-symbol {-fx-background-color: CHART_COLOR_69, white;}
 .default-color68.chart-series-area-line {-fx-stroke: CHART_COLOR_69;}
 .default-color68.chart-series-area-fill {-fx-fill: CHART_COLOR_69_TRANS_20;}
 .default-color68.chart-bubble {-fx-bubble-fill: CHART_COLOR_69_TRANS_70;}
 .default-color68.chart-bar {-fx-bar-fill: CHART_COLOR_69;}
 .default-color68.chart-pie {-fx-pie-color: CHART_COLOR_69;}
-.default-color69.chart-symbol {-fx-background-color: CHART_COLOR_70;}
+.default-color69.chart-symbol {-fx-background-color: CHART_COLOR_70, white;}
 .default-color69.chart-line-symbol {-fx-background-color: CHART_COLOR_70, white;}
 .default-color69.chart-series-line {-fx-stroke: CHART_COLOR_70;}
-.default-color69.chart-area-symbol {fx-background-color: CHART_COLOR_70, white;}
+.default-color69.chart-area-symbol {-fx-background-color: CHART_COLOR_70, white;}
 .default-color69.chart-series-area-line {-fx-stroke: CHART_COLOR_70;}
 .default-color69.chart-series-area-fill {-fx-fill: CHART_COLOR_70_TRANS_20;}
 .default-color69.chart-bubble {-fx-bubble-fill: CHART_COLOR_70_TRANS_70;}
 .default-color69.chart-bar {-fx-bar-fill: CHART_COLOR_70;}
 .default-color69.chart-pie {-fx-pie-color: CHART_COLOR_70;}
-.default-color70.chart-symbol {-fx-background-color: CHART_COLOR_71;}
+.default-color70.chart-symbol {-fx-background-color: CHART_COLOR_71, white;}
 .default-color70.chart-line-symbol {-fx-background-color: CHART_COLOR_71, white;}
 .default-color70.chart-series-line {-fx-stroke: CHART_COLOR_71;}
-.default-color70.chart-area-symbol {fx-background-color: CHART_COLOR_71, white;}
+.default-color70.chart-area-symbol {-fx-background-color: CHART_COLOR_71, white;}
 .default-color70.chart-series-area-line {-fx-stroke: CHART_COLOR_71;}
 .default-color70.chart-series-area-fill {-fx-fill: CHART_COLOR_71_TRANS_20;}
 .default-color70.chart-bubble {-fx-bubble-fill: CHART_COLOR_71_TRANS_70;}
 .default-color70.chart-bar {-fx-bar-fill: CHART_COLOR_71;}
 .default-color70.chart-pie {-fx-pie-color: CHART_COLOR_71;}
-.default-color71.chart-symbol {-fx-background-color: CHART_COLOR_72;}
+.default-color71.chart-symbol {-fx-background-color: CHART_COLOR_72, white;}
 .default-color71.chart-line-symbol {-fx-background-color: CHART_COLOR_72, white;}
 .default-color71.chart-series-line {-fx-stroke: CHART_COLOR_72;}
-.default-color71.chart-area-symbol {fx-background-color: CHART_COLOR_72, white;}
+.default-color71.chart-area-symbol {-fx-background-color: CHART_COLOR_72, white;}
 .default-color71.chart-series-area-line {-fx-stroke: CHART_COLOR_72;}
 .default-color71.chart-series-area-fill {-fx-fill: CHART_COLOR_72_TRANS_20;}
 .default-color71.chart-bubble {-fx-bubble-fill: CHART_COLOR_72_TRANS_70;}
 .default-color71.chart-bar {-fx-bar-fill: CHART_COLOR_72;}
 .default-color71.chart-pie {-fx-pie-color: CHART_COLOR_72;}
-.default-color72.chart-symbol {-fx-background-color: CHART_COLOR_73;}
+.default-color72.chart-symbol {-fx-background-color: CHART_COLOR_73, white;}
 .default-color72.chart-line-symbol {-fx-background-color: CHART_COLOR_73, white;}
 .default-color72.chart-series-line {-fx-stroke: CHART_COLOR_73;}
-.default-color72.chart-area-symbol {fx-background-color: CHART_COLOR_73, white;}
+.default-color72.chart-area-symbol {-fx-background-color: CHART_COLOR_73, white;}
 .default-color72.chart-series-area-line {-fx-stroke: CHART_COLOR_73;}
 .default-color72.chart-series-area-fill {-fx-fill: CHART_COLOR_73_TRANS_20;}
 .default-color72.chart-bubble {-fx-bubble-fill: CHART_COLOR_73_TRANS_70;}
 .default-color72.chart-bar {-fx-bar-fill: CHART_COLOR_73;}
 .default-color72.chart-pie {-fx-pie-color: CHART_COLOR_73;}
-.default-color73.chart-symbol {-fx-background-color: CHART_COLOR_74;}
+.default-color73.chart-symbol {-fx-background-color: CHART_COLOR_74, white;}
 .default-color73.chart-line-symbol {-fx-background-color: CHART_COLOR_74, white;}
 .default-color73.chart-series-line {-fx-stroke: CHART_COLOR_74;}
-.default-color73.chart-area-symbol {fx-background-color: CHART_COLOR_74, white;}
+.default-color73.chart-area-symbol {-fx-background-color: CHART_COLOR_74, white;}
 .default-color73.chart-series-area-line {-fx-stroke: CHART_COLOR_74;}
 .default-color73.chart-series-area-fill {-fx-fill: CHART_COLOR_74_TRANS_20;}
 .default-color73.chart-bubble {-fx-bubble-fill: CHART_COLOR_74_TRANS_70;}
 .default-color73.chart-bar {-fx-bar-fill: CHART_COLOR_74;}
 .default-color73.chart-pie {-fx-pie-color: CHART_COLOR_74;}
-.default-color74.chart-symbol {-fx-background-color: CHART_COLOR_75;}
+.default-color74.chart-symbol {-fx-background-color: CHART_COLOR_75, white;}
 .default-color74.chart-line-symbol {-fx-background-color: CHART_COLOR_75, white;}
 .default-color74.chart-series-line {-fx-stroke: CHART_COLOR_75;}
-.default-color74.chart-area-symbol {fx-background-color: CHART_COLOR_75, white;}
+.default-color74.chart-area-symbol {-fx-background-color: CHART_COLOR_75, white;}
 .default-color74.chart-series-area-line {-fx-stroke: CHART_COLOR_75;}
 .default-color74.chart-series-area-fill {-fx-fill: CHART_COLOR_75_TRANS_20;}
 .default-color74.chart-bubble {-fx-bubble-fill: CHART_COLOR_75_TRANS_70;}
 .default-color74.chart-bar {-fx-bar-fill: CHART_COLOR_75;}
 .default-color74.chart-pie {-fx-pie-color: CHART_COLOR_75;}
-.default-color75.chart-symbol {-fx-background-color: CHART_COLOR_76;}
+.default-color75.chart-symbol {-fx-background-color: CHART_COLOR_76, white;}
 .default-color75.chart-line-symbol {-fx-background-color: CHART_COLOR_76, white;}
 .default-color75.chart-series-line {-fx-stroke: CHART_COLOR_76;}
-.default-color75.chart-area-symbol {fx-background-color: CHART_COLOR_76, white;}
+.default-color75.chart-area-symbol {-fx-background-color: CHART_COLOR_76, white;}
 .default-color75.chart-series-area-line {-fx-stroke: CHART_COLOR_76;}
 .default-color75.chart-series-area-fill {-fx-fill: CHART_COLOR_76_TRANS_20;}
 .default-color75.chart-bubble {-fx-bubble-fill: CHART_COLOR_76_TRANS_70;}
 .default-color75.chart-bar {-fx-bar-fill: CHART_COLOR_76;}
 .default-color75.chart-pie {-fx-pie-color: CHART_COLOR_76;}
-.default-color76.chart-symbol {-fx-background-color: CHART_COLOR_77;}
+.default-color76.chart-symbol {-fx-background-color: CHART_COLOR_77, white;}
 .default-color76.chart-line-symbol {-fx-background-color: CHART_COLOR_77, white;}
 .default-color76.chart-series-line {-fx-stroke: CHART_COLOR_77;}
-.default-color76.chart-area-symbol {fx-background-color: CHART_COLOR_77, white;}
+.default-color76.chart-area-symbol {-fx-background-color: CHART_COLOR_77, white;}
 .default-color76.chart-series-area-line {-fx-stroke: CHART_COLOR_77;}
 .default-color76.chart-series-area-fill {-fx-fill: CHART_COLOR_77_TRANS_20;}
 .default-color76.chart-bubble {-fx-bubble-fill: CHART_COLOR_77_TRANS_70;}
 .default-color76.chart-bar {-fx-bar-fill: CHART_COLOR_77;}
 .default-color76.chart-pie {-fx-pie-color: CHART_COLOR_77;}
-.default-color77.chart-symbol {-fx-background-color: CHART_COLOR_78;}
+.default-color77.chart-symbol {-fx-background-color: CHART_COLOR_78, white;}
 .default-color77.chart-line-symbol {-fx-background-color: CHART_COLOR_78, white;}
 .default-color77.chart-series-line {-fx-stroke: CHART_COLOR_78;}
-.default-color77.chart-area-symbol {fx-background-color: CHART_COLOR_78, white;}
+.default-color77.chart-area-symbol {-fx-background-color: CHART_COLOR_78, white;}
 .default-color77.chart-series-area-line {-fx-stroke: CHART_COLOR_78;}
 .default-color77.chart-series-area-fill {-fx-fill: CHART_COLOR_78_TRANS_20;}
 .default-color77.chart-bubble {-fx-bubble-fill: CHART_COLOR_78_TRANS_70;}
 .default-color77.chart-bar {-fx-bar-fill: CHART_COLOR_78;}
 .default-color77.chart-pie {-fx-pie-color: CHART_COLOR_78;}
-.default-color78.chart-symbol {-fx-background-color: CHART_COLOR_79;}
+.default-color78.chart-symbol {-fx-background-color: CHART_COLOR_79, white;}
 .default-color78.chart-line-symbol {-fx-background-color: CHART_COLOR_79, white;}
 .default-color78.chart-series-line {-fx-stroke: CHART_COLOR_79;}
-.default-color78.chart-area-symbol {fx-background-color: CHART_COLOR_79, white;}
+.default-color78.chart-area-symbol {-fx-background-color: CHART_COLOR_79, white;}
 .default-color78.chart-series-area-line {-fx-stroke: CHART_COLOR_79;}
 .default-color78.chart-series-area-fill {-fx-fill: CHART_COLOR_79_TRANS_20;}
 .default-color78.chart-bubble {-fx-bubble-fill: CHART_COLOR_79_TRANS_70;}
 .default-color78.chart-bar {-fx-bar-fill: CHART_COLOR_79;}
 .default-color78.chart-pie {-fx-pie-color: CHART_COLOR_79;}
-.default-color79.chart-symbol {-fx-background-color: CHART_COLOR_80;}
+.default-color79.chart-symbol {-fx-background-color: CHART_COLOR_80, white;}
 .default-color79.chart-line-symbol {-fx-background-color: CHART_COLOR_80, white;}
 .default-color79.chart-series-line {-fx-stroke: CHART_COLOR_80;}
-.default-color79.chart-area-symbol {fx-background-color: CHART_COLOR_80, white;}
+.default-color79.chart-area-symbol {-fx-background-color: CHART_COLOR_80, white;}
 .default-color79.chart-series-area-line {-fx-stroke: CHART_COLOR_80;}
 .default-color79.chart-series-area-fill {-fx-fill: CHART_COLOR_80_TRANS_20;}
 .default-color79.chart-bubble {-fx-bubble-fill: CHART_COLOR_80_TRANS_70;}
 .default-color79.chart-bar {-fx-bar-fill: CHART_COLOR_80;}
 .default-color79.chart-pie {-fx-pie-color: CHART_COLOR_80;}
-.default-color80.chart-symbol {-fx-background-color: CHART_COLOR_81;}
+.default-color80.chart-symbol {-fx-background-color: CHART_COLOR_81, white;}
 .default-color80.chart-line-symbol {-fx-background-color: CHART_COLOR_81, white;}
 .default-color80.chart-series-line {-fx-stroke: CHART_COLOR_81;}
-.default-color80.chart-area-symbol {fx-background-color: CHART_COLOR_81, white;}
+.default-color80.chart-area-symbol {-fx-background-color: CHART_COLOR_81, white;}
 .default-color80.chart-series-area-line {-fx-stroke: CHART_COLOR_81;}
 .default-color80.chart-series-area-fill {-fx-fill: CHART_COLOR_81_TRANS_20;}
 .default-color80.chart-bubble {-fx-bubble-fill: CHART_COLOR_81_TRANS_70;}
 .default-color80.chart-bar {-fx-bar-fill: CHART_COLOR_81;}
 .default-color80.chart-pie {-fx-pie-color: CHART_COLOR_81;}
-.default-color81.chart-symbol {-fx-background-color: CHART_COLOR_82;}
+.default-color81.chart-symbol {-fx-background-color: CHART_COLOR_82, white;}
 .default-color81.chart-line-symbol {-fx-background-color: CHART_COLOR_82, white;}
 .default-color81.chart-series-line {-fx-stroke: CHART_COLOR_82;}
-.default-color81.chart-area-symbol {fx-background-color: CHART_COLOR_82, white;}
+.default-color81.chart-area-symbol {-fx-background-color: CHART_COLOR_82, white;}
 .default-color81.chart-series-area-line {-fx-stroke: CHART_COLOR_82;}
 .default-color81.chart-series-area-fill {-fx-fill: CHART_COLOR_82_TRANS_20;}
 .default-color81.chart-bubble {-fx-bubble-fill: CHART_COLOR_82_TRANS_70;}
 .default-color81.chart-bar {-fx-bar-fill: CHART_COLOR_82;}
 .default-color81.chart-pie {-fx-pie-color: CHART_COLOR_82;}
-.default-color82.chart-symbol {-fx-background-color: CHART_COLOR_83;}
+.default-color82.chart-symbol {-fx-background-color: CHART_COLOR_83, white;}
 .default-color82.chart-line-symbol {-fx-background-color: CHART_COLOR_83, white;}
 .default-color82.chart-series-line {-fx-stroke: CHART_COLOR_83;}
-.default-color82.chart-area-symbol {fx-background-color: CHART_COLOR_83, white;}
+.default-color82.chart-area-symbol {-fx-background-color: CHART_COLOR_83, white;}
 .default-color82.chart-series-area-line {-fx-stroke: CHART_COLOR_83;}
 .default-color82.chart-series-area-fill {-fx-fill: CHART_COLOR_83_TRANS_20;}
 .default-color82.chart-bubble {-fx-bubble-fill: CHART_COLOR_83_TRANS_70;}
 .default-color82.chart-bar {-fx-bar-fill: CHART_COLOR_83;}
 .default-color82.chart-pie {-fx-pie-color: CHART_COLOR_83;}
-.default-color83.chart-symbol {-fx-background-color: CHART_COLOR_84;}
+.default-color83.chart-symbol {-fx-background-color: CHART_COLOR_84, white;}
 .default-color83.chart-line-symbol {-fx-background-color: CHART_COLOR_84, white;}
 .default-color83.chart-series-line {-fx-stroke: CHART_COLOR_84;}
-.default-color83.chart-area-symbol {fx-background-color: CHART_COLOR_84, white;}
+.default-color83.chart-area-symbol {-fx-background-color: CHART_COLOR_84, white;}
 .default-color83.chart-series-area-line {-fx-stroke: CHART_COLOR_84;}
 .default-color83.chart-series-area-fill {-fx-fill: CHART_COLOR_84_TRANS_20;}
 .default-color83.chart-bubble {-fx-bubble-fill: CHART_COLOR_84_TRANS_70;}
 .default-color83.chart-bar {-fx-bar-fill: CHART_COLOR_84;}
 .default-color83.chart-pie {-fx-pie-color: CHART_COLOR_84;}
-.default-color84.chart-symbol {-fx-background-color: CHART_COLOR_85;}
+.default-color84.chart-symbol {-fx-background-color: CHART_COLOR_85, white;}
 .default-color84.chart-line-symbol {-fx-background-color: CHART_COLOR_85, white;}
 .default-color84.chart-series-line {-fx-stroke: CHART_COLOR_85;}
-.default-color84.chart-area-symbol {fx-background-color: CHART_COLOR_85, white;}
+.default-color84.chart-area-symbol {-fx-background-color: CHART_COLOR_85, white;}
 .default-color84.chart-series-area-line {-fx-stroke: CHART_COLOR_85;}
 .default-color84.chart-series-area-fill {-fx-fill: CHART_COLOR_85_TRANS_20;}
 .default-color84.chart-bubble {-fx-bubble-fill: CHART_COLOR_85_TRANS_70;}
 .default-color84.chart-bar {-fx-bar-fill: CHART_COLOR_85;}
 .default-color84.chart-pie {-fx-pie-color: CHART_COLOR_85;}
-.default-color85.chart-symbol {-fx-background-color: CHART_COLOR_86;}
+.default-color85.chart-symbol {-fx-background-color: CHART_COLOR_86, white;}
 .default-color85.chart-line-symbol {-fx-background-color: CHART_COLOR_86, white;}
 .default-color85.chart-series-line {-fx-stroke: CHART_COLOR_86;}
-.default-color85.chart-area-symbol {fx-background-color: CHART_COLOR_86, white;}
+.default-color85.chart-area-symbol {-fx-background-color: CHART_COLOR_86, white;}
 .default-color85.chart-series-area-line {-fx-stroke: CHART_COLOR_86;}
 .default-color85.chart-series-area-fill {-fx-fill: CHART_COLOR_86_TRANS_20;}
 .default-color85.chart-bubble {-fx-bubble-fill: CHART_COLOR_86_TRANS_70;}
 .default-color85.chart-bar {-fx-bar-fill: CHART_COLOR_86;}
 .default-color85.chart-pie {-fx-pie-color: CHART_COLOR_86;}
-.default-color86.chart-symbol {-fx-background-color: CHART_COLOR_87;}
+.default-color86.chart-symbol {-fx-background-color: CHART_COLOR_87, white;}
 .default-color86.chart-line-symbol {-fx-background-color: CHART_COLOR_87, white;}
 .default-color86.chart-series-line {-fx-stroke: CHART_COLOR_87;}
-.default-color86.chart-area-symbol {fx-background-color: CHART_COLOR_87, white;}
+.default-color86.chart-area-symbol {-fx-background-color: CHART_COLOR_87, white;}
 .default-color86.chart-series-area-line {-fx-stroke: CHART_COLOR_87;}
 .default-color86.chart-series-area-fill {-fx-fill: CHART_COLOR_87_TRANS_20;}
 .default-color86.chart-bubble {-fx-bubble-fill: CHART_COLOR_87_TRANS_70;}
 .default-color86.chart-bar {-fx-bar-fill: CHART_COLOR_87;}
 .default-color86.chart-pie {-fx-pie-color: CHART_COLOR_87;}
-.default-color87.chart-symbol {-fx-background-color: CHART_COLOR_88;}
+.default-color87.chart-symbol {-fx-background-color: CHART_COLOR_88, white;}
 .default-color87.chart-line-symbol {-fx-background-color: CHART_COLOR_88, white;}
 .default-color87.chart-series-line {-fx-stroke: CHART_COLOR_88;}
-.default-color87.chart-area-symbol {fx-background-color: CHART_COLOR_88, white;}
+.default-color87.chart-area-symbol {-fx-background-color: CHART_COLOR_88, white;}
 .default-color87.chart-series-area-line {-fx-stroke: CHART_COLOR_88;}
 .default-color87.chart-series-area-fill {-fx-fill: CHART_COLOR_88_TRANS_20;}
 .default-color87.chart-bubble {-fx-bubble-fill: CHART_COLOR_88_TRANS_70;}
 .default-color87.chart-bar {-fx-bar-fill: CHART_COLOR_88;}
 .default-color87.chart-pie {-fx-pie-color: CHART_COLOR_88;}
-.default-color88.chart-symbol {-fx-background-color: CHART_COLOR_89;}
+.default-color88.chart-symbol {-fx-background-color: CHART_COLOR_89, white;}
 .default-color88.chart-line-symbol {-fx-background-color: CHART_COLOR_89, white;}
 .default-color88.chart-series-line {-fx-stroke: CHART_COLOR_89;}
-.default-color88.chart-area-symbol {fx-background-color: CHART_COLOR_89, white;}
+.default-color88.chart-area-symbol {-fx-background-color: CHART_COLOR_89, white;}
 .default-color88.chart-series-area-line {-fx-stroke: CHART_COLOR_89;}
 .default-color88.chart-series-area-fill {-fx-fill: CHART_COLOR_89_TRANS_20;}
 .default-color88.chart-bubble {-fx-bubble-fill: CHART_COLOR_89_TRANS_70;}
 .default-color88.chart-bar {-fx-bar-fill: CHART_COLOR_89;}
 .default-color88.chart-pie {-fx-pie-color: CHART_COLOR_89;}
-.default-color89.chart-symbol {-fx-background-color: CHART_COLOR_90;}
+.default-color89.chart-symbol {-fx-background-color: CHART_COLOR_90, white;}
 .default-color89.chart-line-symbol {-fx-background-color: CHART_COLOR_90, white;}
 .default-color89.chart-series-line {-fx-stroke: CHART_COLOR_90;}
-.default-color89.chart-area-symbol {fx-background-color: CHART_COLOR_90, white;}
+.default-color89.chart-area-symbol {-fx-background-color: CHART_COLOR_90, white;}
 .default-color89.chart-series-area-line {-fx-stroke: CHART_COLOR_90;}
 .default-color89.chart-series-area-fill {-fx-fill: CHART_COLOR_90_TRANS_20;}
 .default-color89.chart-bubble {-fx-bubble-fill: CHART_COLOR_90_TRANS_70;}
 .default-color89.chart-bar {-fx-bar-fill: CHART_COLOR_90;}
 .default-color89.chart-pie {-fx-pie-color: CHART_COLOR_90;}
-.default-color90.chart-symbol {-fx-background-color: CHART_COLOR_91;}
+.default-color90.chart-symbol {-fx-background-color: CHART_COLOR_91, white;}
 .default-color90.chart-line-symbol {-fx-background-color: CHART_COLOR_91, white;}
 .default-color90.chart-series-line {-fx-stroke: CHART_COLOR_91;}
-.default-color90.chart-area-symbol {fx-background-color: CHART_COLOR_91, white;}
+.default-color90.chart-area-symbol {-fx-background-color: CHART_COLOR_91, white;}
 .default-color90.chart-series-area-line {-fx-stroke: CHART_COLOR_91;}
 .default-color90.chart-series-area-fill {-fx-fill: CHART_COLOR_91_TRANS_20;}
 .default-color90.chart-bubble {-fx-bubble-fill: CHART_COLOR_91_TRANS_70;}
 .default-color90.chart-bar {-fx-bar-fill: CHART_COLOR_91;}
 .default-color90.chart-pie {-fx-pie-color: CHART_COLOR_91;}
-.default-color91.chart-symbol {-fx-background-color: CHART_COLOR_92;}
+.default-color91.chart-symbol {-fx-background-color: CHART_COLOR_92, white;}
 .default-color91.chart-line-symbol {-fx-background-color: CHART_COLOR_92, white;}
 .default-color91.chart-series-line {-fx-stroke: CHART_COLOR_92;}
-.default-color91.chart-area-symbol {fx-background-color: CHART_COLOR_92, white;}
+.default-color91.chart-area-symbol {-fx-background-color: CHART_COLOR_92, white;}
 .default-color91.chart-series-area-line {-fx-stroke: CHART_COLOR_92;}
 .default-color91.chart-series-area-fill {-fx-fill: CHART_COLOR_92_TRANS_20;}
 .default-color91.chart-bubble {-fx-bubble-fill: CHART_COLOR_92_TRANS_70;}
 .default-color91.chart-bar {-fx-bar-fill: CHART_COLOR_92;}
 .default-color91.chart-pie {-fx-pie-color: CHART_COLOR_92;}
-.default-color92.chart-symbol {-fx-background-color: CHART_COLOR_93;}
+.default-color92.chart-symbol {-fx-background-color: CHART_COLOR_93, white;}
 .default-color92.chart-line-symbol {-fx-background-color: CHART_COLOR_93, white;}
 .default-color92.chart-series-line {-fx-stroke: CHART_COLOR_93;}
-.default-color92.chart-area-symbol {fx-background-color: CHART_COLOR_93, white;}
+.default-color92.chart-area-symbol {-fx-background-color: CHART_COLOR_93, white;}
 .default-color92.chart-series-area-line {-fx-stroke: CHART_COLOR_93;}
 .default-color92.chart-series-area-fill {-fx-fill: CHART_COLOR_93_TRANS_20;}
 .default-color92.chart-bubble {-fx-bubble-fill: CHART_COLOR_93_TRANS_70;}
 .default-color92.chart-bar {-fx-bar-fill: CHART_COLOR_93;}
 .default-color92.chart-pie {-fx-pie-color: CHART_COLOR_93;}
-.default-color93.chart-symbol {-fx-background-color: CHART_COLOR_94;}
+.default-color93.chart-symbol {-fx-background-color: CHART_COLOR_94, white;}
 .default-color93.chart-line-symbol {-fx-background-color: CHART_COLOR_94, white;}
 .default-color93.chart-series-line {-fx-stroke: CHART_COLOR_94;}
-.default-color93.chart-area-symbol {fx-background-color: CHART_COLOR_94, white;}
+.default-color93.chart-area-symbol {-fx-background-color: CHART_COLOR_94, white;}
 .default-color93.chart-series-area-line {-fx-stroke: CHART_COLOR_94;}
 .default-color93.chart-series-area-fill {-fx-fill: CHART_COLOR_94_TRANS_20;}
 .default-color93.chart-bubble {-fx-bubble-fill: CHART_COLOR_94_TRANS_70;}
 .default-color93.chart-bar {-fx-bar-fill: CHART_COLOR_94;}
 .default-color93.chart-pie {-fx-pie-color: CHART_COLOR_94;}
-.default-color94.chart-symbol {-fx-background-color: CHART_COLOR_95;}
+.default-color94.chart-symbol {-fx-background-color: CHART_COLOR_95, white;}
 .default-color94.chart-line-symbol {-fx-background-color: CHART_COLOR_95, white;}
 .default-color94.chart-series-line {-fx-stroke: CHART_COLOR_95;}
-.default-color94.chart-area-symbol {fx-background-color: CHART_COLOR_95, white;}
+.default-color94.chart-area-symbol {-fx-background-color: CHART_COLOR_95, white;}
 .default-color94.chart-series-area-line {-fx-stroke: CHART_COLOR_95;}
 .default-color94.chart-series-area-fill {-fx-fill: CHART_COLOR_95_TRANS_20;}
 .default-color94.chart-bubble {-fx-bubble-fill: CHART_COLOR_95_TRANS_70;}
 .default-color94.chart-bar {-fx-bar-fill: CHART_COLOR_95;}
 .default-color94.chart-pie {-fx-pie-color: CHART_COLOR_95;}
-.default-color95.chart-symbol {-fx-background-color: CHART_COLOR_96;}
+.default-color95.chart-symbol {-fx-background-color: CHART_COLOR_96, white;}
 .default-color95.chart-line-symbol {-fx-background-color: CHART_COLOR_96, white;}
 .default-color95.chart-series-line {-fx-stroke: CHART_COLOR_96;}
-.default-color95.chart-area-symbol {fx-background-color: CHART_COLOR_96, white;}
+.default-color95.chart-area-symbol {-fx-background-color: CHART_COLOR_96, white;}
 .default-color95.chart-series-area-line {-fx-stroke: CHART_COLOR_96;}
 .default-color95.chart-series-area-fill {-fx-fill: CHART_COLOR_96_TRANS_20;}
 .default-color95.chart-bubble {-fx-bubble-fill: CHART_COLOR_96_TRANS_70;}
 .default-color95.chart-bar {-fx-bar-fill: CHART_COLOR_96;}
 .default-color95.chart-pie {-fx-pie-color: CHART_COLOR_96;}
-.default-color96.chart-symbol {-fx-background-color: CHART_COLOR_97;}
+.default-color96.chart-symbol {-fx-background-color: CHART_COLOR_97, white;}
 .default-color96.chart-line-symbol {-fx-background-color: CHART_COLOR_97, white;}
 .default-color96.chart-series-line {-fx-stroke: CHART_COLOR_97;}
-.default-color96.chart-area-symbol {fx-background-color: CHART_COLOR_97, white;}
+.default-color96.chart-area-symbol {-fx-background-color: CHART_COLOR_97, white;}
 .default-color96.chart-series-area-line {-fx-stroke: CHART_COLOR_97;}
 .default-color96.chart-series-area-fill {-fx-fill: CHART_COLOR_97_TRANS_20;}
 .default-color96.chart-bubble {-fx-bubble-fill: CHART_COLOR_97_TRANS_70;}
 .default-color96.chart-bar {-fx-bar-fill: CHART_COLOR_97;}
 .default-color96.chart-pie {-fx-pie-color: CHART_COLOR_97;}
-.default-color97.chart-symbol {-fx-background-color: CHART_COLOR_98;}
+.default-color97.chart-symbol {-fx-background-color: CHART_COLOR_98, white;}
 .default-color97.chart-line-symbol {-fx-background-color: CHART_COLOR_98, white;}
 .default-color97.chart-series-line {-fx-stroke: CHART_COLOR_98;}
-.default-color97.chart-area-symbol {fx-background-color: CHART_COLOR_98, white;}
+.default-color97.chart-area-symbol {-fx-background-color: CHART_COLOR_98, white;}
 .default-color97.chart-series-area-line {-fx-stroke: CHART_COLOR_98;}
 .default-color97.chart-series-area-fill {-fx-fill: CHART_COLOR_98_TRANS_20;}
 .default-color97.chart-bubble {-fx-bubble-fill: CHART_COLOR_98_TRANS_70;}
 .default-color97.chart-bar {-fx-bar-fill: CHART_COLOR_98;}
 .default-color97.chart-pie {-fx-pie-color: CHART_COLOR_98;}
-.default-color98.chart-symbol {-fx-background-color: CHART_COLOR_99;}
+.default-color98.chart-symbol {-fx-background-color: CHART_COLOR_99, white;}
 .default-color98.chart-line-symbol {-fx-background-color: CHART_COLOR_99, white;}
 .default-color98.chart-series-line {-fx-stroke: CHART_COLOR_99;}
-.default-color98.chart-area-symbol {fx-background-color: CHART_COLOR_99, white;}
+.default-color98.chart-area-symbol {-fx-background-color: CHART_COLOR_99, white;}
 .default-color98.chart-series-area-line {-fx-stroke: CHART_COLOR_99;}
 .default-color98.chart-series-area-fill {-fx-fill: CHART_COLOR_99_TRANS_20;}
 .default-color98.chart-bubble {-fx-bubble-fill: CHART_COLOR_99_TRANS_70;}
 .default-color98.chart-bar {-fx-bar-fill: CHART_COLOR_99;}
 .default-color98.chart-pie {-fx-pie-color: CHART_COLOR_99;}
-.default-color99.chart-symbol {-fx-background-color: CHART_COLOR_100;}
+.default-color99.chart-symbol {-fx-background-color: CHART_COLOR_100, white;}
 .default-color99.chart-line-symbol {-fx-background-color: CHART_COLOR_100, white;}
 .default-color99.chart-series-line {-fx-stroke: CHART_COLOR_100;}
-.default-color99.chart-area-symbol {fx-background-color: CHART_COLOR_100, white;}
+.default-color99.chart-area-symbol {-fx-background-color: CHART_COLOR_100, white;}
 .default-color99.chart-series-area-line {-fx-stroke: CHART_COLOR_100;}
 .default-color99.chart-series-area-fill {-fx-fill: CHART_COLOR_100_TRANS_20;}
 .default-color99.chart-bubble {-fx-bubble-fill: CHART_COLOR_100_TRANS_70;}
 .default-color99.chart-bar {-fx-bar-fill: CHART_COLOR_100;}
 .default-color99.chart-pie {-fx-pie-color: CHART_COLOR_100;}
-.default-color100.chart-symbol {-fx-background-color: CHART_COLOR_101;}
+.default-color100.chart-symbol {-fx-background-color: CHART_COLOR_101, white;}
 .default-color100.chart-line-symbol {-fx-background-color: CHART_COLOR_101, white;}
 .default-color100.chart-series-line {-fx-stroke: CHART_COLOR_101;}
-.default-color100.chart-area-symbol {fx-background-color: CHART_COLOR_101, white;}
+.default-color100.chart-area-symbol {-fx-background-color: CHART_COLOR_101, white;}
 .default-color100.chart-series-area-line {-fx-stroke: CHART_COLOR_101;}
 .default-color100.chart-series-area-fill {-fx-fill: CHART_COLOR_101_TRANS_20;}
 .default-color100.chart-bubble {-fx-bubble-fill: CHART_COLOR_101_TRANS_70;}
 .default-color100.chart-bar {-fx-bar-fill: CHART_COLOR_101;}
 .default-color100.chart-pie {-fx-pie-color: CHART_COLOR_101;}
-.default-color101.chart-symbol {-fx-background-color: CHART_COLOR_102;}
+.default-color101.chart-symbol {-fx-background-color: CHART_COLOR_102, white;}
 .default-color101.chart-line-symbol {-fx-background-color: CHART_COLOR_102, white;}
 .default-color101.chart-series-line {-fx-stroke: CHART_COLOR_102;}
-.default-color101.chart-area-symbol {fx-background-color: CHART_COLOR_102, white;}
+.default-color101.chart-area-symbol {-fx-background-color: CHART_COLOR_102, white;}
 .default-color101.chart-series-area-line {-fx-stroke: CHART_COLOR_102;}
 .default-color101.chart-series-area-fill {-fx-fill: CHART_COLOR_102_TRANS_20;}
 .default-color101.chart-bubble {-fx-bubble-fill: CHART_COLOR_102_TRANS_70;}
 .default-color101.chart-bar {-fx-bar-fill: CHART_COLOR_102;}
 .default-color101.chart-pie {-fx-pie-color: CHART_COLOR_102;}
-.default-color102.chart-symbol {-fx-background-color: CHART_COLOR_103;}
+.default-color102.chart-symbol {-fx-background-color: CHART_COLOR_103, white;}
 .default-color102.chart-line-symbol {-fx-background-color: CHART_COLOR_103, white;}
 .default-color102.chart-series-line {-fx-stroke: CHART_COLOR_103;}
-.default-color102.chart-area-symbol {fx-background-color: CHART_COLOR_103, white;}
+.default-color102.chart-area-symbol {-fx-background-color: CHART_COLOR_103, white;}
 .default-color102.chart-series-area-line {-fx-stroke: CHART_COLOR_103;}
 .default-color102.chart-series-area-fill {-fx-fill: CHART_COLOR_103_TRANS_20;}
 .default-color102.chart-bubble {-fx-bubble-fill: CHART_COLOR_103_TRANS_70;}
 .default-color102.chart-bar {-fx-bar-fill: CHART_COLOR_103;}
 .default-color102.chart-pie {-fx-pie-color: CHART_COLOR_103;}
-.default-color103.chart-symbol {-fx-background-color: CHART_COLOR_104;}
+.default-color103.chart-symbol {-fx-background-color: CHART_COLOR_104, white;}
 .default-color103.chart-line-symbol {-fx-background-color: CHART_COLOR_104, white;}
 .default-color103.chart-series-line {-fx-stroke: CHART_COLOR_104;}
-.default-color103.chart-area-symbol {fx-background-color: CHART_COLOR_104, white;}
+.default-color103.chart-area-symbol {-fx-background-color: CHART_COLOR_104, white;}
 .default-color103.chart-series-area-line {-fx-stroke: CHART_COLOR_104;}
 .default-color103.chart-series-area-fill {-fx-fill: CHART_COLOR_104_TRANS_20;}
 .default-color103.chart-bubble {-fx-bubble-fill: CHART_COLOR_104_TRANS_70;}
 .default-color103.chart-bar {-fx-bar-fill: CHART_COLOR_104;}
 .default-color103.chart-pie {-fx-pie-color: CHART_COLOR_104;}
-.default-color104.chart-symbol {-fx-background-color: CHART_COLOR_105;}
+.default-color104.chart-symbol {-fx-background-color: CHART_COLOR_105, white;}
 .default-color104.chart-line-symbol {-fx-background-color: CHART_COLOR_105, white;}
 .default-color104.chart-series-line {-fx-stroke: CHART_COLOR_105;}
-.default-color104.chart-area-symbol {fx-background-color: CHART_COLOR_105, white;}
+.default-color104.chart-area-symbol {-fx-background-color: CHART_COLOR_105, white;}
 .default-color104.chart-series-area-line {-fx-stroke: CHART_COLOR_105;}
 .default-color104.chart-series-area-fill {-fx-fill: CHART_COLOR_105_TRANS_20;}
 .default-color104.chart-bubble {-fx-bubble-fill: CHART_COLOR_105_TRANS_70;}
 .default-color104.chart-bar {-fx-bar-fill: CHART_COLOR_105;}
 .default-color104.chart-pie {-fx-pie-color: CHART_COLOR_105;}
-.default-color105.chart-symbol {-fx-background-color: CHART_COLOR_106;}
+.default-color105.chart-symbol {-fx-background-color: CHART_COLOR_106, white;}
 .default-color105.chart-line-symbol {-fx-background-color: CHART_COLOR_106, white;}
 .default-color105.chart-series-line {-fx-stroke: CHART_COLOR_106;}
-.default-color105.chart-area-symbol {fx-background-color: CHART_COLOR_106, white;}
+.default-color105.chart-area-symbol {-fx-background-color: CHART_COLOR_106, white;}
 .default-color105.chart-series-area-line {-fx-stroke: CHART_COLOR_106;}
 .default-color105.chart-series-area-fill {-fx-fill: CHART_COLOR_106_TRANS_20;}
 .default-color105.chart-bubble {-fx-bubble-fill: CHART_COLOR_106_TRANS_70;}
 .default-color105.chart-bar {-fx-bar-fill: CHART_COLOR_106;}
 .default-color105.chart-pie {-fx-pie-color: CHART_COLOR_106;}
-.default-color106.chart-symbol {-fx-background-color: CHART_COLOR_107;}
+.default-color106.chart-symbol {-fx-background-color: CHART_COLOR_107, white;}
 .default-color106.chart-line-symbol {-fx-background-color: CHART_COLOR_107, white;}
 .default-color106.chart-series-line {-fx-stroke: CHART_COLOR_107;}
-.default-color106.chart-area-symbol {fx-background-color: CHART_COLOR_107, white;}
+.default-color106.chart-area-symbol {-fx-background-color: CHART_COLOR_107, white;}
 .default-color106.chart-series-area-line {-fx-stroke: CHART_COLOR_107;}
 .default-color106.chart-series-area-fill {-fx-fill: CHART_COLOR_107_TRANS_20;}
 .default-color106.chart-bubble {-fx-bubble-fill: CHART_COLOR_107_TRANS_70;}
 .default-color106.chart-bar {-fx-bar-fill: CHART_COLOR_107;}
 .default-color106.chart-pie {-fx-pie-color: CHART_COLOR_107;}
-.default-color107.chart-symbol {-fx-background-color: CHART_COLOR_108;}
+.default-color107.chart-symbol {-fx-background-color: CHART_COLOR_108, white;}
 .default-color107.chart-line-symbol {-fx-background-color: CHART_COLOR_108, white;}
 .default-color107.chart-series-line {-fx-stroke: CHART_COLOR_108;}
-.default-color107.chart-area-symbol {fx-background-color: CHART_COLOR_108, white;}
+.default-color107.chart-area-symbol {-fx-background-color: CHART_COLOR_108, white;}
 .default-color107.chart-series-area-line {-fx-stroke: CHART_COLOR_108;}
 .default-color107.chart-series-area-fill {-fx-fill: CHART_COLOR_108_TRANS_20;}
 .default-color107.chart-bubble {-fx-bubble-fill: CHART_COLOR_108_TRANS_70;}
 .default-color107.chart-bar {-fx-bar-fill: CHART_COLOR_108;}
 .default-color107.chart-pie {-fx-pie-color: CHART_COLOR_108;}
-.default-color108.chart-symbol {-fx-background-color: CHART_COLOR_109;}
+.default-color108.chart-symbol {-fx-background-color: CHART_COLOR_109, white;}
 .default-color108.chart-line-symbol {-fx-background-color: CHART_COLOR_109, white;}
 .default-color108.chart-series-line {-fx-stroke: CHART_COLOR_109;}
-.default-color108.chart-area-symbol {fx-background-color: CHART_COLOR_109, white;}
+.default-color108.chart-area-symbol {-fx-background-color: CHART_COLOR_109, white;}
 .default-color108.chart-series-area-line {-fx-stroke: CHART_COLOR_109;}
 .default-color108.chart-series-area-fill {-fx-fill: CHART_COLOR_109_TRANS_20;}
 .default-color108.chart-bubble {-fx-bubble-fill: CHART_COLOR_109_TRANS_70;}
 .default-color108.chart-bar {-fx-bar-fill: CHART_COLOR_109;}
 .default-color108.chart-pie {-fx-pie-color: CHART_COLOR_109;}
-.default-color109.chart-symbol {-fx-background-color: CHART_COLOR_110;}
+.default-color109.chart-symbol {-fx-background-color: CHART_COLOR_110, white;}
 .default-color109.chart-line-symbol {-fx-background-color: CHART_COLOR_110, white;}
 .default-color109.chart-series-line {-fx-stroke: CHART_COLOR_110;}
-.default-color109.chart-area-symbol {fx-background-color: CHART_COLOR_110, white;}
+.default-color109.chart-area-symbol {-fx-background-color: CHART_COLOR_110, white;}
 .default-color109.chart-series-area-line {-fx-stroke: CHART_COLOR_110;}
 .default-color109.chart-series-area-fill {-fx-fill: CHART_COLOR_110_TRANS_20;}
 .default-color109.chart-bubble {-fx-bubble-fill: CHART_COLOR_110_TRANS_70;}
 .default-color109.chart-bar {-fx-bar-fill: CHART_COLOR_110;}
 .default-color109.chart-pie {-fx-pie-color: CHART_COLOR_110;}
-.default-color110.chart-symbol {-fx-background-color: CHART_COLOR_111;}
+.default-color110.chart-symbol {-fx-background-color: CHART_COLOR_111, white;}
 .default-color110.chart-line-symbol {-fx-background-color: CHART_COLOR_111, white;}
 .default-color110.chart-series-line {-fx-stroke: CHART_COLOR_111;}
-.default-color110.chart-area-symbol {fx-background-color: CHART_COLOR_111, white;}
+.default-color110.chart-area-symbol {-fx-background-color: CHART_COLOR_111, white;}
 .default-color110.chart-series-area-line {-fx-stroke: CHART_COLOR_111;}
 .default-color110.chart-series-area-fill {-fx-fill: CHART_COLOR_111_TRANS_20;}
 .default-color110.chart-bubble {-fx-bubble-fill: CHART_COLOR_111_TRANS_70;}
 .default-color110.chart-bar {-fx-bar-fill: CHART_COLOR_111;}
 .default-color110.chart-pie {-fx-pie-color: CHART_COLOR_111;}
-.default-color111.chart-symbol {-fx-background-color: CHART_COLOR_112;}
+.default-color111.chart-symbol {-fx-background-color: CHART_COLOR_112, white;}
 .default-color111.chart-line-symbol {-fx-background-color: CHART_COLOR_112, white;}
 .default-color111.chart-series-line {-fx-stroke: CHART_COLOR_112;}
-.default-color111.chart-area-symbol {fx-background-color: CHART_COLOR_112, white;}
+.default-color111.chart-area-symbol {-fx-background-color: CHART_COLOR_112, white;}
 .default-color111.chart-series-area-line {-fx-stroke: CHART_COLOR_112;}
 .default-color111.chart-series-area-fill {-fx-fill: CHART_COLOR_112_TRANS_20;}
 .default-color111.chart-bubble {-fx-bubble-fill: CHART_COLOR_112_TRANS_70;}
 .default-color111.chart-bar {-fx-bar-fill: CHART_COLOR_112;}
 .default-color111.chart-pie {-fx-pie-color: CHART_COLOR_112;}
-.default-color112.chart-symbol {-fx-background-color: CHART_COLOR_113;}
+.default-color112.chart-symbol {-fx-background-color: CHART_COLOR_113, white;}
 .default-color112.chart-line-symbol {-fx-background-color: CHART_COLOR_113, white;}
 .default-color112.chart-series-line {-fx-stroke: CHART_COLOR_113;}
-.default-color112.chart-area-symbol {fx-background-color: CHART_COLOR_113, white;}
+.default-color112.chart-area-symbol {-fx-background-color: CHART_COLOR_113, white;}
 .default-color112.chart-series-area-line {-fx-stroke: CHART_COLOR_113;}
 .default-color112.chart-series-area-fill {-fx-fill: CHART_COLOR_113_TRANS_20;}
 .default-color112.chart-bubble {-fx-bubble-fill: CHART_COLOR_113_TRANS_70;}
 .default-color112.chart-bar {-fx-bar-fill: CHART_COLOR_113;}
 .default-color112.chart-pie {-fx-pie-color: CHART_COLOR_113;}
-.default-color113.chart-symbol {-fx-background-color: CHART_COLOR_114;}
+.default-color113.chart-symbol {-fx-background-color: CHART_COLOR_114, white;}
 .default-color113.chart-line-symbol {-fx-background-color: CHART_COLOR_114, white;}
 .default-color113.chart-series-line {-fx-stroke: CHART_COLOR_114;}
-.default-color113.chart-area-symbol {fx-background-color: CHART_COLOR_114, white;}
+.default-color113.chart-area-symbol {-fx-background-color: CHART_COLOR_114, white;}
 .default-color113.chart-series-area-line {-fx-stroke: CHART_COLOR_114;}
 .default-color113.chart-series-area-fill {-fx-fill: CHART_COLOR_114_TRANS_20;}
 .default-color113.chart-bubble {-fx-bubble-fill: CHART_COLOR_114_TRANS_70;}
 .default-color113.chart-bar {-fx-bar-fill: CHART_COLOR_114;}
 .default-color113.chart-pie {-fx-pie-color: CHART_COLOR_114;}
-.default-color114.chart-symbol {-fx-background-color: CHART_COLOR_115;}
+.default-color114.chart-symbol {-fx-background-color: CHART_COLOR_115, white;}
 .default-color114.chart-line-symbol {-fx-background-color: CHART_COLOR_115, white;}
 .default-color114.chart-series-line {-fx-stroke: CHART_COLOR_115;}
-.default-color114.chart-area-symbol {fx-background-color: CHART_COLOR_115, white;}
+.default-color114.chart-area-symbol {-fx-background-color: CHART_COLOR_115, white;}
 .default-color114.chart-series-area-line {-fx-stroke: CHART_COLOR_115;}
 .default-color114.chart-series-area-fill {-fx-fill: CHART_COLOR_115_TRANS_20;}
 .default-color114.chart-bubble {-fx-bubble-fill: CHART_COLOR_115_TRANS_70;}
 .default-color114.chart-bar {-fx-bar-fill: CHART_COLOR_115;}
 .default-color114.chart-pie {-fx-pie-color: CHART_COLOR_115;}
-.default-color115.chart-symbol {-fx-background-color: CHART_COLOR_116;}
+.default-color115.chart-symbol {-fx-background-color: CHART_COLOR_116, white;}
 .default-color115.chart-line-symbol {-fx-background-color: CHART_COLOR_116, white;}
 .default-color115.chart-series-line {-fx-stroke: CHART_COLOR_116;}
-.default-color115.chart-area-symbol {fx-background-color: CHART_COLOR_116, white;}
+.default-color115.chart-area-symbol {-fx-background-color: CHART_COLOR_116, white;}
 .default-color115.chart-series-area-line {-fx-stroke: CHART_COLOR_116;}
 .default-color115.chart-series-area-fill {-fx-fill: CHART_COLOR_116_TRANS_20;}
 .default-color115.chart-bubble {-fx-bubble-fill: CHART_COLOR_116_TRANS_70;}
 .default-color115.chart-bar {-fx-bar-fill: CHART_COLOR_116;}
 .default-color115.chart-pie {-fx-pie-color: CHART_COLOR_116;}
-.default-color116.chart-symbol {-fx-background-color: CHART_COLOR_117;}
+.default-color116.chart-symbol {-fx-background-color: CHART_COLOR_117, white;}
 .default-color116.chart-line-symbol {-fx-background-color: CHART_COLOR_117, white;}
 .default-color116.chart-series-line {-fx-stroke: CHART_COLOR_117;}
-.default-color116.chart-area-symbol {fx-background-color: CHART_COLOR_117, white;}
+.default-color116.chart-area-symbol {-fx-background-color: CHART_COLOR_117, white;}
 .default-color116.chart-series-area-line {-fx-stroke: CHART_COLOR_117;}
 .default-color116.chart-series-area-fill {-fx-fill: CHART_COLOR_117_TRANS_20;}
 .default-color116.chart-bubble {-fx-bubble-fill: CHART_COLOR_117_TRANS_70;}
 .default-color116.chart-bar {-fx-bar-fill: CHART_COLOR_117;}
 .default-color116.chart-pie {-fx-pie-color: CHART_COLOR_117;}
-.default-color117.chart-symbol {-fx-background-color: CHART_COLOR_118;}
+.default-color117.chart-symbol {-fx-background-color: CHART_COLOR_118, white;}
 .default-color117.chart-line-symbol {-fx-background-color: CHART_COLOR_118, white;}
 .default-color117.chart-series-line {-fx-stroke: CHART_COLOR_118;}
-.default-color117.chart-area-symbol {fx-background-color: CHART_COLOR_118, white;}
+.default-color117.chart-area-symbol {-fx-background-color: CHART_COLOR_118, white;}
 .default-color117.chart-series-area-line {-fx-stroke: CHART_COLOR_118;}
 .default-color117.chart-series-area-fill {-fx-fill: CHART_COLOR_118_TRANS_20;}
 .default-color117.chart-bubble {-fx-bubble-fill: CHART_COLOR_118_TRANS_70;}
 .default-color117.chart-bar {-fx-bar-fill: CHART_COLOR_118;}
 .default-color117.chart-pie {-fx-pie-color: CHART_COLOR_118;}
-.default-color118.chart-symbol {-fx-background-color: CHART_COLOR_119;}
+.default-color118.chart-symbol {-fx-background-color: CHART_COLOR_119, white;}
 .default-color118.chart-line-symbol {-fx-background-color: CHART_COLOR_119, white;}
 .default-color118.chart-series-line {-fx-stroke: CHART_COLOR_119;}
-.default-color118.chart-area-symbol {fx-background-color: CHART_COLOR_119, white;}
+.default-color118.chart-area-symbol {-fx-background-color: CHART_COLOR_119, white;}
 .default-color118.chart-series-area-line {-fx-stroke: CHART_COLOR_119;}
 .default-color118.chart-series-area-fill {-fx-fill: CHART_COLOR_119_TRANS_20;}
 .default-color118.chart-bubble {-fx-bubble-fill: CHART_COLOR_119_TRANS_70;}
 .default-color118.chart-bar {-fx-bar-fill: CHART_COLOR_119;}
 .default-color118.chart-pie {-fx-pie-color: CHART_COLOR_119;}
-.default-color119.chart-symbol {-fx-background-color: CHART_COLOR_120;}
+.default-color119.chart-symbol {-fx-background-color: CHART_COLOR_120, white;}
 .default-color119.chart-line-symbol {-fx-background-color: CHART_COLOR_120, white;}
 .default-color119.chart-series-line {-fx-stroke: CHART_COLOR_120;}
-.default-color119.chart-area-symbol {fx-background-color: CHART_COLOR_120, white;}
+.default-color119.chart-area-symbol {-fx-background-color: CHART_COLOR_120, white;}
 .default-color119.chart-series-area-line {-fx-stroke: CHART_COLOR_120;}
 .default-color119.chart-series-area-fill {-fx-fill: CHART_COLOR_120_TRANS_20;}
 .default-color119.chart-bubble {-fx-bubble-fill: CHART_COLOR_120_TRANS_70;}
 .default-color119.chart-bar {-fx-bar-fill: CHART_COLOR_120;}
 .default-color119.chart-pie {-fx-pie-color: CHART_COLOR_120;}
-.default-color120.chart-symbol {-fx-background-color: CHART_COLOR_121;}
+.default-color120.chart-symbol {-fx-background-color: CHART_COLOR_121, white;}
 .default-color120.chart-line-symbol {-fx-background-color: CHART_COLOR_121, white;}
 .default-color120.chart-series-line {-fx-stroke: CHART_COLOR_121;}
-.default-color120.chart-area-symbol {fx-background-color: CHART_COLOR_121, white;}
+.default-color120.chart-area-symbol {-fx-background-color: CHART_COLOR_121, white;}
 .default-color120.chart-series-area-line {-fx-stroke: CHART_COLOR_121;}
 .default-color120.chart-series-area-fill {-fx-fill: CHART_COLOR_121_TRANS_20;}
 .default-color120.chart-bubble {-fx-bubble-fill: CHART_COLOR_121_TRANS_70;}
 .default-color120.chart-bar {-fx-bar-fill: CHART_COLOR_121;}
 .default-color120.chart-pie {-fx-pie-color: CHART_COLOR_121;}
-.default-color121.chart-symbol {-fx-background-color: CHART_COLOR_122;}
+.default-color121.chart-symbol {-fx-background-color: CHART_COLOR_122, white;}
 .default-color121.chart-line-symbol {-fx-background-color: CHART_COLOR_122, white;}
 .default-color121.chart-series-line {-fx-stroke: CHART_COLOR_122;}
-.default-color121.chart-area-symbol {fx-background-color: CHART_COLOR_122, white;}
+.default-color121.chart-area-symbol {-fx-background-color: CHART_COLOR_122, white;}
 .default-color121.chart-series-area-line {-fx-stroke: CHART_COLOR_122;}
 .default-color121.chart-series-area-fill {-fx-fill: CHART_COLOR_122_TRANS_20;}
 .default-color121.chart-bubble {-fx-bubble-fill: CHART_COLOR_122_TRANS_70;}
 .default-color121.chart-bar {-fx-bar-fill: CHART_COLOR_122;}
 .default-color121.chart-pie {-fx-pie-color: CHART_COLOR_122;}
-.default-color122.chart-symbol {-fx-background-color: CHART_COLOR_123;}
+.default-color122.chart-symbol {-fx-background-color: CHART_COLOR_123, white;}
 .default-color122.chart-line-symbol {-fx-background-color: CHART_COLOR_123, white;}
 .default-color122.chart-series-line {-fx-stroke: CHART_COLOR_123;}
-.default-color122.chart-area-symbol {fx-background-color: CHART_COLOR_123, white;}
+.default-color122.chart-area-symbol {-fx-background-color: CHART_COLOR_123, white;}
 .default-color122.chart-series-area-line {-fx-stroke: CHART_COLOR_123;}
 .default-color122.chart-series-area-fill {-fx-fill: CHART_COLOR_123_TRANS_20;}
 .default-color122.chart-bubble {-fx-bubble-fill: CHART_COLOR_123_TRANS_70;}
 .default-color122.chart-bar {-fx-bar-fill: CHART_COLOR_123;}
 .default-color122.chart-pie {-fx-pie-color: CHART_COLOR_123;}
-.default-color123.chart-symbol {-fx-background-color: CHART_COLOR_124;}
+.default-color123.chart-symbol {-fx-background-color: CHART_COLOR_124, white;}
 .default-color123.chart-line-symbol {-fx-background-color: CHART_COLOR_124, white;}
 .default-color123.chart-series-line {-fx-stroke: CHART_COLOR_124;}
-.default-color123.chart-area-symbol {fx-background-color: CHART_COLOR_124, white;}
+.default-color123.chart-area-symbol {-fx-background-color: CHART_COLOR_124, white;}
 .default-color123.chart-series-area-line {-fx-stroke: CHART_COLOR_124;}
 .default-color123.chart-series-area-fill {-fx-fill: CHART_COLOR_124_TRANS_20;}
 .default-color123.chart-bubble {-fx-bubble-fill: CHART_COLOR_124_TRANS_70;}
 .default-color123.chart-bar {-fx-bar-fill: CHART_COLOR_124;}
 .default-color123.chart-pie {-fx-pie-color: CHART_COLOR_124;}
-.default-color124.chart-symbol {-fx-background-color: CHART_COLOR_125;}
+.default-color124.chart-symbol {-fx-background-color: CHART_COLOR_125, white;}
 .default-color124.chart-line-symbol {-fx-background-color: CHART_COLOR_125, white;}
 .default-color124.chart-series-line {-fx-stroke: CHART_COLOR_125;}
-.default-color124.chart-area-symbol {fx-background-color: CHART_COLOR_125, white;}
+.default-color124.chart-area-symbol {-fx-background-color: CHART_COLOR_125, white;}
 .default-color124.chart-series-area-line {-fx-stroke: CHART_COLOR_125;}
 .default-color124.chart-series-area-fill {-fx-fill: CHART_COLOR_125_TRANS_20;}
 .default-color124.chart-bubble {-fx-bubble-fill: CHART_COLOR_125_TRANS_70;}
 .default-color124.chart-bar {-fx-bar-fill: CHART_COLOR_125;}
 .default-color124.chart-pie {-fx-pie-color: CHART_COLOR_125;}
-.default-color125.chart-symbol {-fx-background-color: CHART_COLOR_126;}
+.default-color125.chart-symbol {-fx-background-color: CHART_COLOR_126, white;}
 .default-color125.chart-line-symbol {-fx-background-color: CHART_COLOR_126, white;}
 .default-color125.chart-series-line {-fx-stroke: CHART_COLOR_126;}
-.default-color125.chart-area-symbol {fx-background-color: CHART_COLOR_126, white;}
+.default-color125.chart-area-symbol {-fx-background-color: CHART_COLOR_126, white;}
 .default-color125.chart-series-area-line {-fx-stroke: CHART_COLOR_126;}
 .default-color125.chart-series-area-fill {-fx-fill: CHART_COLOR_126_TRANS_20;}
 .default-color125.chart-bubble {-fx-bubble-fill: CHART_COLOR_126_TRANS_70;}
 .default-color125.chart-bar {-fx-bar-fill: CHART_COLOR_126;}
 .default-color125.chart-pie {-fx-pie-color: CHART_COLOR_126;}
-.default-color126.chart-symbol {-fx-background-color: CHART_COLOR_127;}
+.default-color126.chart-symbol {-fx-background-color: CHART_COLOR_127, white;}
 .default-color126.chart-line-symbol {-fx-background-color: CHART_COLOR_127, white;}
 .default-color126.chart-series-line {-fx-stroke: CHART_COLOR_127;}
-.default-color126.chart-area-symbol {fx-background-color: CHART_COLOR_127, white;}
+.default-color126.chart-area-symbol {-fx-background-color: CHART_COLOR_127, white;}
 .default-color126.chart-series-area-line {-fx-stroke: CHART_COLOR_127;}
 .default-color126.chart-series-area-fill {-fx-fill: CHART_COLOR_127_TRANS_20;}
 .default-color126.chart-bubble {-fx-bubble-fill: CHART_COLOR_127_TRANS_70;}
 .default-color126.chart-bar {-fx-bar-fill: CHART_COLOR_127;}
 .default-color126.chart-pie {-fx-pie-color: CHART_COLOR_127;}
-.default-color127.chart-symbol {-fx-background-color: CHART_COLOR_128;}
+.default-color127.chart-symbol {-fx-background-color: CHART_COLOR_128, white;}
 .default-color127.chart-line-symbol {-fx-background-color: CHART_COLOR_128, white;}
 .default-color127.chart-series-line {-fx-stroke: CHART_COLOR_128;}
-.default-color127.chart-area-symbol {fx-background-color: CHART_COLOR_128, white;}
+.default-color127.chart-area-symbol {-fx-background-color: CHART_COLOR_128, white;}
 .default-color127.chart-series-area-line {-fx-stroke: CHART_COLOR_128;}
 .default-color127.chart-series-area-fill {-fx-fill: CHART_COLOR_128_TRANS_20;}
 .default-color127.chart-bubble {-fx-bubble-fill: CHART_COLOR_128_TRANS_70;}
 .default-color127.chart-bar {-fx-bar-fill: CHART_COLOR_128;}
 .default-color127.chart-pie {-fx-pie-color: CHART_COLOR_128;}
-.default-color128.chart-symbol {-fx-background-color: CHART_COLOR_129;}
+.default-color128.chart-symbol {-fx-background-color: CHART_COLOR_129, white;}
 .default-color128.chart-line-symbol {-fx-background-color: CHART_COLOR_129, white;}
 .default-color128.chart-series-line {-fx-stroke: CHART_COLOR_129;}
-.default-color128.chart-area-symbol {fx-background-color: CHART_COLOR_129, white;}
+.default-color128.chart-area-symbol {-fx-background-color: CHART_COLOR_129, white;}
 .default-color128.chart-series-area-line {-fx-stroke: CHART_COLOR_129;}
 .default-color128.chart-series-area-fill {-fx-fill: CHART_COLOR_129_TRANS_20;}
 .default-color128.chart-bubble {-fx-bubble-fill: CHART_COLOR_129_TRANS_70;}
 .default-color128.chart-bar {-fx-bar-fill: CHART_COLOR_129;}
 .default-color128.chart-pie {-fx-pie-color: CHART_COLOR_129;}
-.default-color129.chart-symbol {-fx-background-color: CHART_COLOR_130;}
+.default-color129.chart-symbol {-fx-background-color: CHART_COLOR_130, white;}
 .default-color129.chart-line-symbol {-fx-background-color: CHART_COLOR_130, white;}
 .default-color129.chart-series-line {-fx-stroke: CHART_COLOR_130;}
-.default-color129.chart-area-symbol {fx-background-color: CHART_COLOR_130, white;}
+.default-color129.chart-area-symbol {-fx-background-color: CHART_COLOR_130, white;}
 .default-color129.chart-series-area-line {-fx-stroke: CHART_COLOR_130;}
 .default-color129.chart-series-area-fill {-fx-fill: CHART_COLOR_130_TRANS_20;}
 .default-color129.chart-bubble {-fx-bubble-fill: CHART_COLOR_130_TRANS_70;}
 .default-color129.chart-bar {-fx-bar-fill: CHART_COLOR_130;}
 .default-color129.chart-pie {-fx-pie-color: CHART_COLOR_130;}
-.default-color130.chart-symbol {-fx-background-color: CHART_COLOR_131;}
+.default-color130.chart-symbol {-fx-background-color: CHART_COLOR_131, white;}
 .default-color130.chart-line-symbol {-fx-background-color: CHART_COLOR_131, white;}
 .default-color130.chart-series-line {-fx-stroke: CHART_COLOR_131;}
-.default-color130.chart-area-symbol {fx-background-color: CHART_COLOR_131, white;}
+.default-color130.chart-area-symbol {-fx-background-color: CHART_COLOR_131, white;}
 .default-color130.chart-series-area-line {-fx-stroke: CHART_COLOR_131;}
 .default-color130.chart-series-area-fill {-fx-fill: CHART_COLOR_131_TRANS_20;}
 .default-color130.chart-bubble {-fx-bubble-fill: CHART_COLOR_131_TRANS_70;}
 .default-color130.chart-bar {-fx-bar-fill: CHART_COLOR_131;}
 .default-color130.chart-pie {-fx-pie-color: CHART_COLOR_131;}
-.default-color131.chart-symbol {-fx-background-color: CHART_COLOR_132;}
+.default-color131.chart-symbol {-fx-background-color: CHART_COLOR_132, white;}
 .default-color131.chart-line-symbol {-fx-background-color: CHART_COLOR_132, white;}
 .default-color131.chart-series-line {-fx-stroke: CHART_COLOR_132;}
-.default-color131.chart-area-symbol {fx-background-color: CHART_COLOR_132, white;}
+.default-color131.chart-area-symbol {-fx-background-color: CHART_COLOR_132, white;}
 .default-color131.chart-series-area-line {-fx-stroke: CHART_COLOR_132;}
 .default-color131.chart-series-area-fill {-fx-fill: CHART_COLOR_132_TRANS_20;}
 .default-color131.chart-bubble {-fx-bubble-fill: CHART_COLOR_132_TRANS_70;}
 .default-color131.chart-bar {-fx-bar-fill: CHART_COLOR_132;}
 .default-color131.chart-pie {-fx-pie-color: CHART_COLOR_132;}
-.default-color132.chart-symbol {-fx-background-color: CHART_COLOR_133;}
+.default-color132.chart-symbol {-fx-background-color: CHART_COLOR_133, white;}
 .default-color132.chart-line-symbol {-fx-background-color: CHART_COLOR_133, white;}
 .default-color132.chart-series-line {-fx-stroke: CHART_COLOR_133;}
-.default-color132.chart-area-symbol {fx-background-color: CHART_COLOR_133, white;}
+.default-color132.chart-area-symbol {-fx-background-color: CHART_COLOR_133, white;}
 .default-color132.chart-series-area-line {-fx-stroke: CHART_COLOR_133;}
 .default-color132.chart-series-area-fill {-fx-fill: CHART_COLOR_133_TRANS_20;}
 .default-color132.chart-bubble {-fx-bubble-fill: CHART_COLOR_133_TRANS_70;}
 .default-color132.chart-bar {-fx-bar-fill: CHART_COLOR_133;}
 .default-color132.chart-pie {-fx-pie-color: CHART_COLOR_133;}
-.default-color133.chart-symbol {-fx-background-color: CHART_COLOR_134;}
+.default-color133.chart-symbol {-fx-background-color: CHART_COLOR_134, white;}
 .default-color133.chart-line-symbol {-fx-background-color: CHART_COLOR_134, white;}
 .default-color133.chart-series-line {-fx-stroke: CHART_COLOR_134;}
-.default-color133.chart-area-symbol {fx-background-color: CHART_COLOR_134, white;}
+.default-color133.chart-area-symbol {-fx-background-color: CHART_COLOR_134, white;}
 .default-color133.chart-series-area-line {-fx-stroke: CHART_COLOR_134;}
 .default-color133.chart-series-area-fill {-fx-fill: CHART_COLOR_134_TRANS_20;}
 .default-color133.chart-bubble {-fx-bubble-fill: CHART_COLOR_134_TRANS_70;}
 .default-color133.chart-bar {-fx-bar-fill: CHART_COLOR_134;}
 .default-color133.chart-pie {-fx-pie-color: CHART_COLOR_134;}
-.default-color134.chart-symbol {-fx-background-color: CHART_COLOR_135;}
+.default-color134.chart-symbol {-fx-background-color: CHART_COLOR_135, white;}
 .default-color134.chart-line-symbol {-fx-background-color: CHART_COLOR_135, white;}
 .default-color134.chart-series-line {-fx-stroke: CHART_COLOR_135;}
-.default-color134.chart-area-symbol {fx-background-color: CHART_COLOR_135, white;}
+.default-color134.chart-area-symbol {-fx-background-color: CHART_COLOR_135, white;}
 .default-color134.chart-series-area-line {-fx-stroke: CHART_COLOR_135;}
 .default-color134.chart-series-area-fill {-fx-fill: CHART_COLOR_135_TRANS_20;}
 .default-color134.chart-bubble {-fx-bubble-fill: CHART_COLOR_135_TRANS_70;}
 .default-color134.chart-bar {-fx-bar-fill: CHART_COLOR_135;}
 .default-color134.chart-pie {-fx-pie-color: CHART_COLOR_135;}
-.default-color135.chart-symbol {-fx-background-color: CHART_COLOR_136;}
+.default-color135.chart-symbol {-fx-background-color: CHART_COLOR_136, white;}
 .default-color135.chart-line-symbol {-fx-background-color: CHART_COLOR_136, white;}
 .default-color135.chart-series-line {-fx-stroke: CHART_COLOR_136;}
-.default-color135.chart-area-symbol {fx-background-color: CHART_COLOR_136, white;}
+.default-color135.chart-area-symbol {-fx-background-color: CHART_COLOR_136, white;}
 .default-color135.chart-series-area-line {-fx-stroke: CHART_COLOR_136;}
 .default-color135.chart-series-area-fill {-fx-fill: CHART_COLOR_136_TRANS_20;}
 .default-color135.chart-bubble {-fx-bubble-fill: CHART_COLOR_136_TRANS_70;}
 .default-color135.chart-bar {-fx-bar-fill: CHART_COLOR_136;}
 .default-color135.chart-pie {-fx-pie-color: CHART_COLOR_136;}
-.default-color136.chart-symbol {-fx-background-color: CHART_COLOR_137;}
+.default-color136.chart-symbol {-fx-background-color: CHART_COLOR_137, white;}
 .default-color136.chart-line-symbol {-fx-background-color: CHART_COLOR_137, white;}
 .default-color136.chart-series-line {-fx-stroke: CHART_COLOR_137;}
-.default-color136.chart-area-symbol {fx-background-color: CHART_COLOR_137, white;}
+.default-color136.chart-area-symbol {-fx-background-color: CHART_COLOR_137, white;}
 .default-color136.chart-series-area-line {-fx-stroke: CHART_COLOR_137;}
 .default-color136.chart-series-area-fill {-fx-fill: CHART_COLOR_137_TRANS_20;}
 .default-color136.chart-bubble {-fx-bubble-fill: CHART_COLOR_137_TRANS_70;}
 .default-color136.chart-bar {-fx-bar-fill: CHART_COLOR_137;}
 .default-color136.chart-pie {-fx-pie-color: CHART_COLOR_137;}
-.default-color137.chart-symbol {-fx-background-color: CHART_COLOR_138;}
+.default-color137.chart-symbol {-fx-background-color: CHART_COLOR_138, white;}
 .default-color137.chart-line-symbol {-fx-background-color: CHART_COLOR_138, white;}
 .default-color137.chart-series-line {-fx-stroke: CHART_COLOR_138;}
-.default-color137.chart-area-symbol {fx-background-color: CHART_COLOR_138, white;}
+.default-color137.chart-area-symbol {-fx-background-color: CHART_COLOR_138, white;}
 .default-color137.chart-series-area-line {-fx-stroke: CHART_COLOR_138;}
 .default-color137.chart-series-area-fill {-fx-fill: CHART_COLOR_138_TRANS_20;}
 .default-color137.chart-bubble {-fx-bubble-fill: CHART_COLOR_138_TRANS_70;}
 .default-color137.chart-bar {-fx-bar-fill: CHART_COLOR_138;}
 .default-color137.chart-pie {-fx-pie-color: CHART_COLOR_138;}
-.default-color138.chart-symbol {-fx-background-color: CHART_COLOR_139;}
+.default-color138.chart-symbol {-fx-background-color: CHART_COLOR_139, white;}
 .default-color138.chart-line-symbol {-fx-background-color: CHART_COLOR_139, white;}
 .default-color138.chart-series-line {-fx-stroke: CHART_COLOR_139;}
-.default-color138.chart-area-symbol {fx-background-color: CHART_COLOR_139, white;}
+.default-color138.chart-area-symbol {-fx-background-color: CHART_COLOR_139, white;}
 .default-color138.chart-series-area-line {-fx-stroke: CHART_COLOR_139;}
 .default-color138.chart-series-area-fill {-fx-fill: CHART_COLOR_139_TRANS_20;}
 .default-color138.chart-bubble {-fx-bubble-fill: CHART_COLOR_139_TRANS_70;}
 .default-color138.chart-bar {-fx-bar-fill: CHART_COLOR_139;}
 .default-color138.chart-pie {-fx-pie-color: CHART_COLOR_139;}
-.default-color139.chart-symbol {-fx-background-color: CHART_COLOR_140;}
+.default-color139.chart-symbol {-fx-background-color: CHART_COLOR_140, white;}
 .default-color139.chart-line-symbol {-fx-background-color: CHART_COLOR_140, white;}
 .default-color139.chart-series-line {-fx-stroke: CHART_COLOR_140;}
-.default-color139.chart-area-symbol {fx-background-color: CHART_COLOR_140, white;}
+.default-color139.chart-area-symbol {-fx-background-color: CHART_COLOR_140, white;}
 .default-color139.chart-series-area-line {-fx-stroke: CHART_COLOR_140;}
 .default-color139.chart-series-area-fill {-fx-fill: CHART_COLOR_140_TRANS_20;}
 .default-color139.chart-bubble {-fx-bubble-fill: CHART_COLOR_140_TRANS_70;}
 .default-color139.chart-bar {-fx-bar-fill: CHART_COLOR_140;}
 .default-color139.chart-pie {-fx-pie-color: CHART_COLOR_140;}
-.default-color140.chart-symbol {-fx-background-color: CHART_COLOR_141;}
+.default-color140.chart-symbol {-fx-background-color: CHART_COLOR_141, white;}
 .default-color140.chart-line-symbol {-fx-background-color: CHART_COLOR_141, white;}
 .default-color140.chart-series-line {-fx-stroke: CHART_COLOR_141;}
-.default-color140.chart-area-symbol {fx-background-color: CHART_COLOR_141, white;}
+.default-color140.chart-area-symbol {-fx-background-color: CHART_COLOR_141, white;}
 .default-color140.chart-series-area-line {-fx-stroke: CHART_COLOR_141;}
 .default-color140.chart-series-area-fill {-fx-fill: CHART_COLOR_141_TRANS_20;}
 .default-color140.chart-bubble {-fx-bubble-fill: CHART_COLOR_141_TRANS_70;}
 .default-color140.chart-bar {-fx-bar-fill: CHART_COLOR_141;}
 .default-color140.chart-pie {-fx-pie-color: CHART_COLOR_141;}
-.default-color141.chart-symbol {-fx-background-color: CHART_COLOR_142;}
+.default-color141.chart-symbol {-fx-background-color: CHART_COLOR_142, white;}
 .default-color141.chart-line-symbol {-fx-background-color: CHART_COLOR_142, white;}
 .default-color141.chart-series-line {-fx-stroke: CHART_COLOR_142;}
-.default-color141.chart-area-symbol {fx-background-color: CHART_COLOR_142, white;}
+.default-color141.chart-area-symbol {-fx-background-color: CHART_COLOR_142, white;}
 .default-color141.chart-series-area-line {-fx-stroke: CHART_COLOR_142;}
 .default-color141.chart-series-area-fill {-fx-fill: CHART_COLOR_142_TRANS_20;}
 .default-color141.chart-bubble {-fx-bubble-fill: CHART_COLOR_142_TRANS_70;}
 .default-color141.chart-bar {-fx-bar-fill: CHART_COLOR_142;}
 .default-color141.chart-pie {-fx-pie-color: CHART_COLOR_142;}
-.default-color142.chart-symbol {-fx-background-color: CHART_COLOR_143;}
+.default-color142.chart-symbol {-fx-background-color: CHART_COLOR_143, white;}
 .default-color142.chart-line-symbol {-fx-background-color: CHART_COLOR_143, white;}
 .default-color142.chart-series-line {-fx-stroke: CHART_COLOR_143;}
-.default-color142.chart-area-symbol {fx-background-color: CHART_COLOR_143, white;}
+.default-color142.chart-area-symbol {-fx-background-color: CHART_COLOR_143, white;}
 .default-color142.chart-series-area-line {-fx-stroke: CHART_COLOR_143;}
 .default-color142.chart-series-area-fill {-fx-fill: CHART_COLOR_143_TRANS_20;}
 .default-color142.chart-bubble {-fx-bubble-fill: CHART_COLOR_143_TRANS_70;}
 .default-color142.chart-bar {-fx-bar-fill: CHART_COLOR_143;}
 .default-color142.chart-pie {-fx-pie-color: CHART_COLOR_143;}
-.default-color143.chart-symbol {-fx-background-color: CHART_COLOR_144;}
+.default-color143.chart-symbol {-fx-background-color: CHART_COLOR_144, white;}
 .default-color143.chart-line-symbol {-fx-background-color: CHART_COLOR_144, white;}
 .default-color143.chart-series-line {-fx-stroke: CHART_COLOR_144;}
-.default-color143.chart-area-symbol {fx-background-color: CHART_COLOR_144, white;}
+.default-color143.chart-area-symbol {-fx-background-color: CHART_COLOR_144, white;}
 .default-color143.chart-series-area-line {-fx-stroke: CHART_COLOR_144;}
 .default-color143.chart-series-area-fill {-fx-fill: CHART_COLOR_144_TRANS_20;}
 .default-color143.chart-bubble {-fx-bubble-fill: CHART_COLOR_144_TRANS_70;}
 .default-color143.chart-bar {-fx-bar-fill: CHART_COLOR_144;}
 .default-color143.chart-pie {-fx-pie-color: CHART_COLOR_144;}
-.default-color144.chart-symbol {-fx-background-color: CHART_COLOR_145;}
+.default-color144.chart-symbol {-fx-background-color: CHART_COLOR_145, white;}
 .default-color144.chart-line-symbol {-fx-background-color: CHART_COLOR_145, white;}
 .default-color144.chart-series-line {-fx-stroke: CHART_COLOR_145;}
-.default-color144.chart-area-symbol {fx-background-color: CHART_COLOR_145, white;}
+.default-color144.chart-area-symbol {-fx-background-color: CHART_COLOR_145, white;}
 .default-color144.chart-series-area-line {-fx-stroke: CHART_COLOR_145;}
 .default-color144.chart-series-area-fill {-fx-fill: CHART_COLOR_145_TRANS_20;}
 .default-color144.chart-bubble {-fx-bubble-fill: CHART_COLOR_145_TRANS_70;}
 .default-color144.chart-bar {-fx-bar-fill: CHART_COLOR_145;}
 .default-color144.chart-pie {-fx-pie-color: CHART_COLOR_145;}
-.default-color145.chart-symbol {-fx-background-color: CHART_COLOR_146;}
+.default-color145.chart-symbol {-fx-background-color: CHART_COLOR_146, white;}
 .default-color145.chart-line-symbol {-fx-background-color: CHART_COLOR_146, white;}
 .default-color145.chart-series-line {-fx-stroke: CHART_COLOR_146;}
-.default-color145.chart-area-symbol {fx-background-color: CHART_COLOR_146, white;}
+.default-color145.chart-area-symbol {-fx-background-color: CHART_COLOR_146, white;}
 .default-color145.chart-series-area-line {-fx-stroke: CHART_COLOR_146;}
 .default-color145.chart-series-area-fill {-fx-fill: CHART_COLOR_146_TRANS_20;}
 .default-color145.chart-bubble {-fx-bubble-fill: CHART_COLOR_146_TRANS_70;}
 .default-color145.chart-bar {-fx-bar-fill: CHART_COLOR_146;}
 .default-color145.chart-pie {-fx-pie-color: CHART_COLOR_146;}
-.default-color146.chart-symbol {-fx-background-color: CHART_COLOR_147;}
+.default-color146.chart-symbol {-fx-background-color: CHART_COLOR_147, white;}
 .default-color146.chart-line-symbol {-fx-background-color: CHART_COLOR_147, white;}
 .default-color146.chart-series-line {-fx-stroke: CHART_COLOR_147;}
-.default-color146.chart-area-symbol {fx-background-color: CHART_COLOR_147, white;}
+.default-color146.chart-area-symbol {-fx-background-color: CHART_COLOR_147, white;}
 .default-color146.chart-series-area-line {-fx-stroke: CHART_COLOR_147;}
 .default-color146.chart-series-area-fill {-fx-fill: CHART_COLOR_147_TRANS_20;}
 .default-color146.chart-bubble {-fx-bubble-fill: CHART_COLOR_147_TRANS_70;}
 .default-color146.chart-bar {-fx-bar-fill: CHART_COLOR_147;}
 .default-color146.chart-pie {-fx-pie-color: CHART_COLOR_147;}
-	
-
-
