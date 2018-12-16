@@ -36,6 +36,19 @@ multiTypeChart.addValueMarker(new ValueMarker<Number>(5,true,Color.BLUE,showLabe
 multiTypeChart.addValueMarker(new ValueMarker<Number>(12,false,Color.BLACK,showLabel));
 multiTypeChart.addValueMarker(new ValueMarker<Number>(20,false,Color.GREEN,showLabel));
 
+//add series 
+multiTypeChart.addSeries(scatterSeries);
+multiTypeChart.addSeries(areaSeries);
+multiTypeChart.addSeries(lineSeries);
+
+//customize color if desired
+multiTypeChart.setSeriesColor(1, 90);
+multiTypeChart.setSeriesColor(2, 50);
+    
+//customize symbol (currently not well supported with colors)
+//multiTypeChart.setSeriesSymbol(0,SymbolType.solidTriangle);
+//multiTypeChart.setSeriesSymbol(1,SymbolType.solidTriangle);
+   
 //Add data
 for(...){
     lineSeries.addData(x,y);
