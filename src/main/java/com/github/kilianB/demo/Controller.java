@@ -21,6 +21,8 @@ public class Controller {
 	@FXML
 	public void initialize() {
 
+		System.out.println("Init controller");
+		
 		// Create a chart
 		MultiTypeChart<Number, Number> multiTypeChart = new MultiTypeChart<>(new NumberAxis(), new NumberAxis());
 
@@ -52,13 +54,17 @@ public class Controller {
 
 		System.out.println("Set series color");
 
-		multiTypeChart.setSeriesColor(0, 40);
-		multiTypeChart.setSeriesColor(1, 41);
-		multiTypeChart.setSeriesColor(2, 42);
+		multiTypeChart.setSeriesColor(0, 0);
+		multiTypeChart.setSeriesColor(1, 90);
+		multiTypeChart.setSeriesColor(2, 50);
+		multiTypeChart.setSeriesColor(3, 45);
+		multiTypeChart.setSeriesColor(4, 60);
+		multiTypeChart.setSeriesColor(5, 5);
+		multiTypeChart.setSeriesColor(6, 62);
 
 		
-		multiTypeChart.setSeriesSymbol(0,SymbolType.solidTriangle);
-		multiTypeChart.setSeriesSymbol(1,SymbolType.solidTriangle);
+//		multiTypeChart.setSeriesSymbol(0,SymbolType.solidTriangle);
+//		multiTypeChart.setSeriesSymbol(1,SymbolType.solidTriangle);
 		multiTypeChart.setSeriesSymbol(2,SymbolType.solidTriangle);
 		
 		borderPane.setCenter(multiTypeChart);

@@ -75,7 +75,7 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 
 	// Global chart properties
 	private static final String COLOR_CSS_CLASS = "default-color";
-	private static final String LINE_CHART_LINE_CSS_CLASS = "series-line";
+	private static final String LINE_CHART_LINE_CSS_CLASS = "chart-series-line";
 	private static final String LINE_CHART_SYMBOL_CSS_CLASS = "chart-line-symbol";
 	private static final String SCATTER_CHART_SYMBOL_CSS_CLASS = "chart-symbol";
 
@@ -223,6 +223,12 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 
 	public MultiTypeChart(@NamedArg("xAxis") Axis<X> xAxis, @NamedArg("yAxis") Axis<Y> yAxis) {
 		super(xAxis, yAxis);
+		
+		//Add css
+		String css = getClass().getClassLoader().getResource("chart.css").toExternalForm();
+		System.out.println("CSS: " + css);
+		this.getStylesheets().add(css);
+		
 		setData(FXCollections.<Series<X, Y>>observableArrayList());
 
 		plotArea = (Group) this.lookup(".chart-horizontal-grid-lines").getParent();
@@ -269,8 +275,8 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 				// we need to change the series
 				Series<X, Y> ser = series.getSeries();
 				SymbolType t = seriesSymbolType.get(series);
-				String symTypeCss = (t != null)? t.name() : "";
-				
+				String symTypeCss = (t != null) ? t.name() : "";
+
 				for (int itemIndex = 0; itemIndex < ser.getData().size(); itemIndex++) {
 					Data<X, Y> item = ser.getData().get(itemIndex);
 					Node symbol = item.getNode();
@@ -285,7 +291,7 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 							identifier = AREA_CHART_SYMBOL_CSS_CLASS;
 							break;
 						}
-						this.createSymbols(ser, itemIndex, item, identifier,symTypeCss);
+						this.createSymbols(ser, itemIndex, item, identifier, symTypeCss);
 
 						symbol = item.getNode();
 						getPlotChildren().add(symbol);
@@ -487,34 +493,35 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 			String seriesColor = COLOR_CSS_CLASS + seriesColorMap.get(s);
 
 			SymbolType symType = seriesSymbolType.get(s);
-			String symTypeCss = (symType != null) ? symType.name():"";
+			String symTypeCss = (symType != null) ? symType.name() : "";
 
-			
 			switch (type.getSeriesType()) {
 			case AREA:
 				Path seriesLine = (Path) ((Group) s.getNode()).getChildren().get(1);
 				Path fillPath = (Path) ((Group) s.getNode()).getChildren().get(0);
 				seriesLine.getStyleClass().setAll(AREA_CHART_SERIES_LINE_CSS_CLASS, "series" + i, seriesColor);
 				fillPath.getStyleClass().setAll(AREA_CHART_FILL_CSS_CLASS, "series" + i, seriesColor);
-				
-			
+
 				for (int j = 0; j < s.getData().size(); j++) {
 					final Data<X, Y> item = s.getData().get(j);
 					final Node node = item.getNode();
 					if (node != null)
-						node.getStyleClass().setAll(AREA_CHART_SYMBOL_CSS_CLASS, "series" + i, "data" + j, seriesColor,symTypeCss);
+						node.getStyleClass().setAll(AREA_CHART_SYMBOL_CSS_CLASS, "series" + i, "data" + j, seriesColor,
+								symTypeCss);
 				}
 				break;
 			case LINE:
 				Node seriesNode = s.getNode();
-				if (seriesNode != null)
+				if (seriesNode != null) {
 					seriesNode.getStyleClass().setAll(LINE_CHART_LINE_CSS_CLASS, "series" + i, seriesColor);
-		
+				}
+					
 				for (int j = 0; j < s.getData().size(); j++) {
 					final Node symbol = s.getData().get(j).getNode();
-					if (symbol != null)
+					if (symbol != null) {
 						symbol.getStyleClass().setAll(LINE_CHART_SYMBOL_CSS_CLASS, "series" + i, "data" + j,
-								seriesColor,symTypeCss);
+								seriesColor, symTypeCss);
+					}	
 				}
 				break;
 
@@ -524,9 +531,9 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 					final Node symbol = s.getData().get(j).getNode();
 					if (symbol != null) {
 						symbol.getStyleClass().setAll(SCATTER_CHART_SYMBOL_CSS_CLASS, "series" + i, "data" + j,
-								seriesColor,symTypeCss);
+								seriesColor, symTypeCss);
 					}
-						
+
 				}
 				break;
 			case STACKED_AREA:
@@ -838,20 +845,20 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 	// Add data item
 	protected void addAreaItem(Series<X, Y> series, int itemIndex, Data<X, Y> item) {
 		// TODO add animation code
-		
-		SymbolType t = seriesSymbolType.get(series);
-		String symTypeCss = (t != null)? t.name() : "";
 
-		createSymbols(series, itemIndex, item, AREA_CHART_SYMBOL_CSS_CLASS,symTypeCss);
+		SymbolType t = seriesSymbolType.get(series);
+		String symTypeCss = (t != null) ? t.name() : "";
+
+		createSymbols(series, itemIndex, item, AREA_CHART_SYMBOL_CSS_CLASS, symTypeCss);
 		getPlotChildren().add(item.getNode());
 	}
 
 	protected void addScatterItem(Series<X, Y> series, int itemIndex, Data<X, Y> item) {
 
 		SymbolType t = seriesSymbolType.get(series);
-		String symTypeCss = (t != null)? t.name() : "";
+		String symTypeCss = (t != null) ? t.name() : "";
 
-		createSymbols(series, itemIndex, item, SCATTER_CHART_SYMBOL_CSS_CLASS,symTypeCss);
+		createSymbols(series, itemIndex, item, SCATTER_CHART_SYMBOL_CSS_CLASS, symTypeCss);
 		Node symbol = item.getNode();
 
 		// add and fade in new symbol if animated
@@ -869,12 +876,13 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 	protected void addLineItem(Series<X, Y> series, int itemIndex, Data<X, Y> item) {
 
 		SymbolType t = seriesSymbolType.get(series);
-		String symTypeCss = (t != null)? t.name() : "";
-		
+		String symTypeCss = (t != null) ? t.name() : "";
+
 		// Create the node
 		if (typedSeries.get(series).showSymbolsProperty().get()) {
-			createSymbols(series, itemIndex, item, LINE_CHART_SYMBOL_CSS_CLASS,symTypeCss);
+			createSymbols(series, itemIndex, item, LINE_CHART_SYMBOL_CSS_CLASS, symTypeCss);
 		}
+		
 		Node symbol = item.getNode();
 
 		if (symbol != null) {
@@ -884,7 +892,8 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 		// TODO add animation code
 	}
 
-	private void createSymbols(Series<X, Y> series, int itemIndex, Data<X, Y> item, String symbolCSSIdentifier,String additionalCss) {
+	private void createSymbols(Series<X, Y> series, int itemIndex, Data<X, Y> item, String symbolCSSIdentifier,
+			String additionalCss) {
 		Node symbol = item.getNode();
 		// TODO should we also check here is e.g. scatter chart ticks should be drawn?
 		if (symbol == null) {
@@ -897,7 +906,7 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 
 		if (symbol != null) {
 			symbol.getStyleClass().addAll(symbolCSSIdentifier, "series" + getData().indexOf(series), "data" + itemIndex,
-					COLOR_CSS_CLASS + seriesColorMap.get(series),additionalCss);
+					COLOR_CSS_CLASS + seriesColorMap.get(series), additionalCss);
 		}
 	}
 
@@ -1158,12 +1167,13 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 				}
 
 				SymbolType t = seriesSymbolType.get(series);
-				String symTypeCss = (t != null)? t.name() : "";
-				
+				String symTypeCss = (t != null) ? t.name() : "";
+
 				Node symbol = new StackPane();
 				symbol.getStyleClass().addAll("chart-legend-symbol", "default-color" + seriesColorMap.get(series),
-						"chart-symbol",symTypeCss); // This css class contains background-color of the chart. Just go ahead and use
-											// it
+						"chart-symbol", symTypeCss); // This css class contains background-color of the chart. Just go
+														// ahead and use
+				// it
 				LegendItem lItem = new LegendItem(name, symbol);
 
 				lItem.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
@@ -1321,19 +1331,19 @@ public class MultiTypeChart<X, Y> extends XYChart<X, Y> {
 
 	public void setSeriesSymbol(int seriesIndex, SymbolType type) {
 		// Gettings the index in a linked hashset is expensive. This won't be performed
-				// many times!
-				int index = 0;
-				for (var entry : typedSeries.entrySet()) {
-					if (index++ == seriesIndex) {
-						setSeriesSymbol(entry.getKey(), type);
-						break;
-					}
-				}
+		// many times!
+		int index = 0;
+		for (var entry : typedSeries.entrySet()) {
+			if (index++ == seriesIndex) {
+				setSeriesSymbol(entry.getKey(), type);
+				break;
+			}
+		}
 	}
 
 	public void setSeriesSymbol(Series series, SymbolType type) {
 		if (series != null) {
-			seriesSymbolType.put(series,type);
+			seriesSymbolType.put(series, type);
 			legendMap.get(series);
 			updateLegend();
 			this.seriesChanged(null);

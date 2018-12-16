@@ -16,16 +16,9 @@ public class ChartTest extends Application {
 		// exit application on window close
 		Platform.setImplicitExit(true);
 
-		FXMLLoader loader = new FXMLLoader();
-
-		// loader.setController(new Controller());
-		loader.setLocation(ChartTest.class.getResource("ChartTest.fxml"));
-
-		Parent parent = loader.load();
+		Parent parent = FXMLLoader.load(ChartTest.class.getResource("ChartTest.fxml"));
 
 		Scene scene = new Scene(parent, 800, 500);
-
-		scene.getStylesheets().add(ChartTest.class.getResource("chart.css").toExternalForm());
 
 		primaryStage.setScene(scene);
 		primaryStage.show();
