@@ -11,8 +11,9 @@ Currently JavaFX does not support to create a composite chart using different se
 
 ![bildschirmfoto 2018-09-10 um 17 39 44](https://user-images.githubusercontent.com/9025925/45307979-b4b2d580-b520-11e8-8643-8c41098c41df.png)
 
-## Due to it's development state it's not hosted on bintray but if required snapshots can be included via jitpack
+## Maven via jitpack
 
+Due to the alpha development state the project is not hosted on bintray but if required snapshots can be included via jitpack
 https://jitpack.io/#KilianB/JavaFXMultiChart
 
 
@@ -28,7 +29,7 @@ https://jitpack.io/#KilianB/JavaFXMultiChart
    <dependency>
       <groupId>com.github.KilianB</groupId>
       <artifactId>JavaFXMultiChart</artifactId>
-      <version>-SNAPSHOT</version>
+      <version>2b506d77ac</version>
    </dependency>
 </dependencies>
 ````
