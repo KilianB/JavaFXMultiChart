@@ -28,7 +28,7 @@ https://jitpack.io/#KilianB/JavaFXMultiChart
    <dependency>
       <groupId>com.github.KilianB</groupId>
       <artifactId>JavaFXMultiChart</artifactId>
-	    <version>-SNAPSHOT</version>
+      <version>-SNAPSHOT</version>
    </dependency>
 </dependencies>
 ````
