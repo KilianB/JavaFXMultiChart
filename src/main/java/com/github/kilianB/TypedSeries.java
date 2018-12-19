@@ -1,5 +1,7 @@
 package com.github.kilianB;
 
+import java.util.Collection;
+
 import com.github.kilianB.MultiTypeChart.SeriesType;
 
 import javafx.beans.property.BooleanProperty;
@@ -20,29 +22,28 @@ public class TypedSeries<X, Y> {
 	private final Series<X, Y> series;
 
 	/**
-	 * Support multiple y axis. This is the y axis index 
-	 * to determine which axis this should be drawn in.
+	 * Support multiple y axis. This is the y axis index to determine which axis
+	 * this should be drawn in.
 	 * 
 	 * An index of 0 defaults to the primary axis
 	 */
 	private int yAxisIndex = 0;
-	
+
 	private int xAxisIndex = 0;
-	
+
 	private Side yAxisSide = Side.RIGHT;
-	
+
 	private Side xAxisSide = Side.TOP;
-	
+
 	private ReadOnlyObjectWrapper<SeriesType> seriesType;
 
 	// Line specific
 	// We can't set the bean initially. Just after it has been attached to the
 
 	/*
-	 *	We can't create stylable properties outside of the bean object.
-	 *	For now discard css support, or do we set the listeners once a series was added
-	 *	to the chart? Or can we? TODO
-	 *Also useful for area. only not for scatter
+	 * We can't create stylable properties outside of the bean object. For now
+	 * discard css support, or do we set the listeners once a series was added to
+	 * the chart? Or can we? TODO Also useful for area. only not for scatter
 	 */
 	private BooleanProperty showSymbols = new SimpleBooleanProperty(true);
 
@@ -106,81 +107,119 @@ public class TypedSeries<X, Y> {
 	public Side getxAxisSide() {
 		return xAxisSide;
 	}
-	
-	public void addData(X x, Y y){
-		series.getData().add(new Data<X, Y>(x,y));
+
+	/**
+	 * class com.sun.javafx.collections.ObservableListWrapper
+	 * 
+	 * @param x
+	 * @param y
+	 */
+	public void addData(X x, Y y) {
+		series.getData().add(new Data<X, Y>(x, y));
+	}
+
+	@SuppressWarnings("unchecked")
+	public void addDataBatch(X[] x, Y[] y) {
+
+		if (x.length != y.length) {
+			throw new IllegalArgumentException();
+		}
+
+		// Construct data
+		Data<X, Y>[] dataToAdd = new Data[x.length];
+
+		for (int i = 0; i < x.length; i++) {
+			dataToAdd[i] = new Data(x[i], y[i]);
+		}
+		series.getData().addAll(dataToAdd);
+	}
+
+	@SuppressWarnings("unchecked")
+	public void addDataBatch(Data<X, Y>[] c) {
+		series.getData().addAll(c);
 	}
 	
-	public static <X1,Y1> Builder<X1,Y1> builder(String seriesName) {
-		return new Builder<X1,Y1>(seriesName);
+	public void addDataBatch(Collection c) {
+		series.getData().addAll(c);
 	}
-	
-	public static <X1,Y1> Builder<X1,Y1> builder(Series<X1,Y1> series) {
-		return new Builder<X1,Y1>(series);
+
+	public static <X1, Y1> Builder<X1, Y1> builder(String seriesName) {
+		return new Builder<X1, Y1>(seriesName);
 	}
-	
-	
-	public interface ITypeStage<X1,Y1>{
-		IAxisStage<X1,Y1> line();
-		IAxisStage<X1,Y1> scatter();
-		IAxisStage<X1,Y1> area();
+
+	public static <X1, Y1> Builder<X1, Y1> builder(Series<X1, Y1> series) {
+		return new Builder<X1, Y1>(series);
 	}
-	
-	public interface ILineAxisStage<X1,Y1>{
-		//Only line chart options
-		ILineAxisStage<X1,Y1> withXAxisSortingPolicy(SortingPolicy sortingPolicy);
-		
-		IAxisStage<X1,Y1> withXAxisIndex(int xAxisIndex);
-		IAxisStage<X1,Y1> withXAxisSide(Side side);
-		IAxisStage<X1,Y1> withYAxisIndex(int yAxisIndex);
-		IAxisStage<X1,Y1> withYAxisSide(Side side);
+
+	public interface ITypeStage<X1, Y1> {
+		IAxisStage<X1, Y1> line();
+
+		IAxisStage<X1, Y1> scatter();
+
+		IAxisStage<X1, Y1> area();
+	}
+
+	public interface ILineAxisStage<X1, Y1> {
+		// Only line chart options
+		ILineAxisStage<X1, Y1> withXAxisSortingPolicy(SortingPolicy sortingPolicy);
+
+		IAxisStage<X1, Y1> withXAxisIndex(int xAxisIndex);
+
+		IAxisStage<X1, Y1> withXAxisSide(Side side);
+
+		IAxisStage<X1, Y1> withYAxisIndex(int yAxisIndex);
+
+		IAxisStage<X1, Y1> withYAxisSide(Side side);
+
 		TypedSeries<X1, Y1> build();
 	}
-	
-	public interface IAxisStage<X1,Y1>{
-		
-		IAxisStage<X1,Y1> withXAxisIndex(int xAxisIndex);
-		IAxisStage<X1,Y1> withXAxisSide(Side side);
-		IAxisStage<X1,Y1> withYAxisIndex(int yAxisIndex);
-		IAxisStage<X1,Y1> withYAxisSide(Side side);
-		
-		TypedSeries<X1,Y1> build();
+
+	public interface IAxisStage<X1, Y1> {
+
+		IAxisStage<X1, Y1> withXAxisIndex(int xAxisIndex);
+
+		IAxisStage<X1, Y1> withXAxisSide(Side side);
+
+		IAxisStage<X1, Y1> withYAxisIndex(int yAxisIndex);
+
+		IAxisStage<X1, Y1> withYAxisSide(Side side);
+
+		TypedSeries<X1, Y1> build();
 	}
-	
-	public static final class Builder<X,Y> implements ITypeStage<X,Y>,ILineAxisStage<X,Y>,IAxisStage<X,Y>{
-		
-		private Series<X,Y> series;
+
+	public static final class Builder<X, Y> implements ITypeStage<X, Y>, ILineAxisStage<X, Y>, IAxisStage<X, Y> {
+
+		private Series<X, Y> series;
 		private ReadOnlyObjectWrapper<SeriesType> seriesType;
 		private SortingPolicy xAxisSortingPolicy = SortingPolicy.NONE;
 		private int xAxisIndex = 0;
 		private int yAxisIndex = 0;
 		private Side xAxisSide = Side.TOP;
 		private Side yAxisSide = Side.RIGHT;
-		
-		
+
 		private Builder(String seriesName) {
-			series = new Series<X,Y>();
+			series = new Series<X, Y>();
 			series.setName(seriesName);
 		};
-		
-		private Builder(Series<X,Y> series) {
+
+		private Builder(Series<X, Y> series) {
 			this.series = series;
 		}
-		
+
 		@Override
-		public IAxisStage<X,Y> line() {
+		public IAxisStage<X, Y> line() {
 			seriesType = new ReadOnlyObjectWrapper<SeriesType>(SeriesType.LINE);
 			return this;
 		}
 
 		@Override
-		public IAxisStage<X,Y> scatter() {
+		public IAxisStage<X, Y> scatter() {
 			seriesType = new ReadOnlyObjectWrapper<SeriesType>(SeriesType.SCATTER);
 			return this;
 		}
 
 		@Override
-		public IAxisStage<X,Y> area() {
+		public IAxisStage<X, Y> area() {
 			seriesType = new ReadOnlyObjectWrapper<SeriesType>(SeriesType.AREA);
 			return this;
 		}
@@ -199,15 +238,15 @@ public class TypedSeries<X, Y> {
 
 		@Override
 		public IAxisStage<X, Y> withXAxisSide(Side side) {
-			if(side.equals(Side.TOP) || side.equals(Side.BOTTOM)) {
-				
-				//TODO
-				if(side.equals(Side.BOTTOM)) {
+			if (side.equals(Side.TOP) || side.equals(Side.BOTTOM)) {
+
+				// TODO
+				if (side.equals(Side.BOTTOM)) {
 					throw new IllegalArgumentException("Currently additional xAxis can only be positioned at the top");
 				}
-				
+
 				xAxisSide = side;
-			}else {
+			} else {
 				throw new IllegalArgumentException("X Axis may only be placed at the Top or Bottom of the chart");
 			}
 			return this;
@@ -221,9 +260,9 @@ public class TypedSeries<X, Y> {
 
 		@Override
 		public IAxisStage<X, Y> withYAxisSide(Side side) {
-			if(side.equals(Side.LEFT) || side.equals(Side.RIGHT)) {
+			if (side.equals(Side.LEFT) || side.equals(Side.RIGHT)) {
 				yAxisSide = side;
-			}else {
+			} else {
 				throw new IllegalArgumentException("Y Axis may only be placed at the Left or Right of the chart");
 			}
 			return this;
@@ -231,12 +270,10 @@ public class TypedSeries<X, Y> {
 
 		@Override
 		public TypedSeries<X, Y> build() {
-			return new TypedSeries(series,seriesType,yAxisIndex,xAxisIndex,xAxisSortingPolicy,
-					xAxisSide,yAxisSide);
+			return new TypedSeries(series, seriesType, yAxisIndex, xAxisIndex, xAxisSortingPolicy, xAxisSide,
+					yAxisSide);
 		}
-		
 
-		
 	}
-	
+
 }

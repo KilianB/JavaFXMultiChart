@@ -1185,7 +1185,13 @@ for(...){
 
 ### Changelog 
 
-#### 10.09
+#### 19.12.18
+- Fixed hide and display series via setDisabled rather than css (more stable)
+- added new color options beyond the default 8
+- support choosing defined color and series symbol
+- add batch addition of data to a series reducing redraw operations
+
+#### 10.09.18
 - Add builder pattern to typed series
 - Add support for secondary/multiple x and y axis
 - change legend to be a flow pane instead of tile pane for better looking layout
