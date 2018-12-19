@@ -52,20 +52,18 @@ public class Controller {
 		multiTypeChart.addValueMarker(new ValueMarker<Number>(12, false, Color.BLACK, showLabel));
 		multiTypeChart.addValueMarker(new ValueMarker<Number>(20, false, Color.GREEN, showLabel));
 
-		System.out.println("Set series color");
-
-		multiTypeChart.setSeriesColor(0, 0);
-		multiTypeChart.setSeriesColor(1, 90);
-		multiTypeChart.setSeriesColor(2, 50);
-		multiTypeChart.setSeriesColor(3, 45);
-		multiTypeChart.setSeriesColor(4, 60);
-		multiTypeChart.setSeriesColor(5, 5);
-		multiTypeChart.setSeriesColor(6, 62);
+		multiTypeChart.setSeriesColor(0, 8);
+		multiTypeChart.setSeriesColor(1, 9);
+		multiTypeChart.setSeriesColor(2, 20);
+		multiTypeChart.setSeriesColor(3, 31);
+		multiTypeChart.setSeriesColor(4, 42);
+		multiTypeChart.setSeriesColor(5, 53);
+		multiTypeChart.setSeriesColor(6, 64);
 
 		
-//		multiTypeChart.setSeriesSymbol(0,SymbolType.solidTriangle);
-//		multiTypeChart.setSeriesSymbol(1,SymbolType.solidTriangle);
-		multiTypeChart.setSeriesSymbol(2,SymbolType.solidTriangle);
+		multiTypeChart.setSeriesSymbol(0,SymbolType.hollowSquare);
+		multiTypeChart.setSeriesSymbol(1,SymbolType.solidCicrle);
+		multiTypeChart.setSeriesSymbol(2,SymbolType.solidCicrle);
 		
 		borderPane.setCenter(multiTypeChart);
 
